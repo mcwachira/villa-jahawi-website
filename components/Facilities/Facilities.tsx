@@ -4,12 +4,13 @@ import {FaWifi,FaParking } from 'react-icons/fa'
 import {FaPersonSwimming} from 'react-icons/fa6'
 import {MdLocalLaundryService} from 'react-icons/md'
 import {HiLightBulb} from 'react-icons/hi'
+import {TbMassage} from 'react-icons/tb'
 
 const Facilities = () => {
   return (
    <Container>
 
-<div className='my-4'>
+<div className='my-2'>
 
 
 
@@ -21,11 +22,11 @@ const Facilities = () => {
 <p className='text-center text-2xl'>
   We offer modern villa facilities for your comfort
 </p>
-<div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 my-40 '>
+<div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 my-40 mb-5 '>
 
 
 
-<div className="flex flex-col items-center justify-center bg-[#dfdfdf] w-3/4 px-16 py-16">
+<div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
 
 
         <FaPersonSwimming size={60} color='#7c6a46'/>
@@ -39,7 +40,7 @@ const Facilities = () => {
       
           </div>
 
-          <div className="flex flex-col items-center justify-center bg-[#dfdfdf] w-3/4 px-16 py-16">
+          <div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
 
 
 <FaWifi size={60} color='#7c6a46'/>
@@ -53,7 +54,7 @@ const Facilities = () => {
 
   </div>
 
-  <div className="flex flex-col items-center justify-center bg-[#dfdfdf] w-3/4 px-16 py-16">
+  <div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
 
 
         <FaParking size={60} color='#7c6a46'/>
@@ -71,11 +72,11 @@ const Facilities = () => {
 
 </div>
 
-<div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 my-40 '>
+<div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 my-10 '>
 
 
 
-<div className="flex flex-col items-center justify-center bg-[#dfdfdf] w-3/4 px-16 py-16">
+<div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
 
 
         <MdLocalLaundryService size={60} color='#7c6a46'/>
@@ -89,7 +90,7 @@ const Facilities = () => {
       
           </div>
 
-          <div className="flex flex-col items-center justify-center bg-[#dfdfdf] w-3/4 px-16 py-16">
+          <div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
 
 
 <HiLightBulb size={60} color='#7c6a46'/>
@@ -103,14 +104,14 @@ const Facilities = () => {
 
   </div>
 
-  <div className="flex flex-col items-center justify-center bg-[#dfdfdf] w-3/4 px-16 py-16">
+  <div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
 
 
-        <FaParking size={60} color='#7c6a46'/>
+        <TbMassage size={60} color='#7c6a46'/>
 
 
     <h2 className="text-2xl text-[#7c6a46] my-4 leading-1">
-           Parking
+         Massage & Spa
             </h2>
 
 
