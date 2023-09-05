@@ -1,5 +1,8 @@
 "use client"
+import Carousel from '@/components/Carousel/Carousel'
+import { imageData } from '@/data/images'
 import Image from 'next/image'
+
 
 
 export default function Home() {
@@ -9,15 +12,7 @@ export default function Home() {
     <main> 
 
 
-      <h1> 
-        
-        Hello world
-         </h1>
-   
-
-   <div className="h-full">
-   
-   </div>
+     <Carousel images={imageData}/>
 
     </main>
   )

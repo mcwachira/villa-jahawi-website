@@ -35,7 +35,7 @@ const navbarToggleHandler = () => {
 
   return (
    <>
-   <header className={`header top-0 left-0 z-40 flex w-full items-center bg-black ${sticky ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20":'absolute'}`}>
+   <header className={`header top-0 left-0 z-40 flex w-full items-center bg-white  ${sticky ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20":'absolute'}`}>
 
 
 <div className="container">
@@ -43,7 +43,7 @@ const navbarToggleHandler = () => {
     <div className="w-60 max-w-full ">
       <Link   href='/' className={`header-logo block w-full ${sticky ? 'py-5 lg:py-2':'py-8'} `}>
 
-<p className="text-white">
+<p className="text-black font-bold">
 Villa Jahawi
 
 </p>
@@ -110,7 +110,7 @@ Villa Jahawi
 
 <div>
 
-<ThemeToggler />
+{/* <ThemeToggler /> */}
 </div>
 
 
@@ -128,9 +128,9 @@ Villa Jahawi
            
                 <Link
                   href="/hire"
-                  className="ease-in-up  rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
+                  className="ease-in-up  rounded-md bg-[#7c6a46] py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
                 >
-                 Hire
+               Book now
                 </Link>
                 
               </div>

@@ -9,20 +9,20 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "About",
-    path: "/about",
+    title: "Explore",
+    path: "/explore",
     newTab: false,
   },
   {
     id: 3,
-    title: "Services",
-    path: "/services",
+    title: "Rooms",
+    path: "/rooms",
     newTab: false,
   },
   {
     id: 4,
-    title: "Pricing",
-    path: "/pricing",
+    title: "About",
+    path: "/about",
     newTab: false,
   },
   {
