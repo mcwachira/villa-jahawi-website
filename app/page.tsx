@@ -1,4 +1,5 @@
 "use client"
+import Blog from '@/components/Blog/Blog'
 import Carousel from '@/components/Carousel/Carousel'
 import Facilities from '@/components/Facilities/Facilities'
 import Gallery from '@/components/Gallery/Gallery'
@@ -22,6 +23,7 @@ export default function Home() {
      <Rooms/>
      <Testimonial/>
      <Gallery images={galleryData}/>
+     <Blog/>
 
     </main>
   )
