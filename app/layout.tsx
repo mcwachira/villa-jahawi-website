@@ -3,8 +3,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-// import Footer from '@/components/Footer'
-import MainNavbar from '@/components/Navbar'
 import Navbar from '@/components/Header/Navbar'
 import Footer from '@/components/Footer/Footer'
 
