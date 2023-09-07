@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import Blog from '@/components/Blog/Blog'
 import Carousel from '@/components/Carousel/Carousel'
 import Facilities from '@/components/Facilities/Facilities'
@@ -26,7 +26,7 @@ export default function Home() {
      <Facilities/>
      <Rooms/>
      <Testimonial/>
-     <Gallery images={galleryData}/>
+     {/* <Gallery images={galleryData}/> */}
      <Blog/>
 {/* 
 
