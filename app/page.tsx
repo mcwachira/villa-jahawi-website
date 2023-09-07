@@ -10,6 +10,7 @@ import Testimonial from '@/components/Testimonial/Testimonial'
 import { galleryData } from '@/data/galleryImages'
 import VideoThumb from '@/public/assets/images/modal-video-thumb.jpg'
 import { imageData } from '@/data/images'
+import HeroTwo from '@/components/Hero/HeroTwo'
 
 
 
@@ -20,7 +21,7 @@ export default function Home() {
 
     <main> 
 
-<Hero/>
+<HeroTwo/>
 
      {/* <Carousel images={imageData}/> */}
      <Facilities/>
