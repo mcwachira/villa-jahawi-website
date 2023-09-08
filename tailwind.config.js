@@ -2,8 +2,8 @@
 module.exports = {
   content: [
     './node_modules/flowbite-react/**/*.js',
-    '.src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    '.src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     // './app/**/*.{js,ts,jsx,tsx,mdx}',
     './public/**/*.html'
   ],
@@ -108,7 +108,6 @@ module.exports = {
 },
 plugins: [
   require('@tailwindcss/typography'),
-  require('@tailwindcss/line-clamp'),
   require('@tailwindcss/aspect-ratio'),
   require('@tailwindcss/forms'),
   require('flowbite/plugin'),
