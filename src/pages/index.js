@@ -16,14 +16,17 @@
 // import Card from '@/components/Rooms/Card'
 
 import Facilities from "@/components/Facilities/Facilities";
+import { FeaturedArticles } from "@/components/FeaturedArticles";
 import HeroTwo from "@/components/Hero/HeroTwo";
 import Card from "@/components/Rooms/Card";
 import TestimonialTwo from "@/components/Testimonial/TestimonialTwo";
 
+import { getAllArticles } from '@/lib/articles'
 
 
 
-export default function Home() {
+
+export default function Home({ caseStudies, articles }) {
   return (
 
 
@@ -36,6 +39,7 @@ export default function Home() {
      <Card/>
 
      <TestimonialTwo/>
+     <FeaturedArticles articles={articles} />
      {/* <Gallery images={galleryData}/> */}
      {/* <Blog/> */}
 {/* 
@@ -53,4 +57,14 @@ export default function Home() {
 
     </main>
   )
+}
+
+
+export async function getStaticProps() {
+  return {
+    props: {
+
+      articles: await getAllArticles(),
+    },
+  }
 }

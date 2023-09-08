@@ -19,7 +19,7 @@ export function FeaturedArticles({ articles }) {
             </svg>
             <span className="relative text-sky-700 ">Thoughts</span>
           </span>{' '}
-          on design, business and indie-hacking
+          on  Hotels, villas  and Traveling
         </h2>
 
         <div className="relative mx-auto mt-14 grid max-w-lg gap-8 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-6 xl:gap-x-6 xl:gap-y-8">

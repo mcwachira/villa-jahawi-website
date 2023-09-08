@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import { Button } from './Button'
 import { Container } from './Container'
-import newsletterBg from '@/images/newsletter-bg.png'
+import newsletterBg from  '/public/assets/images/newsletter-bg.png'
 import {
   DribbbleIcon,
   InstagramIcon,
@@ -67,7 +67,7 @@ function SocialLink({ icon: Icon, label, ...props }) {
   )
 }
 
-export function Footer({ newsletter = true }) {
+const  Footer = ({ newsletter = true }) => {
   return (
     <section className={clsx(newsletter && 'pt-12 sm:pt-16')}>
       {newsletter && (
@@ -196,3 +196,6 @@ export function Footer({ newsletter = true }) {
     </section>
   )
 }
+
+
+export default Footer
