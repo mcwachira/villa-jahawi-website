@@ -14,7 +14,7 @@ const RoomsTwo = () => {
 
 
 <div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-8 my-20 mb-5 '>
-<div  className="flex flex-col items-start justify-between rounded-2xl bg-slate-50 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100">
+{/* <div  className="flex flex-col items-start justify-between rounded-2xl bg-slate-50 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100">
       <div className="w-full px-4 pt-4">
 <Link href=''>
 <Image     fill={true}        className="w-full rounded-xl bg-slate-100 object-cover transition duration-300 group-hover:scale-105"  src="/assets/images/gallery-4.png" alt="Property Image"/>
@@ -50,7 +50,7 @@ const RoomsTwo = () => {
   </div>
 
 </div>
-</div>
+</div> */}
 
 {/* <div className="max-w-full w-full rounded overflow-hidden shadow-lg hover:shadow-xl">
   <Image   className="w-full rounded-xl bg-slate-100 object-cover transition duration-300 group-hover:scale-105"  src="/assets/images/gallery-4.png"       fill={true}     alt="Property Image"/>

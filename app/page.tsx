@@ -13,6 +13,7 @@ import { imageData } from '@/data/images'
 import HeroTwo from '@/components/Hero/HeroTwo'
 import RoomsTwo from '@/components/Rooms/RoomsTwo'
 import TestimonialTwo from '@/components/Testimonial/TestimonialTwo'
+import Card from '@/components/Rooms/Card'
 
 
 
@@ -27,7 +28,8 @@ export default function Home() {
 
      {/* <Carousel images={imageData}/> */}
      <Facilities/>
-     <RoomsTwo/>
+     <Card/>
+
      <TestimonialTwo/>
      {/* <Gallery images={galleryData}/> */}
      <Blog/>

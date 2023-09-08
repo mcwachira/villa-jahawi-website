@@ -128,13 +128,13 @@ const TestimonialTwo = () => {
 
   let [carouselProgress, setCarouselProgress] = useState<number>(15)
 
-  useState(() => {
+  useEffect(() => {
 
     let screenWidth = window.innerWidth
     if(screenWidth >= 1138){
       setCarouselProgress(((swiperIndex + 3) / testimonialsCount) * 100)
     }
-  }, [swiperIndex])
+  }, [swiperIndex,testimonialsCount])
 
 
   return (
@@ -143,7 +143,7 @@ const TestimonialTwo = () => {
         <div className="mx-auto grid max-w-xl gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
-              Here’s what past clients are saying about me
+              Here’s what past Guests are saying about our villa
             </h2>
             <div className="mt-10 hidden h-[7px] w-full rounded-full bg-slate-200 lg:mt-16 lg:block">
               <div
@@ -220,7 +220,7 @@ const TestimonialTwo = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="currentColor"
-                            className="h-5 w-5 text-yellow-400"
+                            className="h-5 w-5 text-red-700"
                           >
                             <path
                               fillRule="evenodd"
@@ -230,10 +230,10 @@ const TestimonialTwo = () => {
                           </svg>
                         ))}
                       </div>
-                      <h4 className="mt-7 font-display text-xl font-medium text-slate-900">
+                      <h4 className="mt-7 font-display text-3xl font-medium text-slate-900">
                         {testimonial.headline}
                       </h4>
-                      <p className="mt-3 text-sm leading-7 text-slate-700">
+                      <p className="mt-3 text-xl leading-7 text-slate-700">
                         {testimonial.content}
                       </p>
                     </div>
@@ -241,10 +241,10 @@ const TestimonialTwo = () => {
                       <hr className="my-6 h-px w-full bg-slate-200" />
                       <div className="flex items-center justify-between">
                         <div className="">
-                          <p className="font-display text-md font-medium text-slate-900">
+                          <p className="font-display text-lg font-medium text-slate-900">
                             {testimonial.author.name}
                           </p>
-                          <p className="mt-1.5 text-sm text-slate-600">
+                          <p className="mt-1.5 text-md text-slate-600">
                             {testimonial.author.role}
                           </p>
                         </div>
