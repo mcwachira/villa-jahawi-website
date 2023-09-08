@@ -11,6 +11,8 @@ import { galleryData } from '@/data/galleryImages'
 import VideoThumb from '@/public/assets/images/modal-video-thumb.jpg'
 import { imageData } from '@/data/images'
 import HeroTwo from '@/components/Hero/HeroTwo'
+import RoomsTwo from '@/components/Rooms/RoomsTwo'
+import TestimonialTwo from '@/components/Testimonial/TestimonialTwo'
 
 
 
@@ -25,8 +27,8 @@ export default function Home() {
 
      {/* <Carousel images={imageData}/> */}
      <Facilities/>
-     <Rooms/>
-     <Testimonial/>
+     <RoomsTwo/>
+     <TestimonialTwo/>
      {/* <Gallery images={galleryData}/> */}
      <Blog/>
 {/* 
