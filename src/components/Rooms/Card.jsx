@@ -174,8 +174,8 @@ const Card = () => {
         >
             
             
-                <div key={roomIndex} className="  h-full w-full  overflow-hidden shadow-lg hover:shadow-xl bg-white rounded-lg ">
-      <Image   className="w-full rounded-xl bg-slate-100 object-cover transition duration-300 group-hover:scale-105"
+                <div key={roomIndex} className="  h-full w-full rounded-xl p-6  overflow-hidden shadow-lg hover:shadow-xl bg-white ">
+      <Image   className="h-72 w-full rounded-md object-cover bg-slate-100 transition duration-300 group-hover:scale-105"
         src={room.imageSrc}
              width={400}
              height={400}    
@@ -229,6 +229,7 @@ const Card = () => {
   </Swiper>
       
    </Container>
+
          
         </div>
     
@@ -240,121 +241,4 @@ const Card = () => {
 export default Card;
 
 
-        {/* <SwiperSlide
-          key={`room-${roomIndex}`}
-          className="swiper-slide !h-auto !w-auto shrink-0 border-b border-l border-t border-slate-200 p-10 shadow-sm shadow-sky-100/50 first:rounded-l-2xl last:rounded-r-2xl last:border-r"
-        >
-          <div className="flex h-full w-full max-w-[272px] flex-1 flex-col">
-            <div className="flex-1">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((i, n) => (
-                  <svg
-                    key={`room-${roomIndex}-star-${n}`}
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="h-5 w-5 text-red-700"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                ))}
-              </div>
-              <h4 className="mt-7 font-display text-3xl font-medium text-slate-900">
-                {room.headline}
-              </h4>
-              <p className="mt-3 text-xl leading-7 text-slate-700">
-                {room.content}
-              </p>
-            </div>
-            <div>
-              <hr className="my-6 h-px w-full bg-slate-200" />
-              <div className="flex items-center justify-between">
-                <div className="">
-                  <p className="font-display text-lg font-medium text-slate-900">
-                    {room.author.name}
-                  </p>
-                  <p className="mt-1.5 text-md text-slate-600">
-                    {room.author.role}
-                  </p>
-                </div>
-                <Image
-                  src={room.author.image}
-                  alt={room.author.name}
-                  className="h-14 w-14 rounded-full"
-                />
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </div>
-  </Swiper>
-</Container>
-</div> */}
-
-
-
-
-
-{/* interface singleCardProps{
-  room:{
-
-   imageSrc:string,
-    title:string,
-    bedrooms:number
-    bathrooms:number
-
-  }
-}
-
-const SingleCard = ({
-room
-
-}:singleCardProps) => {
-
-    const {imageSrc, title, bedrooms, bathrooms} = room
-  return (
-    <>
-  
-      <div className=" overflow-hidden shadow-lg hover:shadow-xl bg-white rounded-lg ">
-      <Image   className="w-full rounded-xl bg-slate-100 object-cover transition duration-300 group-hover:scale-105"
-        src={imageSrc}
-             width={400}
-             height={400}    
-             alt="Property Image"/>
-     <div className="px-6 py-4">
-    <div className="my-8">
-      <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
-      <div className="flex items-center">
-
-      </div>
-    </div>
-    <div className="flex justify-between">
-      <div className="flex items-center">
-          <MdOutlineBedroomParent size={40} />
-        <p className="ml-2 text-lg  font-medium text-gray-700">{bedrooms} Bedrooms</p>
-      </div>
-      <div className="flex items-center">
-          <GiBathtub size={40} />
-        <p className="ml-2 text-lg  font-medium text-gray-700">{bathrooms} Bathrooms</p>
-      </div>
-      
-    </div>
-    <div className="my-12 flex justify-between items-center">
-
-        <button   className="ease-in-up  rounded-md bg-[#7c6a46] py-3 px-8 text-xl font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9">
-            Book Now 
-        </button>
-        <p className="text-3xl font-extrabold text-black">$300</p>
-    </div>
-  </div>
-      </div>
-    
-    </>
-  );
-}; */}
-
+     
