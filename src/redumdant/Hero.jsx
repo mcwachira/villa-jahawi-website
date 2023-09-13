@@ -1,18 +1,19 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import Image from 'next/image'
-import Container from '../container/Container'
+
 import { Dancing_Script } from 'next/font/google'
 import VideoThumb from '/public/assets/images/modal-video-thumb.jpg'
 
-import ModalVideo from '../ModalVideo/ModalVideo'
-import Button from '../Button/Button'
+import ModalVideo from '@/components/ModalVideo/ModalVideo'
+import Button from '@/components/Button/Button'
 import { useTheme } from 'next-themes'
+import { Container } from '../components/Container'
 const dancingScript = Dancing_Script({
   weight: '700',
   subsets: ['latin'] })
 
-const HeroTwo = () => {
+const Hero = () => {
 
   const {theme, setTheme} = useTheme();  
 
@@ -128,16 +129,19 @@ Every Moment feels like the first time Villa Jahawi
             </div>
           </div>
         </div>
-        <div className="mx-auto w-full max-w-lg lg:mr-0">
-          <div className="aspect-h-5 aspect-w-4 relative rounded-2xl bg-slate-50">
+        <div className="mx-auto w-full  lg:mr-0">
+          <div className="aspect-h-6 aspect-w-8 relative rounded-sm bg-slate-50">
             <Image
-              className="h-full w-full rounded-2xl object-cover object-center"
-              src="/assets/images/gallery-2.png"
+              className=" rounded-sm object-cover object-center"
+              src="/assets/images/banner-2.png"
               alt=""
               sizes="(min-width: 552px) 32rem, calc(100vw - 40px)"
-              fill
+              // width={600}
+              // height={500}
+             fill
               priority
             />
+     
   
           </div>
         </div>
@@ -146,6 +150,6 @@ Every Moment feels like the first time Villa Jahawi
   )
 }
 
-export default HeroTwo
+export default Hero
 
 

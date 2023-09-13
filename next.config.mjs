@@ -21,6 +21,15 @@ const nextConfig = {
   // Configure pageExtensions to include md and mdx
   pageExtensions: ['js', 'jsx', 'mdx'],
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+      },
+    ],
+  },
 }
 
 export default withMDX(nextConfig)

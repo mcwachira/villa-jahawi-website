@@ -1,6 +1,6 @@
 import React from 'react'
-import ModalVideo from '../ModalVideo/ModalVideo'
-import Container from '../container/Container'
+import ModalVideo from '../../components/ModalVideo/ModalVideo'
+import Container from '../../components/container/Container'
 import { Dancing_Script } from 'next/font/google'
 import VideoThumb from '/public/assets/images/modal-video-thumb.jpg'
 

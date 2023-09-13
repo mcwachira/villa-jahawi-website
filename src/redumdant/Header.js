@@ -5,8 +5,8 @@ import { useRouter } from 'next/router'
 import clsx from 'clsx'
 import { Menu, Popover, Transition, Disclosure } from '@headlessui/react'
 
-import { Button } from './Button'
-import { Container } from './Container'
+import { Button } from '../components/Button'
+import { Container } from '../components/Container'
 import logo from  '/public/assets/images/logo.png'
 import logoIcon from  '/public/assets/images/logo-icon.png'
 
