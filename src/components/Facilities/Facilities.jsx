@@ -5,17 +5,21 @@ import {FaPersonSwimming} from 'react-icons/fa6'
 import {MdLocalLaundryService} from 'react-icons/md'
 import {HiLightBulb} from 'react-icons/hi'
 import {TbMassage} from 'react-icons/tb'
+import { clsx } from 'clsx'
+import { useTheme } from 'next-themes'
 
 const Facilities = () => {
+  const {theme, setTheme} = useTheme();
+
   return (
-   <Container>
+   <Container >
 
 <div className='my-2'>
 
 
 
 
-<h2  className='text-center text-6xl py-4'>
+<h2  className='text-center text-6xl py-24'>
   Our Facilities
 </h2>
 
@@ -26,7 +30,7 @@ const Facilities = () => {
 
 
 
-<div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
+<div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-8">
 
 
         <FaPersonSwimming size={60} color='#7c6a46'/>

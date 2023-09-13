@@ -198,4 +198,4 @@ const  Footer = ({ newsletter = true }) => {
 }
 
 
-export default Footer
+export default Footer  
