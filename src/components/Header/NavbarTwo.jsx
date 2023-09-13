@@ -9,6 +9,7 @@ import MenuIcon from './MenuIcon'
 import Container from '../container/Container'
 import Button from '../Button/Button'
 import ThemeToggler from './ThemeToggler'
+import { useTheme } from 'next-themes'
 
 const links = [
     {
@@ -29,6 +30,8 @@ const links = [
 ]
 
 const NavbarTwo = () => {
+
+  const {theme, setTheme} = useTheme();
 
 const router = useRouter()
     const pathname = usePathname()
@@ -113,7 +116,7 @@ const router = useRouter()
           >
             <Popover.Panel
               as="div"
-              className="absolute inset-x-0 top-full z-30 mt-4 origin-top overflow-hidden rounded-2xl bg-slate-50 px-6 py-7 shadow-xl shadow-sky-100/40 ring-1 ring-slate-900/5"
+              className={clsx("absolute inset-x-0 top-full z-30 mt-4 origin-top overflow-hidden rounded-2xl bg-slate-50 px-6 py-7 shadow-xl shadow-sky-100/40 ring-1 ring-slate-900/5", theme==='dark'? 'bg-[#1D1E30]': 'bg-white')}
             >
               <div>
                 <div className="flex flex-col space-y-4">
@@ -136,8 +139,11 @@ const router = useRouter()
     )
   }
 
+
+  // sticky ? "!fixed !z-[9999] !bg-white !bg-opacity-100 shadow-sticky backdrop-blur-sm !transition dark:!bg-[#121212] dark:!bg-opacity-20":""
   return (
-    <header className={clsx("h-24 border-b  w-full   border-slate-200/80 bg-white",  sticky ? "!fixed !z-[9999] !bg-white !bg-opacity-100 shadow-sticky backdrop-blur-sm !transition dark:!bg-[#121212] dark:!bg-opacity-20":"")}> 
+    <header className={clsx("h-24 border-b  w-full  border-slate-200/80"
+    ,sticky ? "!fixed !z-[9999] !bg-opacity-100 shadow-sticky backdrop-blur-sm":"",theme==='light'? '!bg-white':'!bg-[#1D1E30]' )}> 
     {/* absolute */}
       <Container className="flex h-full w-full items-center">
         <nav className="relative z-50 flex w-full items-center justify-between">
