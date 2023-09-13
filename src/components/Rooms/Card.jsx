@@ -97,7 +97,7 @@ const Card = () => {
 
   return (
     <>
- <section className={clsx("relative overflow-hidden pt-20 lg:pt-[120px] pb-10 lg:pb-20 h-full",  theme==='dark' ? "bg-[#121212]" :"bg-[#F3F4F6]")} >
+ <section className={clsx("relative overflow-hidden pt-20 lg:pt-[120px] pb-10 lg:pb-20 h-full  border-b  border-slate-200/80",  theme==='dark' ? "bg-[#1D1E30]" :"bg-[#F3F4F6]")} >
 
 
       <Container className="relative">
@@ -116,7 +116,7 @@ const Card = () => {
   <div className="lg:ml-auto lg:max-w-sm">
 
     <div className="mt-14 flex gap-2.5 lg:mt-12">
-      <button className="carousel-prev inline-flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
+      <button className="carousel-prev inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -130,7 +130,7 @@ const Card = () => {
           />
         </svg>
       </button>
-      <button className="carousel-next inline-flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
+      <button className="carousel-next inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"

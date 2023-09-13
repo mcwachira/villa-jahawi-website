@@ -12,12 +12,12 @@ const Facilities = () => {
   const {theme, setTheme} = useTheme();
 
   return (
-   <Container >
-
-<div className='my-2'>
 
 
+<div className={clsx('  border-b  border-slate-200/80 w-full',  theme==='dark' ? "bg-[#1D1E30]" :"bg-[#FFFFFF]")}>
 
+
+<Container>
 
 <h2  className='text-center text-6xl py-24'>
   Our Facilities
@@ -122,12 +122,12 @@ const Facilities = () => {
       
           </div>
 
-
+          </div>
+          </Container>
 
 </div>
-</div>
 
-   </Container>
+
   )
 }
 
