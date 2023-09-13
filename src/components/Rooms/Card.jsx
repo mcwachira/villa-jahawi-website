@@ -1,5 +1,4 @@
-"use client"
-
+import clsx from 'clsx'
 import React, { useEffect, useState } from "react";
 
 import roomImage1 from '/public/assets/images/room-1.png'
@@ -19,6 +18,7 @@ import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import Container from "../container/Container";
+import { useTheme } from 'next-themes';
 
 const Card = () => {
 
@@ -76,6 +76,8 @@ const Card = () => {
       ]
 
 
+      const {theme, setTheme} = useTheme();
+
     let roomsCount = parseFloat(roomsData.length)
 
     let [swiperIndex, setSwiperIndex] = useState(1)
@@ -92,9 +94,11 @@ const Card = () => {
 
 
 
+
   return (
     <>
- <section className="relative overflow-hidden pt-20 lg:pt-[120px] pb-10 lg:pb-20 h-full bg-[#F3F4F6]">
+ <section className={clsx("relative overflow-hidden pt-20 lg:pt-[120px] pb-10 lg:pb-20 h-full",  theme==='dark' ? "bg-[#121212]" :"bg-[#F3F4F6]")} >
+
 
       <Container className="relative">
 <div className="mx-auto grid max-w-xl gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
