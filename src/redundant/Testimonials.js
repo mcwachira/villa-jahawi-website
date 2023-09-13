@@ -24,6 +24,8 @@ import { Navigation } from 'swiper'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import { clsx } from 'clsx'
+import { useTheme } from 'next-themes'
 
 const testimonials = [
   {
@@ -128,18 +130,7 @@ const testimonials = [
   },
 ]
 
-const companies = [
-  { name: 'Zendesk', logo: zendesk },
-  { name: 'Intercom', logo: intercom },
-  { name: 'Coursera', logo: coursera },
-  { name: 'Unbounce', logo: unbounce },
-  { name: 'Prismic', logo: prismic },
-  { name: 'Codesee', logo: codesee },
-  { name: 'Booqable', logo: booqable },
-  { name: 'Tapcart', logo: tapcart },
-  { name: 'Mailchimp', logo: mailchimp },
-  { name: 'Instagram', logo: instagram },
-]
+
 
 export function Testimonials() {
   let testimonialsCount = parseFloat(testimonials.length)
@@ -153,8 +144,10 @@ export function Testimonials() {
     }
   }, [swiperIndex])
 
+  const {theme, setTheme} = useTheme();
+
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-20 sm:py-24 lg:pt-32 ">
+    <section className={clsx("relative overflow-hidden  py-20 sm:py-24 lg:pt-32 ",theme==='dark'? 'bg-[#1D1E30]': 'bg-white')}>
       <Container className="relative">
         <div className="mx-auto grid max-w-xl gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>

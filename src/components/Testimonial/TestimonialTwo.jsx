@@ -13,6 +13,8 @@ import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import Container from '../container/Container'
+import { useTheme } from 'next-themes'
+import { clsx } from 'clsx'
 
 
 const testimonials = [
@@ -126,6 +128,8 @@ const TestimonialTwo = () => {
 
   let [carouselProgress, setCarouselProgress] = useState(15)
 
+  const {theme, setTheme} = useTheme();
+
   useEffect(() => {
 
     let screenWidth = window.innerWidth
@@ -136,7 +140,7 @@ const TestimonialTwo = () => {
 
 
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-20 sm:py-24 lg:pt-32 ">
+    <section className={clsx("relative overflow-hidden 0 py-20 sm:py-24 lg:pt-32 ",theme==='dark'? 'bg-[#1D1E30]': 'bg-white')}>
       <Container className="relative">
         <div className="mx-auto grid max-w-xl gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
@@ -156,7 +160,7 @@ const TestimonialTwo = () => {
               barista con barista cappuccino filter roast.
             </p>
             <div className="mt-14 flex gap-2.5 lg:mt-12">
-              <button className="carousel-prev inline-flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
+              <button className="carousel-prev inline-flex h-12 w-12 items-center justify-center rounded-full text-black bg-white shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -170,7 +174,7 @@ const TestimonialTwo = () => {
                   />
                 </svg>
               </button>
-              <button className="carousel-next inline-flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
+              <button className="carousel-next inline-flex h-12 w-12 items-center justify-center rounded-full  text-black bg-white shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"

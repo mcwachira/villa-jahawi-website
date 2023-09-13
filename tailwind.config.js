@@ -24,7 +24,7 @@ module.exports = {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     colors: {
-dark:"#1D1E30",
+dark:"#351111",
 light: '#ffffff',
 
 

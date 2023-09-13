@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Header } from '@/redumdant/Header'
+import { Header } from '@/redundant/Header'
 import { BlogHero } from '@/components/BlogHero'
 import { Articles } from '@/components/Articles'
 import { Footer } from '@/components/Footer'
