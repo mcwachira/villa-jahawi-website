@@ -26,11 +26,13 @@ const Facilities = () => {
 <p className='text-center text-2xl'>
   We offer modern villa facilities for your comfort
 </p>
-<div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 my-40 mb-5 '>
+<div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 my-20 mb-5 '>
 
 
 
-<div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-8">
+<div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-8", theme==='dark'?" bg-[#fafafa]"
+          :"bg-[#e5dada]")}>
+
 
 
         <FaPersonSwimming size={60} color='#7c6a46'/>
@@ -44,7 +46,8 @@ const Facilities = () => {
       
           </div>
 
-          <div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
+          <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+          :"bg-[#e5dada]")}>
 
 
 <FaWifi size={60} color='#7c6a46'/>
@@ -58,7 +61,9 @@ const Facilities = () => {
 
   </div>
 
-  <div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
+    <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+          :"bg-[#e5dada]")}>
+
 
 
         <FaParking size={60} color='#7c6a46'/>
@@ -80,7 +85,9 @@ const Facilities = () => {
 
 
 
-<div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
+  <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+          :"bg-[#e5dada]")}>
+
 
 
         <MdLocalLaundryService size={60} color='#7c6a46'/>
@@ -94,7 +101,9 @@ const Facilities = () => {
       
           </div>
 
-          <div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
+            <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+          :"bg-[#e5dada]")}>
+
 
 
 <HiLightBulb size={60} color='#7c6a46'/>
@@ -108,7 +117,9 @@ const Facilities = () => {
 
   </div>
 
-  <div className="flex flex-col items-center justify-center bg-[#fafafa] w-3/4 px-16 py-16">
+    <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+          :"bg-[#e5dada]")}>
+
 
 
         <TbMassage size={60} color='#7c6a46'/>

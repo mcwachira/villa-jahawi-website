@@ -186,9 +186,9 @@ const router = useRouter()
 <ThemeToggler />
           </div>
           <div className="flex items-center">
-            <Button className="bg-[#7C6A46] text-white border-white
+            <Button className="bg-[#7C6A46] text-white text-xl border-white
             " variant="secondary" href="#">
-              Book a call
+              Book Now
             </Button>
             <div className="ml-4 md:hidden">
               <MobileNav />
