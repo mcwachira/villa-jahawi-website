@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import {MdOutlineBedroomParent} from 'react-icons/md'
 import {GiBathtub} from 'react-icons/gi'
-import Container from '../container/Container'
+import Container from '../../components/container/Container'
 
 
 const RoomsTwo = () => {

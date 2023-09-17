@@ -43,7 +43,7 @@ const Rooms = () => {
 
   <div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-8 my-20 mb-5 '>
 <div className="max-w-full w-full rounded overflow-hidden shadow-lg hover:shadow-xl">
-  <img className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
+  <Image className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
   <div className="px-6 py-4">
     <div className="my-8">
       <h2 className="text-2xl font-bold text-gray-900">Beautiful House</h2>
@@ -75,7 +75,7 @@ const Rooms = () => {
 </div>
 
 <div className="max-w-full w-full rounded overflow-hidden shadow-lg hover:shadow-xl">
-  <img className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
+  <Image className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
   <div className="px-6 py-4">
     <div className="my-8">
       <h2 className="text-2xl font-bold text-gray-900">Beautiful House</h2>
@@ -105,7 +105,7 @@ const Rooms = () => {
 
 </div>
 <div className="max-w-full w-full rounded overflow-hidden shadow-lg hover:shadow-xl">
-  <img className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
+  <Image className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
   <div className="px-6 py-4">
     <div className="my-8">
       <h2 className="text-2xl font-bold text-gray-900">Beautiful House</h2>
@@ -138,7 +138,7 @@ const Rooms = () => {
 
 <div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-8 my-20 mb-5 '>
 <div className="max-w-full w-full rounded overflow-hidden shadow-lg hover:shadow-xl">
-  <img className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
+  <Image className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
   <div className="px-6 py-4">
     <div className="my-8">
       <h2 className="text-2xl font-bold text-gray-900">Beautiful House</h2>
@@ -170,7 +170,7 @@ const Rooms = () => {
 </div>
 
 <div className="max-w-full w-full rounded overflow-hidden shadow-lg hover:shadow-xl">
-  <img className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
+  <Image className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
   <div className="px-6 py-4">
     <div className="my-8">
       <h2 className="text-2xl font-bold text-gray-900">Beautiful House</h2>
@@ -200,7 +200,7 @@ const Rooms = () => {
 
 </div>
 <div className="max-w-full w-full rounded overflow-hidden shadow-lg hover:shadow-xl">
-  <img className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
+  <Image className="w-full" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80" alt="Property Image"/>
   <div className="px-6 py-4">
     <div className="my-8">
       <h2 className="text-2xl font-bold text-gray-900">Beautiful House</h2>

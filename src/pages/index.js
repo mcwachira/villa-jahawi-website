@@ -5,7 +5,7 @@ import { FeaturedArticles } from "@/components/FeaturedArticles";
 
 import Hero from "@/components/Hero";
 
-import Card from "@/components/Rooms/Card";
+import Rooms from "@/components/Rooms";
 import TestimonialTwo from "@/components/Testimonial/TestimonialTwo";
 
 import { getAllArticles } from '@/lib/articles'
@@ -22,9 +22,9 @@ export default function Home({ caseStudies, articles }) {
 <Hero/>
 
      <Facilities/>
-     <Card/>
-
-     <TestimonialTwo/>
+     <Rooms/>
+{/* 
+     <TestimonialTwo/> */}
      <FeaturedArticles articles={articles} />
      {/* <Gallery images={galleryData}/> */}
      {/* <Blog/> */}

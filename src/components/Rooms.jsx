@@ -17,10 +17,10 @@ import { Navigation } from 'swiper/modules'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import Container from "../container/Container";
+import Container from "./container/Container";
 import { useTheme } from 'next-themes';
 
-const Card = () => {
+const Rooms = () => {
 
     const roomsData = [
         {
@@ -80,21 +80,26 @@ const Card = () => {
 
     let roomsCount = parseFloat(roomsData.length)
 
-    let [swiperIndex, setSwiperIndex] = useState(1)
+    let [Index, setIndex] = useState(1)
   
-    let [carouselProgress, setCarouselProgress] = useState(5)
+    let [carouselProgress, setCarouselProgress] = useState(15)
   
+
+
+
+    
     useEffect(() => {
   
       let screenWidth = window.innerWidth
       if(screenWidth >= 1138){
-        setCarouselProgress(((swiperIndex + 3) / roomsCount) * 100)
+        setCarouselProgress(((Index + 3) / roomsCount) * 100)
       }
-    }, [swiperIndex, roomsCount])
+    }, [Index, roomsCount])
 
 
-
-
+console.log(roomsCount)
+console.log(carouselProgress)
+console.log(Index)
   return (
     <>
  <section className={clsx("relative overflow-hidden pt-20 lg:pt-[120px] pb-10 lg:pb-20 h-full  border-b  border-slate-200/80",  theme==='dark' ? "bg-[#1D1E30]" :"bg-[#F3F4F6]")} >
@@ -106,13 +111,13 @@ const Card = () => {
     <h2 className="font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
     Our Beautiful Rooms
     </h2>
-    <div className="mt-10 hidden h-[7px] w-full rounded-full bg-slate-200 lg:mt-16 lg:block">
-      <div
-        className="h-full rounded-full bg-slate-900 duration-200"
-        style={{ width: `${carouselProgress}%` }}
-      ></div>
-    </div>
-  </div>
+    <div className="mt-10 hidden h-[10px] w-full rounded-full bg-gray-300 lg:mt-16 lg:block">
+              <div
+                className="h-full rounded-full bg-gray-500 duration-200"
+                style={{ width: `${carouselProgress}%` }}
+              ></div>
+            </div>
+          </div> 
   <div className="lg:ml-auto lg:max-w-sm">
 
     <div className="mt-14 flex gap-2.5 lg:mt-12">
@@ -161,7 +166,7 @@ const Card = () => {
     loop={false}
     centeredSlides={false}
     initialSlide={0}
-    onSlideChange={(swiper) => setSwiperIndex(swiper.activeIndex)}
+    onSlideChange={(swiper) => setIndex(swiper.activeIndex)}
     className="!overflow-visible"
   >
 
@@ -238,7 +243,7 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Rooms;
 
 
      

@@ -162,12 +162,12 @@ theme==='light'? (
   src={logo}
   alt=""
   width={80} height={80} 
-  className="h-18 w-auto sm:h-18  lg:h-20 dark:hidden"
+  className="h-18 w-auto sm:h-16  lg:h-16 dark:hidden"
 />):( <Image
                 src={colorLogo}
                 alt=""
                 width={80} height={80} 
-                className="h-18 w-auto sm:h-18  lg:h-20 dark:hidden"
+                className="h-18 w-auto sm:h-16  lg:h-16 dark:hidden"
               />)               
               }
              
