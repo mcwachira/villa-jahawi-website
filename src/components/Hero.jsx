@@ -18,13 +18,15 @@ const Hero = () => {
   <div
     className="relative mx-auto max-w-screen-xl  px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
   >
-    <div className="max-w-lg text-center ltr:sm:text-left rtl:sm:text-right">
+
+    {/* sm:max-w-lg */}
+    <div className="w-full  text-center ltr:sm:text-left rtl:sm:text-right">
     <h1 className={`${dancingScript.className}
-     text-center font-display text-5xl font-semibold text-[#7c6a467]
+     text-center font-display text-6xl font-semibold text-[#7c6a467]
       sm:text-6xl lg:text-left my-12 text-white`}>
           Villa Jahawi
           </h1>
-      <h2 className=" my-4 text-3xl font-extrabold sm:text-5xl  lg:text-left text-white">
+      <h2 className=" my-4 text-4xl font-extrabold text-center sm:text-5xl  lg:text-left text-white">
       Every Moment feels like the first time 
 {/* 
         <strong className="block font-extrabold text-rose-700">
@@ -36,12 +38,12 @@ const Hero = () => {
       Every Moment feels like the first time Villa Jahawi
       </p> */}
 
-      <div className="mt-8 flex flex-wrap gap-4 text-center">
+      <div className="mt-8 flex flex-wrap gap-4 text-center  justify-center items-center lg:justify-start">
   
 
         <Link
           href="#"
-          className="block w-full rounded bg-[#7c6a46] my-8 px-12 py-3 text-xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+          className="block w-3/4 rounded bg-[#7c6a46] my-8 px-14 py-6  sm:px-12 sm:py-4 text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
         >
 Book Now
         </Link>

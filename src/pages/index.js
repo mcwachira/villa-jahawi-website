@@ -21,7 +21,6 @@ export default function Home({ caseStudies, articles }) {
 
 <Hero/>
 
-     {/* <Carousel images={imageData}/> */}
      <Facilities/>
      <Card/>
 
