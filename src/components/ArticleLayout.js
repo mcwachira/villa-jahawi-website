@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Header } from '@/redundant/Header'
-import { Footer } from '@/components/Footer'
+import { Footer } from '@/redundant/Footer'
 import { formatDate } from '@/lib/formatDate'
 import { LinkedInIcon, InstagramIcon, TwitterIcon } from './SocialIcons'
 import {

@@ -2,8 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import { Button } from './Button'
-import { Container } from './Container'
+import { Button } from '../components/Button'
+import { Container } from '../components/Container'
 import newsletterBg from  '/public/assets/images/newsletter-bg.png'
 import {
   DribbbleIcon,
@@ -12,48 +12,16 @@ import {
   LinkedInIcon,
   GitHubIcon,
   EmailIcon,
-} from './SocialIcons'
+} from '../components/SocialIcons'
 
 const links = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Work', href: '/work' },
+  { label: 'Work', href: '/rooms' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ]
 
-const socialLinks = [
-  {
-    label: 'Email me',
-    icon: EmailIcon,
-    href: '#',
-  },
-  {
-    label: 'Dribbble',
-    icon: DribbbleIcon,
-    href: '#',
-  },
-  {
-    label: 'Instagram',
-    icon: InstagramIcon,
-    href: '#',
-  },
-  {
-    label: 'Twitter',
-    icon: TwitterIcon,
-    href: '#',
-  },
-  {
-    label: 'LinkedIn',
-    icon: LinkedInIcon,
-    href: '#',
-  },
-  {
-    label: 'Github',
-    icon: GitHubIcon,
-    href: '#',
-  },
-]
 
 function SocialLink({ icon: Icon, label, ...props }) {
   return (

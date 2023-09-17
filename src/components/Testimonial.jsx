@@ -12,7 +12,7 @@ import { Navigation } from 'swiper/modules'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import Container from '../container/Container'
+import Container from './container/Container'
 import { useTheme } from 'next-themes'
 import { clsx } from 'clsx'
 
@@ -120,7 +120,7 @@ const testimonials = [
   },
 ]
 
-const TestimonialTwo = () => {
+const Testimonial = () => {
 
   let testimonialsCount = parseFloat(testimonials.length)
 
@@ -269,4 +269,4 @@ const TestimonialTwo = () => {
   )
 }
 
-export default TestimonialTwo
+export default Testimonial

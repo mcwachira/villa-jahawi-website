@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer/Footer'
+import Footer from '@/components/Footer'
 import NavbarTwo from '@/components/Header/NavbarTwo'
 import '../styles/globals.css'
 import { ThemeProvider } from 'next-themes'
