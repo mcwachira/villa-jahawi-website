@@ -1,6 +1,6 @@
 
 
-import Facilities from "@/components/Facilities/Facilities";
+import Facilities from "@/components/Facilities";
 import { FeaturedArticles } from "@/components/FeaturedArticles";
 
 import Hero from "@/components/Hero";

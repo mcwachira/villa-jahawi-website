@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../container/Container'
+import Container from './container/Container'
 import {FaWifi,FaParking } from 'react-icons/fa'
 import {FaPersonSwimming} from 'react-icons/fa6'
 import {MdLocalLaundryService} from 'react-icons/md'
@@ -26,11 +26,11 @@ const Facilities = () => {
 <p className='text-center text-2xl'>
   We offer modern villa facilities for your comfort
 </p>
-<div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 my-20 mb-5 '>
+<div className='py-2 grid aut-cols-max auto-rows-max justify-center md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8 my-12 '>
 
 
 
-<div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-8", theme==='dark'?" bg-[#fafafa]"
+<div className={clsx("flex flex-col items-center justify-center   px-16 py-16", theme==='dark'?" bg-[#fafafa]"
           :"bg-[#e5dada]")}>
 
 
@@ -46,7 +46,7 @@ const Facilities = () => {
       
           </div>
 
-          <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+          <div className={clsx("flex flex-col items-center justify-center   px-16 py-16", theme==='dark'?" bg-[#fafafa]"
           :"bg-[#e5dada]")}>
 
 
@@ -61,7 +61,7 @@ const Facilities = () => {
 
   </div>
 
-    <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+  <div className={clsx("flex flex-col items-center justify-center   px-16 py-16", theme==='dark'?" bg-[#fafafa]"
           :"bg-[#e5dada]")}>
 
 
@@ -81,11 +81,10 @@ const Facilities = () => {
 
 </div>
 
-<div className='py-2 grid aut-cols-max auto-rows-max  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-4 my-10 '>
+<div className='py-2 grid aut-cols-max auto-rows-max justify-center  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8 my-12 '>
 
 
-
-  <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+<div className={clsx("flex flex-col items-center justify-center   px-16 py-16", theme==='dark'?" bg-[#fafafa]"
           :"bg-[#e5dada]")}>
 
 
@@ -101,7 +100,7 @@ const Facilities = () => {
       
           </div>
 
-            <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+          <div className={clsx("flex flex-col items-center justify-center   px-16 py-16", theme==='dark'?" bg-[#fafafa]"
           :"bg-[#e5dada]")}>
 
 
@@ -117,7 +116,7 @@ const Facilities = () => {
 
   </div>
 
-    <div className={clsx("flex flex-col items-center justify-center w-3/4 px-16 py-16", theme==='dark'?" bg-[#fafafa]"
+  <div className={clsx("flex flex-col items-center justify-center   px-16 py-16", theme==='dark'?" bg-[#fafafa]"
           :"bg-[#e5dada]")}>
 
 
