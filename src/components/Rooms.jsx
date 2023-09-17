@@ -97,9 +97,6 @@ const Rooms = () => {
     }, [Index, roomsCount])
 
 
-console.log(roomsCount)
-console.log(carouselProgress)
-console.log(Index)
   return (
     <>
  <section className={clsx("relative overflow-hidden pt-20 lg:pt-[120px] pb-10 lg:pb-20 h-full  border-b  border-slate-200/80",  theme==='dark' ? "bg-[#1D1E30]" :"bg-[#F3F4F6]")} >
