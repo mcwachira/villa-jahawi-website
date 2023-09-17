@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import clsx from 'clsx'
 import { Menu, Popover, Transition, Disclosure } from '@headlessui/react'
 import logo from '@/images/logos/png/Black-logo-no-background.png'
+import colorLogo from '@/images/logos/png/Color-logo-with-background.png'
 import MenuIcon from './MenuIcon'
 import Container from '../container/Container'
 import Button from '../Button/Button'
@@ -57,25 +58,25 @@ const router = useRouter()
       <span className="relative h-3.5 w-4 transform transition duration-500 ease-in-out">
         <span
           className={clsx(
-            'absolute block h-0.5 rotate-0 transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
+            'absolute block h-0.5 rotate-0 transform rounded-full', theme==='dark'?"bg-white": "bg-dark",'opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
             open ? 'top-1.5 left-1/2 w-0' : 'top-0 left-0 w-full'
           )}
         />
         <span
           className={clsx(
-            'absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
+            'absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full', theme==='dark'?"bg-white": "bg-dark",'opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
             open ? 'rotate-45' : 'rotate-0'
           )}
         />
         <span
           className={clsx(
-            'absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
+            'absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full', theme==='dark'?"bg-white": "bg-dark",'opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
             open ? '-rotate-45' : 'rotate-0'
           )}
         />
         <span
           className={clsx(
-            'absolute block h-0.5 rotate-0 transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
+            'absolute block h-0.5 rotate-0 transform rounded-full', theme==='dark'?"bg-white": "bg-dark",'opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
             open ? 'top-1.5 left-1/2 w-0' : 'left-0 top-3 w-full'
           )}
         />
@@ -153,18 +154,24 @@ const router = useRouter()
               aria-label="Home"
               className="flex flex-shrink-0 items-center"
             >
-              <Image
-                src={logo}
+
+              {
+
+theme==='light'? ( 
+<Image
+  src={logo}
+  alt=""
+  width={80} height={80} 
+  className="h-18 w-auto sm:h-18  lg:h-20 dark:hidden"
+/>):( <Image
+                src={colorLogo}
                 alt=""
-                width={200} height={200} 
-                className="h-12 w-auto sm:h-12 md:hidden lg:block lg:h-20 dark:hidden"
-              />
-              {/* <Image
-                src='/logo/png/white.png'
-                alt=""
-                width={50} height={50} 
-                className="h-8 w-auto sm:h-9 md:hidden lg:hidden lg:h-10 dark:block"
-              /> */}
+                width={80} height={80} 
+                className="h-18 w-auto sm:h-18  lg:h-20 dark:hidden"
+              />)               
+              }
+             
+        
             </Link>
           </div>
           <div className="hidden items-center md:flex md:space-x-6 lg:space-x-8">
