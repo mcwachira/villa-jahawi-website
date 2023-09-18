@@ -156,21 +156,13 @@ const router = useRouter()
               className="flex flex-shrink-0 items-center"
             >
 
-              {
-
-theme==='light'? ( 
-<Image
-  src={logo}
-  alt=""
-  width={80} height={80} 
-  className="h-18 w-auto sm:h-16  lg:h-16 dark:hidden"
-/>):( <Image
+    ( <Image
                 src={colorLogo}
                 alt=""
-                width={80} height={80} 
+                width={60} height={60} 
                 className="h-18 w-auto sm:h-16  lg:h-16 dark:hidden"
               />)               
-              }
+              
              
         
             </Link>
