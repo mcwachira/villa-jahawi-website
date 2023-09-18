@@ -5,12 +5,11 @@ const About = () => {
     <>
   
     <section className="mb-40">
-  
+
   {/* <!-- Jumbotron --> */}
   <div className="relative overflow-hidden bg-cover bg-no-repeat" style={{
         backgroundPosition: '50%',
-        backgroundColor:'black',
-        backgroundImage:" url('/assets/images/banner-3.png')",
+        background:" url('/assets/images/banner-3.png')",
         height: '800px'
   }}>
     <div

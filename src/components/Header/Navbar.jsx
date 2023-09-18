@@ -24,7 +24,7 @@ const links = [
     },
    
     {
-        label:"Blog" , href:'/blog'
+        label:"Blog" , href:'/articles'
     },
     {
         label:"Contact" , href:'/contact'
@@ -156,12 +156,12 @@ const router = useRouter()
               className="flex flex-shrink-0 items-center"
             >
 
-    ( <Image
+     <Image
                 src={colorLogo}
                 alt=""
                 width={60} height={60} 
-                className="h-18 w-auto sm:h-16  lg:h-16 dark:hidden"
-              />)               
+                className="h-18 w-auto sm:h-16  lg:h-16"
+              />           
               
              
         

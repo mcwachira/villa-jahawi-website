@@ -10,10 +10,15 @@ import {BsPeopleFill} from 'react-icons/bs'
 
 import { accommodationData } from "@/data/accommodationData";
 import SingleAccommodation from '@/components/accommodation/SingleAccommodation'
+import clsx from 'clsx'
+import { useTheme } from 'next-themes'
 
 const Rooms = ({rooms}) => {
-  return (
-  <>
+
+
+
+  const {theme, setTheme} = useTheme();  return (
+  <div className={clsx(theme==='dark'? 'bg-[#1D1E30]': 'bg-white')}>
   
   <section className="mb-40">
 
@@ -72,7 +77,7 @@ The sunny costal climate
 
 
   
-  </>
+  </div>
   )
 }
 

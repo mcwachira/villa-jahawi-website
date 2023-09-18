@@ -9,13 +9,14 @@ import {
 } from './CategoryIcons'
 
 const iconOptions = {
-  'Web Development': WebDevelopmentIcon,
+  'Traveling': WebDevelopmentIcon,
   Business: BusinessIcon,
-  'Content Creation': ContentCreationIcon,
-  Tutorials: TutorialIcon,
+  'Villa': ContentCreationIcon,
+  'Diani': TutorialIcon,
 }
 
 export function Article({ article }) {
+  console.log(article)
   const categorySlug = article.category.replace(/ /g, '-').toLowerCase()
   const CategoryIcon = iconOptions[article.category]
 

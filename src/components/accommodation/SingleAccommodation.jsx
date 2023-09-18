@@ -4,9 +4,12 @@ import React from 'react'
 import { BsPeopleFill } from 'react-icons/bs'
 import { Container } from '../Container'
 import {motion} from 'framer-motion'
+import clsx from 'clsx'
+import { useTheme } from 'next-themes'
 
 const SingleAccommodation = ({room}) => {
 
+  const {theme, setTheme} = useTheme();
     console.log(room)
   return (
 
@@ -24,7 +27,8 @@ const SingleAccommodation = ({room}) => {
 
 
 
-<div className="pb-20 w-full grid  md:grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 " id="#section1">
+
+<div className={clsx('pb-20 w-full grid  md:grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 ',theme==='dark'? 'bg-[#1D1E30]': 'bg-white')} id="#section1">
 
 
 

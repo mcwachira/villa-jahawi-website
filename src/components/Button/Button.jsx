@@ -22,7 +22,7 @@ const variantStyles ={
 const Button = ({variant='primary' ,className, href, ...props}) => {
 
     className = clsx(
-        'inline-flex items-center rounded-full gap-2.5 justify-center px:5 py-2 sm:px-7 sm:py-3 text-md font-semibold leading-none outline-offset-2 transition-all duration-200 ease-in-out active:transition-none',
+        'inline-flex items-center rounded-full gap-2.5 justify-center px-7 py-3 text-md font-semibold leading-none outline-offset-2 transition-all duration-200 ease-in-out active:transition-none',
         variantStyles[`${variant}ClassName`],
         className
       )
