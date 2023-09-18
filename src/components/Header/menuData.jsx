@@ -8,8 +8,8 @@ const menuData= [
   },
   {
     id: 2,
-    title: "Explore",
-    path: "/explore",
+    title: "Facilities",
+    path: "/facilities",
     newTab: false,
   },
   {
@@ -18,12 +18,7 @@ const menuData= [
     path: "/rooms",
     newTab: false,
   },
-  {
-    id: 4,
-    title: "About",
-    path: "/about",
-    newTab: false,
-  },
+ 
   {
     id: 5,
     title: "Blog",

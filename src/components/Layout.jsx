@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '@/components/Header/Navbar'
+import Navbar from '@/redundant/Navbar'
 import Footer from '@/components/Footer'
-import NavbarTwo from '@/components/Header/NavbarTwo'
+import NavbarTwo from '@/components/Header/Navbar'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 const Layout = ({children , ...customMeta}) => {

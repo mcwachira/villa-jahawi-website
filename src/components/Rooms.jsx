@@ -19,6 +19,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import Container from "./container/Container";
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 
 const Rooms = () => {
 
@@ -176,7 +177,7 @@ const Rooms = () => {
         >
             
             
-                <div key={roomIndex} className="  h-full w-full rounded-xl p-6  overflow-hidden shadow-lg hover:shadow-xl bg-white ">
+                <div key={roomIndex} className="  h-full w-ful rounded-xl p-6  overflow-hidden shadow-lg hover:shadow-xl bg-white ">
       <Image   className="h-72 w-full rounded-md object-cover bg-slate-100 transition duration-300 group-hover:scale-105"
         src={room.imageSrc}
              width={400}
@@ -216,12 +217,19 @@ const Rooms = () => {
       </div>
       
     </div>
-    <div className="my-12 flex justify-between items-center">
+    <div className=" my-16 flex justify-between items-center space-x-12g
+    ">
+<Link href="#_" class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#7c6a46]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group">
+<span class="w-48 h-48 rounded rotate-[-40deg] bg-[#7c6a46] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+<span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">Explore</span>
+</Link>
 
-        <button   className="ease-in-up  rounded-md bg-[#7c6a46] py-3 px-8 text-xl font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9">
-            Book Now 
-        </button>
-        <p className="text-3xl font-extrabold text-black">$300</p>
+
+
+<Link href="#_" class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#7c6a46]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group">
+<span class="w-48 h-48 rounded rotate-[-40deg] bg-[#7c6a46] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+<span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">Book Now</span>
+</Link>
     </div>
   </div>
       </div>
