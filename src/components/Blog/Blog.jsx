@@ -1,4 +1,6 @@
 
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Blog = () => {
@@ -57,7 +59,7 @@ const BlogCard = ({ image, date, CardTitle, CardDescription }) => {
       <div className="w-full px-4 md:w-1/2 lg:w-1/3">
         <div className="mx-auto mb-10 max-w-[370px]">
           <div className="mb-8 overflow-hidden rounded">
-            <img src={image} alt="" className="w-full" />
+            <Image src={image} alt="" className="w-full" width={500} height={500}/>
           </div>
           <div>
             {date && (
@@ -66,12 +68,12 @@ const BlogCard = ({ image, date, CardTitle, CardDescription }) => {
               </span>
             )}
             <h3>
-              <a
+              <Link
                 href="/#"
                 className="inline-block mb-4 text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
               >
                 {CardTitle}
-              </a>
+              </Link>
             </h3>
             <p className="text-base text-body-color">{CardDescription}</p>
           </div>
