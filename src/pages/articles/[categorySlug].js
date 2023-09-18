@@ -1,11 +1,13 @@
 import Head from 'next/head'
 
-import { Header } from '@/redundant/Header'
+
 import { BlogHero } from '@/components/BlogHero'
 import { Articles } from '@/components/Articles'
-import { Footer } from '@/redundant/Footer'
+
 
 import { getArticlesInCategory, getAllCategories } from '@/lib/articles'
+import Navbar from '@/components/Header/Navbar'
+import Footer from '@/components/Footer'
 
 export default function ArticlesIndex({ articles, categories, category }) {
   return (
@@ -17,7 +19,7 @@ export default function ArticlesIndex({ articles, categories, category }) {
           content="Explore a diverse range of blog posts covering web development, design, content creation, business, programming tutorials, and more."
         />
       </Head>
-      <Header />
+      <Navbar />
       <BlogHero />
       <Articles articles={articles} categories={categories} />
       <Footer newsletter={false} />

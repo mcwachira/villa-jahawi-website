@@ -2,8 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Header } from '@/redundant/Header'
-import { Footer } from '@/redundant/Footer'
+
 import { formatDate } from '@/lib/formatDate'
 import { LinkedInIcon, InstagramIcon, TwitterIcon } from './SocialIcons'
 import {
@@ -12,6 +11,8 @@ import {
   BusinessIcon,
   ContentCreationIcon,
 } from './CategoryIcons'
+import Navbar from './Header/Navbar'
+import Footer from './Footer'
 
 const iconOptions = {
   'Web Development': WebDevelopmentIcon,
@@ -41,7 +42,7 @@ export function ArticleLayout({ meta, children }) {
         <title>{`${meta.title} - Jane Doe`}</title>
         <meta name="description" content={meta.description} />
       </Head>
-      <Header />
+      <Navbar />
       <main>
         <article>
           {/* Article Header */}
