@@ -13,10 +13,11 @@ import {MdOutlineBedroomParent} from 'react-icons/md'
 import {GiBathtub} from 'react-icons/gi'
 
 // Import Swiper
-import { Navigation } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import 'swiper/css/autoplay'
 import Container from "./container/Container";
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
@@ -109,59 +110,24 @@ const Rooms = () => {
     <h2 className="font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
     Our Beautiful Rooms
     </h2>
-    <div className="mt-10 hidden h-[10px] w-full rounded-full bg-gray-300 lg:mt-16 lg:block">
-              <div
-                className="h-full rounded-full bg-gray-500 duration-200"
-                style={{ width: `${carouselProgress}%` }}
-              ></div>
-            </div>
-          </div> 
-  <div className="lg:ml-auto lg:max-w-sm">
-
-    <div className="mt-14 flex gap-2.5 lg:mt-12">
-      <button className="carousel-prev inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="h-6 w-6 text-sky-700/70"
-        >
-          <path
-            fillRule="evenodd"
-            d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
-      <button className="carousel-next inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="h-6 w-6 text-sky-700/70"
-        >
-          <path
-            fillRule="evenodd"
-            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
+   </div>
 </div>
 </Container>
 
 <div className="relative mt-8 lg:mt-24">
 <Container className="relative">
   <Swiper
-    modules={[Navigation]}
+    modules={[Navigation, Autoplay]}
     navigation={{ nextEl: '.carousel-next', prevEl: '.carousel-prev' }}
     scrollbar={{ draggable: true }}
+    autoplay={{
+      delay: 2500,
+
+    }}
+    loop={true}
     spaceBetween={0}
     slidesPerView="auto"
     grabCursor={true}
-    loop={false}
     centeredSlides={false}
     initialSlide={0}
     onSlideChange={(swiper) => setIndex(swiper.activeIndex)}

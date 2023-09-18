@@ -22,6 +22,7 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx'],
   reactStrictMode: true,
   images: {
+
     remotePatterns: [
       {
         protocol: 'https',
