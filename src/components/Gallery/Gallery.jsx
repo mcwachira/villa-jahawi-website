@@ -15,11 +15,11 @@ const Gallery = ({images}) => {
         >
             <Masonry>
                 {images.map((image, i) => (
-                    <img
+                    <Image
                         key={i}
                         src={image}
                        
-
+                        
                         style={{width: "80%", display: "block"}}
                         alt=""
                     />
