@@ -5,6 +5,7 @@ export const accommodationData= [
 		id: 1,
 		title: '3 bedroom',
 		url:"contemporary",
+		image:'/assets/images/room-1.png',
         subTitle:'Contemporary Swahili furnishing',
         description:'Lamu style carved door features a fountain against a triple height coral clad wall with decorative grille panel bringing light & ventilation into the whole villa.',
 		numberOfPeople:6,
@@ -30,8 +31,9 @@ export const accommodationData= [
 
 	},	{
 		id: 2,
-		title: '3 bedroom',
+		title: '5 bedroom',
 		url:"contemporary",
+		image:'/assets/images/room-2.png',
         subTitle:'Contemporary Swahili furnishing',
         description:'Lamu style carved door features a fountain against a triple height coral clad wall with decorative grille panel bringing light & ventilation into the whole villa.',
 		numberOfPeople:6,
@@ -56,9 +58,10 @@ export const accommodationData= [
 	}
 	,	{
 		id: 3,
-		title: '3 bedroom',
+		title: '2 bedroom',
 		url:"contemporary",
         subTitle:'Contemporary Swahili furnishing',
+		image:'/assets/images/room-3.png',
         description:'Lamu style carved door features a fountain against a triple height coral clad wall with decorative grille panel bringing light & ventilation into the whole villa.',
 		numberOfPeople:6,
 		AccommodationImages: [
@@ -82,8 +85,9 @@ export const accommodationData= [
 	}
 	,	{
 		id: 4,
-		title: '3 bedroom',
+		title: '1 bedroom',
 		url:"contemporary",
+		image:'/assets/images/room-4.png',
         subTitle:'Contemporary Swahili furnishing',
         description:'Lamu style carved door features a fountain against a triple height coral clad wall with decorative grille panel bringing light & ventilation into the whole villa.',
 		numberOfPeople:6,

@@ -39,7 +39,7 @@ const SingleAccommodation = ({room}) => {
 <Container>
     <div className='flex flex-col'>
     
-                <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 text-3xl text-left capitalize font-semibold  "> 3 Bedroom </h2>
+                <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 text-3xl text-left capitalize font-semibold  "> {room?.title}</h2>
                 
                 <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#7c6a46] text-5xl text-left capitalize font-semibold  ">Contemporary Swahili furnishing </h2>
       
