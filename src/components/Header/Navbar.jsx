@@ -186,7 +186,7 @@ const router = useRouter()
 <ThemeToggler />
           </div>
           <div className="flex items-center">
-            <Button className="bg-[#7C6A46] text-white text-xl border-white
+            <Button className="bg-[#7C6A46] text-white text-base md:text-xl border-white
             " variant="secondary" href="#">
               Book Now
             </Button>
