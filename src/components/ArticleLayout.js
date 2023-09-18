@@ -15,10 +15,10 @@ import Navbar from './Header/Navbar'
 import Footer from './Footer'
 
 const iconOptions = {
-  'Web Development': WebDevelopmentIcon,
+  Traveling:  WebDevelopmentIcon,
   Business: BusinessIcon,
-  'Content Creation': ContentCreationIcon,
-  Tutorials: TutorialIcon,
+  Villa: ContentCreationIcon,
+  Diani: TutorialIcon,
 }
 
 function SocialLink({ icon: Icon, ...props }) {
