@@ -8,7 +8,7 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import { BsPeopleFill } from "react-icons/bs";
 
 import { accommodationData } from "../../data/accommodationData";
-import SingleAccommodation from "../../components/accommodation/SingleAccommodation";
+import SingleAccommodation from "../../components/SingleAccommodation";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import Container from "../../components/container/Container";
@@ -23,7 +23,7 @@ const Rooms = ({ rooms }) => {
           className="relative overflow-hidden bg-cover bg-no-repeat"
           style={{
             backgroundPosition: "50%",
-            backgroundImage: " url('/assets/images/blog-2.png')",
+            backgroundImage: " url('/assets/images/jahawi-images/room-2.jpg')",
             height: "850px",
           }}
         >
@@ -56,7 +56,7 @@ const Rooms = ({ rooms }) => {
       </section>
 
       <Container>
-        <h2 className="text-center text-6xl py-24">Our Facilities</h2>
+        <h2 className="text-center text-6xl py-24">Our Rooms</h2>
       </Container>
 
       {rooms.map((room) => (

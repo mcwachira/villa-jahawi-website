@@ -1,34 +1,33 @@
-import SingleAccommodation from "@/components/accommodation/SingleAccommodation";
-import { accommodationData } from "@/data/accommodationData";
+import RoomFeatures from "../../components/accommodation/RoomFeatures";
+
+import { accommodationData } from "../../data/accommodationData";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 
-const AccommodationPage = (props) => {
-  const { room } = props;
-  console.log(room);
-
+const AccommodationPage = ({ room }) => {
   const { theme, setTheme } = useTheme();
+
+  console.log(room);
 
   return (
     <div className={clsx(theme === "dark" ? "bg-[#041434]" : "bg-white")}>
-      <SingleAccommodation key={room.id} room={room} />
+      <RoomFeatures key={room?.id} room={room} />
     </div>
   );
 };
 
 export default AccommodationPage;
 
-export async function getStaticProps(params) {
+export async function getStaticProps({ params }) {
   console.log(accommodationData);
 
-  const id = params.id;
   const accommodation = accommodationData.filter(
-    (accommodation) => accommodation.id.toString() === id
+    (accommodation) => accommodation.id.toString() === params.id
   );
 
   return {
     props: {
-      room: { ...accommodation },
+      room: accommodation[0],
     },
   };
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BsPeopleFill } from "react-icons/bs";
-import { Container } from "../Container";
+import { Container } from "./Container";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
@@ -35,27 +35,24 @@ const SingleAccommodation = ({ room }) => {
                 {room?.title}
               </h2>
 
-              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#7c6a46] text-5xl text-left capitalize font-semibold  ">
-                Contemporary Swahili furnishing{" "}
+              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-5xl text-left capitalize font-semibold  ">
+                {room?.subTitle}
+                subTitle
               </h2>
 
-              <p className="text-2xl my-4">
-                Lamu style carved door features a fountain against a triple
-                height coral clad wall with decorative grille panel bringing
-                light & ventilation into the whole villa.
-              </p>
+              <p className="text-2xl my-4">{room?.description}</p>
 
               <div className="flex my-14 ">
                 <div className="flex items-center">
-                  <BsPeopleFill size={60} color="#7c6a46" />
+                  <BsPeopleFill size={60} color="#4a576E" />
                   <p className="ml-2 text-2xl  font-medium text-gray-700">
-                    for upto 6 people
+                    {room?.numberOfPeople} people
                   </p>
                 </div>
               </div>
 
               <div
-                className=" w-full md:w-2/3 my-16 flex justify-between items-center space-x-1
+                className="w-full  sm:w-2/3 my-16 flex justify-between items-center space-x-12
     "
               >
                 <Link
@@ -63,9 +60,9 @@ const SingleAccommodation = ({ room }) => {
                   as={`/accommodation/${room.id}`}
                   aria-label="Single Project"
                   passHref
-                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#7c6a46]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                 >
-                  <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#7c6a46] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                  <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                   <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                     Explore
                   </span>
@@ -73,9 +70,9 @@ const SingleAccommodation = ({ room }) => {
 
                 <Link
                   href="#"
-                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#7c6a46]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                 >
-                  <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#7c6a46] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                  <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                   <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                     Inquire
                   </span>
@@ -83,9 +80,9 @@ const SingleAccommodation = ({ room }) => {
 
                 <Link
                   href="#"
-                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#7c6a46]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                 >
-                  <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#7c6a46] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                  <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                   <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                     Book{" "}
                   </span>
@@ -97,9 +94,9 @@ const SingleAccommodation = ({ room }) => {
 
         <div className="relative  mx:auto my-auto md:w-full order-first md:order-last ">
           <Image
-            src="/assets/images/blog-2.png"
+            src={room?.image}
             loading="lazy"
-            alt="Care Girl Image"
+            alt="room image"
             className="relative z-10 shadow-lg object-cover rounded-lg"
             width="916"
             height="817"
