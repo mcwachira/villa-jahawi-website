@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="mt-8 flex flex-wrap gap-4 text-center  justify-center items-center lg:justify-start">
             <Link
               href="#"
-              className="block w-3/4 rounded bg-[#7c6a46] my-8 px-14 py-6  sm:px-12 sm:py-4 text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+              className="block w-3/4 rounded bg-[#4a576E] my-8 px-14 py-6  sm:px-12 sm:py-4 text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
             >
               Book Now
             </Link>

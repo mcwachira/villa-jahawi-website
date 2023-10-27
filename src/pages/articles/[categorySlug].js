@@ -1,13 +1,11 @@
-import Head from 'next/head'
+import Head from "next/head";
 
+import { BlogHero } from "@/components/BlogHero";
+import { Articles } from "@/components/Articles";
 
-import { BlogHero } from '@/components/BlogHero'
-import { Articles } from '@/components/Articles'
-
-
-import { getArticlesInCategory, getAllCategories } from '@/lib/articles'
-import Navbar from '@/components/Header/Navbar'
-import Footer from '@/components/Footer'
+import { getArticlesInCategory, getAllCategories } from "@/lib/articles";
+import Navbar from "@/components/Header/Navbar";
+import Footer from "@/components/Footer";
 
 export default function ArticlesIndex({ articles, categories, category }) {
   return (
@@ -24,25 +22,25 @@ export default function ArticlesIndex({ articles, categories, category }) {
       <Articles articles={articles} categories={categories} />
       <Footer newsletter={false} />
     </>
-  )
+  );
 }
 
 export async function getStaticPaths() {
-  const categories = await getAllCategories()
+  const categories = await getAllCategories();
   return {
     paths: categories.map((category) => ({
-      params: { categorySlug: category.replace(/ /g, '-').toLowerCase() },
+      params: { categorySlug: category.replace(/ /g, "-").toLowerCase() },
     })),
     fallback: false,
-  }
+  };
 }
 
 export async function getStaticProps({ params: { categorySlug } }) {
   const category = categorySlug
-    .replace(/-/g, ' ')
-    .split(' ')
+    .replace(/-/g, " ")
+    .split(" ")
     .map((w) => w[0].toUpperCase() + w.substring(1).toLowerCase())
-    .join(' ')
+    .join(" ");
 
   return {
     props: {
@@ -50,5 +48,5 @@ export async function getStaticProps({ params: { categorySlug } }) {
       categories: await getAllCategories(),
       category,
     },
-  }
+  };
 }

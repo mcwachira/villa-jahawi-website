@@ -1,30 +1,40 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { formatDate } from '@/lib/formatDate'
+import Link from "next/link";
+import Image from "next/image";
+import { formatDate } from "@/lib/formatDate";
+
+import clsx from "clsx";
+import { useTheme } from "next-themes";
+
 import {
   WebDevelopmentIcon,
   TutorialIcon,
   BusinessIcon,
   ContentCreationIcon,
-} from './CategoryIcons'
+} from "./CategoryIcons";
 
 const iconOptions = {
   Traveling: WebDevelopmentIcon,
   Business: BusinessIcon,
   Villa: ContentCreationIcon,
   Diani: TutorialIcon,
-}
+};
 
 export function Article({ article }) {
-  console.log(article)
-  const categorySlug = article.category.replace(/ /g, '-').toLowerCase()
-  console.log(article.category)
-  const CategoryIcon = iconOptions[article.category]
-  console.log(CategoryIcon)
+  console.log(article);
+  const categorySlug = article.category.replace(/ /g, "-").toLowerCase();
+  console.log(article.category);
+  const CategoryIcon = iconOptions[article.category];
+  console.log(CategoryIcon);
 
+  const { theme, setTheme } = useTheme();
   return (
-    <article className="flex flex-col items-start justify-between rounded-2xl bg-slate-50 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100">
-  <div className="w-full px-4 pt-4">
+    <article
+      className={clsx(
+        "flex flex-col items-start justify-between rounded-2xl bg-slate-50 shadow-sm shadow-sky-100/50 ring-1 ",
+        theme === "dark" ? "ring-white" : "ring-slate-100"
+      )}
+    >
+      <div className="w-full px-4 pt-4">
         <Link
           href={`/articles/${article.slug}`}
           className="group aspect-h-9 aspect-w-16 relative block w-full overflow-hidden rounded-xl md:aspect-h-2 md:aspect-w-3"
@@ -35,19 +45,24 @@ export function Article({ article }) {
             fill={true}
             className="w-full rounded-xl bg-slate-100 object-cover transition duration-300 group-hover:scale-105"
           />
-          <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"></div>
+          <div
+            className={clsx(
+              "absolute inset-0 rounded-xl ring-1 ring-inset ",
+              theme === "dark" ? "ring-white" : "ring-slate-900/5"
+            )}
+          ></div>
         </Link>
-      </div> 
+      </div>
 
       <div className="group relative flex flex-1 flex-col px-5 pb-10 pt-8 xl:px-7">
         <Link
           href={`/articles/${categorySlug}`}
           className="group relative z-10 flex items-center gap-2.5 text-md  text-sky-700 transition duration-200 ease-in-out hover:text-sky-600"
         >
-      <CategoryIcon className="h-4 w-4 text-sky-600" />
+          <CategoryIcon className="h-4 w-4 text-sky-600" />
           {article.category}
         </Link>
-   <div className="flex-1">
+        <div className="flex-1">
           <h3 className="mt-4 font-display text-xl font-medium leading-normal text-slate-900 decoration-slate-400 transition duration-200 ease-in-out group-hover:text-sky-900">
             <Link href={`/articles/${article.slug}`}>
               <span className="absolute inset-0"></span>
@@ -57,7 +72,7 @@ export function Article({ article }) {
           <p className="mt-3.5 line-clamp-3 text-md leading-7 text-slate-700">
             {article.description}
           </p>
-        </div> 
+        </div>
         <div className="mt-8 flex items-center gap-3 text-sm text-slate-500">
           <span className="flex items-center gap-1.5">
             <svg
@@ -96,5 +111,5 @@ export function Article({ article }) {
         </div>
       </div>
     </article>
-  )
+  );
 }

@@ -1,9 +1,17 @@
-import { Container } from './Container'
-import { Article } from './Article'
+import { Container } from "./Container";
+import { Article } from "./Article";
+import clsx from "clsx";
+import { useTheme } from "next-themes";
 
 export function FeaturedArticles({ articles }) {
+  const { theme, setTheme } = useTheme();
   return (
-    <section className="overflow-hidden bg-white py-16 sm:pt-24 lg:pt-28">
+    <section
+      className={clsx(
+        "overflow-hidden py-16 sm:pt-24 lg:pt-28 border-b  border-slate-200/80",
+        theme === "dark" ? "bg-[#041434]" : "bg-[#F3F4F6]"
+      )}
+    >
       <Container>
         <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
           <span className="relative whitespace-nowrap">
@@ -18,8 +26,8 @@ export function FeaturedArticles({ articles }) {
               <path d="M247.564 18.5808C241.772 13.3568 232.473 12.7526 225.225 11.4427C217.124 9.97398 208.996 8.57034 200.846 7.46096C186.542 5.51305 172.169 4.08857 157.79 3.01565C126.033 0.645858 94.0929 0.0338786 62.3387 2.36982C42.1785 3.85419 22.008 5.90888 2.32917 10.8464C-0.0155171 11.4349 0.207047 14.6719 2.6889 14.7084C22.0261 14.9896 41.3866 12.6406 60.7109 11.8568C79.9471 11.0808 99.2274 10.6719 118.484 10.9558C142.604 11.3125 166.719 12.8334 190.722 15.5156C199.956 16.5469 209.195 17.6016 218.411 18.8255C227.864 20.0808 237.259 22 246.767 20.7422C247.709 20.6198 248.426 19.3568 247.564 18.5808Z" />
             </svg>
             <span className="relative text-sky-700 ">Thoughts</span>
-          </span>{' '}
-          on  Hotels, villas  and Traveling
+          </span>{" "}
+          on Hotels, villas and Traveling
         </h2>
 
         <div className="relative mx-auto mt-14 grid max-w-lg gap-8 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-6 xl:gap-x-6 xl:gap-y-8">
@@ -48,5 +56,5 @@ export function FeaturedArticles({ articles }) {
         </div>
       </Container>
     </section>
-  )
+  );
 }

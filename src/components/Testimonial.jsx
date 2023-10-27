@@ -1,148 +1,147 @@
-import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
-import avatarImage1 from '/public/assets/images/avatars/avatar-1.png'
-import avatarImage2 from '/public/assets/images/avatars/avatar-2.png'
-import avatarImage3 from '/public/assets/images/avatars/avatar-3.png'
-import avatarImage4 from '/public/assets/images/avatars/avatar-4.png'
-import avatarImage5 from '/public/assets/images/avatars/avatar-5.png'
+import avatarImage1 from "/public/assets/images/avatars/avatar-1.png";
+import avatarImage2 from "/public/assets/images/avatars/avatar-2.png";
+import avatarImage3 from "/public/assets/images/avatars/avatar-3.png";
+import avatarImage4 from "/public/assets/images/avatars/avatar-4.png";
+import avatarImage5 from "/public/assets/images/avatars/avatar-5.png";
 
 // Import Swiper
-import { Navigation } from 'swiper/modules'
+import { Navigation } from "swiper/modules";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import Container from './container/Container'
-import { useTheme } from 'next-themes'
-import { clsx } from 'clsx'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import Container from "./container/Container";
+import { useTheme } from "next-themes";
+import { clsx } from "clsx";
 
 const testimonials = [
   {
-    headline: '“Highly skilled and professional”',
+    headline: "“Highly skilled and professional”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Katy Jackson',
-      role: 'Guest',
+      name: "Katy Jackson",
+      role: "Guest",
       image: avatarImage1,
     },
   },
   {
-    headline: '“I highly recommend him”',
+    headline: "“I highly recommend him”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Sean Murphy',
-      role: 'Guest',
+      name: "Sean Murphy",
+      role: "Guest",
       image: avatarImage2,
     },
   },
   {
-    headline: '“I’m so lucky I found John!”',
+    headline: "“I’m so lucky I found John!”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Elaine Foster',
-      role: 'Guest',
+      name: "Elaine Foster",
+      role: "Guest",
       image: avatarImage3,
     },
   },
   {
-    headline: '“I’m really impressed with the quality of his work”',
+    headline: "“I’m really impressed with the quality of his work”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Jeff Bick',
-      role: 'Guest',
+      name: "Jeff Bick",
+      role: "Guest",
       image: avatarImage4,
     },
   },
   {
-    headline: '“Seriously awesome!”',
+    headline: "“Seriously awesome!”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Jason Cosmo',
-      role: 'Guest',
+      name: "Jason Cosmo",
+      role: "Guest",
       image: avatarImage5,
     },
   },
   {
-    headline: '“Highly skilled and professional”',
+    headline: "“Highly skilled and professional”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Katy Jackson',
-      role: 'Guest',
+      name: "Katy Jackson",
+      role: "Guest",
       image: avatarImage1,
     },
   },
   {
-    headline: '“I highly recommend him”',
+    headline: "“I highly recommend him”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Sean Murphy',
-      role: 'Guest',
+      name: "Sean Murphy",
+      role: "Guest",
       image: avatarImage2,
     },
   },
   {
-    headline: '“I’m so lucky I found John!”',
+    headline: "“I’m so lucky I found John!”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Elaine Foster',
-      role: 'Guest',
+      name: "Elaine Foster",
+      role: "Guest",
       image: avatarImage3,
     },
   },
   {
-    headline: '“I’m really impressed with the quality of his work”',
+    headline: "“I’m really impressed with the quality of his work”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Jeff Bick',
-      role: 'Guest',
+      name: "Jeff Bick",
+      role: "Guest",
       image: avatarImage4,
     },
   },
   {
-    headline: '“Seriously awesome!”',
+    headline: "“Seriously awesome!”",
     content:
-      'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
+      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
     author: {
-      name: 'Jason Cosmo',
-      role: 'Guest',
+      name: "Jason Cosmo",
+      role: "Guest",
       image: avatarImage5,
     },
   },
-]
-
-
+];
 
 const Testimonial = () => {
+  let testimonialsCount = parseFloat(testimonials.length);
 
-  let testimonialsCount = parseFloat(testimonials.length)
+  let [swiperIndex, setSwiperIndex] = useState(1);
 
-  let [swiperIndex, setSwiperIndex] = useState(1)
+  let [carouselProgress, setCarouselProgress] = useState(15);
 
-  let [carouselProgress, setCarouselProgress] = useState(15)
-
-  const {theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-
-    let screenWidth = window.innerWidth
-    if(screenWidth >= 1138){
-      setCarouselProgress(((swiperIndex + 3) / testimonialsCount) * 100)
+    let screenWidth = window.innerWidth;
+    if (screenWidth >= 1138) {
+      setCarouselProgress(((swiperIndex + 3) / testimonialsCount) * 100);
     }
-  }, [swiperIndex,testimonialsCount])
-
+  }, [swiperIndex, testimonialsCount]);
 
   return (
-    <section className={clsx("relative overflow-hidden 0 py-20 sm:py-24 lg:pt-32 ",theme==='dark'? 'bg-[#1D1E30]': 'bg-white')}>
+    <section
+      className={clsx(
+        "relative overflow-hidden 0 py-20 sm:py-24 lg:pt-32 border-b  border-slate-200/80 ",
+        theme === "dark" ? "bg-[#041434]" : "bg-white"
+      )}
+    >
       <Container className="relative">
         <div className="mx-auto grid max-w-xl gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
@@ -198,7 +197,7 @@ const Testimonial = () => {
         <Container className="relative">
           <Swiper
             modules={[Navigation]}
-            navigation={{ nextEl: '.carousel-next', prevEl: '.carousel-prev' }}
+            navigation={{ nextEl: ".carousel-next", prevEl: ".carousel-prev" }}
             scrollbar={{ draggable: true }}
             spaceBetween={0}
             slidesPerView="auto"
@@ -265,10 +264,9 @@ const Testimonial = () => {
             </div>
           </Swiper>
         </Container>
-        </div>
+      </div>
+    </section>
+  );
+};
 
-        </section>
-  )
-}
-
-export default Testimonial
+export default Testimonial;

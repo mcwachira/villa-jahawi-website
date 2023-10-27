@@ -1,25 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 
-
-import { formatDate } from '@/lib/formatDate'
-import { LinkedInIcon, InstagramIcon, TwitterIcon } from './SocialIcons'
+import { formatDate } from "@/lib/formatDate";
+import { LinkedInIcon, InstagramIcon, TwitterIcon } from "./SocialIcons";
 import {
   WebDevelopmentIcon,
   TutorialIcon,
   BusinessIcon,
   ContentCreationIcon,
-} from './CategoryIcons'
-import Navbar from './Header/Navbar'
-import Footer from './Footer'
+} from "./CategoryIcons";
+import Navbar from "./Header/Navbar";
+import Footer from "./Footer";
 
 const iconOptions = {
-  Traveling:  WebDevelopmentIcon,
+  Traveling: WebDevelopmentIcon,
   Business: BusinessIcon,
   Villa: ContentCreationIcon,
   Diani: TutorialIcon,
-}
+};
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
@@ -29,12 +28,12 @@ function SocialLink({ icon: Icon, ...props }) {
     >
       <Icon className="h-3.5 w-3.5 fill-slate-500 transition group-hover:fill-slate-600" />
     </Link>
-  )
+  );
 }
 
 export function ArticleLayout({ meta, children }) {
-  const categorySlug = meta.category.replace(/ /g, '-').toLowerCase()
-  const CategoryIcon = iconOptions[meta.category]
+  const categorySlug = meta.category.replace(/ /g, "-").toLowerCase();
+  const CategoryIcon = iconOptions[meta.category];
 
   return (
     <>
@@ -42,7 +41,7 @@ export function ArticleLayout({ meta, children }) {
         <title>{`${meta.title} - Jane Doe`}</title>
         <meta name="description" content={meta.description} />
       </Head>
-      <Navbar />
+
       <main>
         <article>
           {/* Article Header */}
@@ -137,13 +136,13 @@ export function ArticleLayout({ meta, children }) {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       >
-                        <rect x="2.5" y="3.5" width="10" height="12"></rect>{' '}
+                        <rect x="2.5" y="3.5" width="10" height="12"></rect>{" "}
                         <polyline
                           points="4.5,0.5 15.5,0.5 15.5,13.5 "
                           stroke="currentCOlor"
-                        ></polyline>{' '}
-                        <line x1="5.5" y1="6.5" x2="9.5" y2="6.5"></line>{' '}
-                        <line x1="5.5" y1="9.5" x2="9.5" y2="9.5"></line>{' '}
+                        ></polyline>{" "}
+                        <line x1="5.5" y1="6.5" x2="9.5" y2="6.5"></line>{" "}
+                        <line x1="5.5" y1="9.5" x2="9.5" y2="9.5"></line>{" "}
                         <line x1="5.5" y1="12.5" x2="9.5" y2="12.5"></line>
                       </g>
                     </svg>
@@ -171,7 +170,6 @@ export function ArticleLayout({ meta, children }) {
           </div>
         </article>
       </main>
-      <Footer />
     </>
-  )
+  );
 }

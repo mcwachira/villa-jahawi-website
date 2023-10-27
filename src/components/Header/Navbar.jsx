@@ -1,90 +1,99 @@
-import { Fragment, useEffect, useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { usePathname, useRouter } from 'next/navigation'
-import clsx from 'clsx'
-import { Menu, Popover, Transition, Disclosure } from '@headlessui/react'
-import logo from '@/images/logos/png/Black-logo-no-background.png'
-import colorLogo from '@/images/logos/png/Color-logo-with-background.png'
-import MenuIcon from './MenuIcon'
-import Container from '../container/Container'
-import Button from '../Button/Button'
-import ThemeToggler from './ThemeToggler'
-import { useTheme } from 'next-themes'
+import { Fragment, useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+import clsx from "clsx";
+import { Menu, Popover, Transition, Disclosure } from "@headlessui/react";
+import darkLogo from "@/images/logos/web/png/white-logo.png";
+import lightLogo from "@/images/logos/web/png/color-logo-background.png";
+import MenuIcon from "./MenuIcon";
+import Container from "../container/Container";
+import Button from "../Button/Button";
+import ThemeToggler from "./ThemeToggler";
+import { useTheme } from "next-themes";
 
 const links = [
-    {
-        label:"Home" , href:'/'
-    },
-    {
-      label:"Accommodation" , href:'/accommodation'
+  {
+    label: "Home",
+    href: "/",
   },
-    {
-        label:"Facilities" , href:'/facilities'
-    },
-   
-    {
-        label:"Blog" , href:'/articles'
-    },
-    {
-        label:"Contact" , href:'/contact'
-    }
-]
+  {
+    label: "Accommodation",
+    href: "/accommodation",
+  },
+  {
+    label: "Facilities",
+    href: "/facilities",
+  },
+
+  {
+    label: "Blog",
+    href: "/articles",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+];
 
 const Navbar = () => {
+  const { theme, setTheme } = useTheme();
+  console.log(theme);
 
-  const {theme, setTheme} = useTheme();
+  const router = useRouter();
+  const pathname = usePathname();
 
-const router = useRouter()
-    const pathname = usePathname()
+  const [sticky, setSticky] = useState(false);
 
-       const [sticky, setSticky] = useState(false)
+  const handleStickyNavbar = () => {
+    if (window.scrollY >= 80) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
 
-    const handleStickyNavbar = () => {
-        if(window.scrollY >=80){
-            setSticky(true)
-          }else{
-            setSticky(false)
-          }
-        }
-
-        
-        useEffect(() => {
-
-            window.addEventListener('scroll', handleStickyNavbar)
-        },[]
-        )
+  useEffect(() => {
+    window.addEventListener("scroll", handleStickyNavbar);
+  }, []);
   function MenuIcon({ open }) {
     return (
       <span className="relative h-3.5 w-4 transform transition duration-500 ease-in-out">
         <span
           className={clsx(
-            'absolute block h-0.5 rotate-0 transform rounded-full', theme==='dark'?"bg-white": "bg-dark",'opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
-            open ? 'top-1.5 left-1/2 w-0' : 'top-0 left-0 w-full'
+            "absolute block h-0.5 rotate-0 transform rounded-full",
+            theme === "dark" ? "bg-white" : "bg-dark",
+            "opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
+            open ? "top-1.5 left-1/2 w-0" : "top-0 left-0 w-full"
           )}
         />
         <span
           className={clsx(
-            'absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full', theme==='dark'?"bg-white": "bg-dark",'opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
-            open ? 'rotate-45' : 'rotate-0'
+            "absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full",
+            theme === "dark" ? "bg-white" : "bg-dark",
+            "opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
+            open ? "rotate-45" : "rotate-0"
           )}
         />
         <span
           className={clsx(
-            'absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full', theme==='dark'?"bg-white": "bg-dark",'opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
-            open ? '-rotate-45' : 'rotate-0'
+            "absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full",
+            theme === "dark" ? "bg-white" : "bg-dark",
+            "opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
+            open ? "-rotate-45" : "rotate-0"
           )}
         />
         <span
           className={clsx(
-            'absolute block h-0.5 rotate-0 transform rounded-full', theme==='dark'?"bg-white": "bg-dark",'opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
-            open ? 'top-1.5 left-1/2 w-0' : 'left-0 top-3 w-full'
+            "absolute block h-0.5 rotate-0 transform rounded-full",
+            theme === "dark" ? "bg-white" : "bg-dark",
+            "opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
+            open ? "top-1.5 left-1/2 w-0" : "left-0 top-3 w-full"
           )}
         />
       </span>
-    )
+    );
   }
-
 
   function MobileNav() {
     return (
@@ -118,7 +127,10 @@ const router = useRouter()
           >
             <Popover.Panel
               as="div"
-              className={clsx("absolute inset-x-0 top-full z-30 mt-4 origin-top overflow-hidden rounded-2xl bg-slate-50 px-6 py-7 shadow-xl shadow-sky-100/40 ring-1 ring-slate-900/5", theme==='dark'? 'bg-[#1D1E30]': 'bg-white')}
+              className={clsx(
+                "absolute inset-x-0 top-full z-30 mt-4 origin-top overflow-hidden rounded-2xl bg-slate-50 px-6 py-7 shadow-xl shadow-sky-100/40 ring-1 ring-slate-900/5",
+                theme === "dark" ? "bg-[#041434]" : "bg-white"
+              )}
             >
               <div>
                 <div className="flex flex-col space-y-4">
@@ -131,22 +143,28 @@ const router = useRouter()
                       {link.label}
                     </Link>
                   ))}
-<ThemeToggler />
+                  <ThemeToggler />
                 </div>
               </div>
             </Popover.Panel>
           </Transition.Child>
         </Transition.Root>
       </Popover>
-    )
+    );
   }
-
 
   // sticky ? "!fixed !z-[9999] !bg-white !bg-opacity-100 shadow-sticky backdrop-blur-sm !transition dark:!bg-[#121212] dark:!bg-opacity-20":""
   return (
-    <header className={clsx("h-24 border-b  w-full  border-slate-200/80"
-    ,sticky ? "!fixed !z-[9999] !bg-opacity-100 shadow-sticky backdrop-blur-sm":"",theme==='light'? '!bg-white':'!bg-[#1D1E30]' )}> 
-    {/* absolute */}
+    <header
+      className={clsx(
+        "h-24 border-b  w-full  border-slate-200/80",
+        sticky
+          ? "!fixed !z-[9999] !bg-opacity-100 shadow-sticky backdrop-blur-sm"
+          : "",
+        theme === "light" ? "!bg-white" : "!bg-[#041434]"
+      )}
+    >
+      {/* absolute */}
       <Container className="flex h-full w-full items-center">
         <nav className="relative z-50 flex w-full items-center justify-between">
           <div className="flex shrink-0 items-center">
@@ -155,16 +173,23 @@ const router = useRouter()
               aria-label="Home"
               className="flex flex-shrink-0 items-center"
             >
-
-     <Image
-                src={colorLogo}
-                alt=""
-                width={60} height={60} 
-                className="h-18 w-auto sm:h-16  lg:h-16"
-              />           
-              
-             
-        
+              {theme === "dark" ? (
+                <Image
+                  src={darkLogo}
+                  alt=""
+                  width={100}
+                  height={100}
+                  className="h-18 w-auto sm:h-16  lg:h-16"
+                />
+              ) : (
+                <Image
+                  src={lightLogo}
+                  alt=""
+                  width={100}
+                  height={100}
+                  className="h-18 w-auto sm:h-16  lg:h-16"
+                />
+              )}
             </Link>
           </div>
           <div className="hidden items-center md:flex md:space-x-6 lg:space-x-8">
@@ -174,20 +199,24 @@ const router = useRouter()
                 href={link?.href}
                 className={clsx(
                   'relative duration-200 text-2xl after:absolute after:left-1/2 after:-bottom-2.5 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[""]',
-                 pathname === link.href
-                    ? 'font-semibold text-slate-900 after:opacity-100'
-                    : 'font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25'
+                  pathname === link.href
+                    ? "font-semibold text-slate-900 after:opacity-100"
+                    : "font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25"
                 )}
               >
                 {link.label}
               </Link>
             ))}
 
-<ThemeToggler />
+            <ThemeToggler />
           </div>
           <div className="flex items-center">
-            <Button className="bg-[#7C6A46] text-white text-base md:text-xl border-white
-            " variant="secondary" href="#">
+            <Button
+              className="bg-[#4a576e] text-white text-base md:text-xl border-white
+            "
+              variant="secondary"
+              href="#"
+            >
               Book Now
             </Button>
             <div className="ml-4 md:hidden">
@@ -197,9 +226,7 @@ const router = useRouter()
         </nav>
       </Container>
     </header>
-  )
-}
+  );
+};
 
-
-
-export default Navbar
+export default Navbar;

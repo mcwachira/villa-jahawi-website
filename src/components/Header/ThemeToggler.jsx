@@ -1,4 +1,4 @@
-"use client "
+"use client ";
 // import { useTheme } from 'next-themes';
 // import { useEffect, useState } from 'react';
 
@@ -7,14 +7,13 @@
 //     const {theme, setTheme} = useTheme();
 //     const [mounted, setMounted] = useState(false)
 
-// //prevents hydration 
+// //prevents hydration
 // useEffect(() => {
 //   setMounted(true)
 // },[])
 // if(!mounted){
 //   return null
 // }
-
 
 //     return (
 
@@ -35,7 +34,7 @@
 //             strokeLinejoin="round"
 //             fill="white"
 //             stroke="black"
-         
+
 //           />
 //         </svg>
 //         <svg
@@ -60,14 +59,7 @@
 //     )
 // }
 
-
 // export default ThemeToggler
-
-
-
-
-
-
 
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
@@ -93,13 +85,19 @@ function ThemeToggler() {
   };
 
   return (
-    <button onClick={toggleDarkMode} className="flex items-center focus:outline-none"
+    <button
+      onClick={toggleDarkMode}
+      className="flex items-center focus:outline-none"
     >
       {isDark ? (
-        <div className="mr-2 text-4xl text-[#7c6a46]"><RiSunLine /></div>
+        <div className="mr-2 text-4xl text-[#4a576E]">
+          <RiSunLine />
+        </div>
       ) : (
         <div className="mr-2 text-4xl text-gray-700">
-          <span className="text-[#7c6a46]"><RiMoonClearLine /></span>
+          <span className="text-[#4a576E]">
+            <RiMoonClearLine />
+          </span>
         </div>
       )}
     </button>
