@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Dancing_Script } from "next/font/google";
 import { Container } from "../../components/Container";
+import clsx from "clsx";
 import "../../styles/swiper-styles.module.css";
 const dancingScript = Dancing_Script({
   weight: "700",
@@ -17,9 +18,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import { useTheme } from "next-themes";
+
 const Amenities = () => {
+  const { theme, setTheme } = useTheme();
   return (
-    <>
+    <div
+      className={clsx(
+        "h-full",
+        theme === "dark" ? "bg-[#041434]" : "bg-[#F3F4F6]"
+      )}
+    >
       <section className="relative bg-[url(/assets/images/jahawi-images/front-2.jpg)] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
@@ -146,17 +155,17 @@ const Amenities = () => {
       <div className="mt-20 space-y-6">
         <h3 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
           {" "}
-          Lounge
+          Kitchen
         </h3>
 
         <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
-          Ideal Space for relaxing
+          Ideal Space for Cooking and preparing your meals
         </h2>
 
         <p className="text-2xl text-center">
-          Whether you want to kick back and watch a movie or simply unwind, our
-          villa's lounge is the perfect retreat for relaxation and
-          entertainment.
+          The villa's kitchen is a home away from home, allowing guests to take
+          control of their dining experience and prepare their meals to their
+          liking.
         </p>
       </div>
 
@@ -187,21 +196,21 @@ const Amenities = () => {
       <div className="mt-20 space-y-6">
         <h3 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
           {" "}
-          Kitchen
+          Lounge
         </h3>
 
         <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
-          Ideal Space for Cooking and preparing your meals
+          Ideal Space for relaxing
         </h2>
 
         <p className="text-2xl text-center">
-          The villa's kitchen is a home away from home, allowing guests to take
-          control of their dining experience and prepare their meals to their
-          liking.
+          Whether you want to kick back and watch a movie or simply unwind, our
+          villa's lounge is the perfect retreat for relaxation and
+          entertainment.
         </p>
       </div>
 
-      <div className=" mt-20 mb-20">
+      <div className=" mt-20 ">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -223,7 +232,7 @@ const Amenities = () => {
           <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
