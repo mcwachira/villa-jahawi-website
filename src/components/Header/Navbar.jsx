@@ -22,8 +22,8 @@ const links = [
     href: "/accommodation",
   },
   {
-    label: "Facilities",
-    href: "/facilities",
+    label: "Amenities",
+    href: "/amenities",
   },
 
   {
