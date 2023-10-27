@@ -1,34 +1,26 @@
+import Facilities from "../components/Facilities";
+import { FeaturedArticles } from "../components/FeaturedArticles";
 
+import Hero from "../components/Hero";
 
-import Facilities from "@/components/Facilities";
-import { FeaturedArticles } from "@/components/FeaturedArticles";
+import Rooms from "../components/Rooms";
+import Testimonial from "../components/Testimonial";
 
-import Hero from "@/components/Hero";
-
-import Rooms from "@/components/Rooms";
-import Testimonial from "@/components/Testimonial";
-
-import { getAllArticles } from '@/lib/articles'
-
-
-
+import { getAllArticles } from "../lib/articles";
 
 export default function Home({ caseStudies, articles }) {
   return (
+    <main>
+      <Hero />
 
+      <Facilities />
+      <Rooms />
 
-    <main> 
-
-<Hero/>
-
-     <Facilities/>
-     <Rooms/>
-
-     <Testimonial/>
-     <FeaturedArticles articles={articles} />
-     {/* <Gallery images={galleryData}/> */}
-     {/* <Blog/> */}
-{/* 
+      <Testimonial />
+      <FeaturedArticles articles={articles} />
+      {/* <Gallery images={galleryData}/> */}
+      {/* <Blog/> */}
+      {/* 
 
 
                 <ModalVideo
@@ -39,18 +31,14 @@ export default function Home({ caseStudies, articles }) {
   video="/assets/images/video.mp4"
   videoWidth={1920}
   videoHeight={1080} /> */}
-
-
     </main>
-  )
+  );
 }
-
 
 export async function getStaticProps() {
   return {
     props: {
-
       articles: await getAllArticles(),
     },
-  }
+  };
 }

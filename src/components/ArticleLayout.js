@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import { formatDate } from "@/lib/formatDate";
+import { formatDate } from "../lib/formatDate";
 import { LinkedInIcon, InstagramIcon, TwitterIcon } from "./SocialIcons";
 import {
   WebDevelopmentIcon,

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { formatDate } from "@/lib/formatDate";
+import { formatDate } from "../lib/formatDate";
 
 import clsx from "clsx";
 import { useTheme } from "next-themes";

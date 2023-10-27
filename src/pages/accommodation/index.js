@@ -2,15 +2,16 @@ import React from "react";
 import Image from "next/image";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
-import Container from "@/components/container/Container";
+
 import Link from "next/link";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { BsPeopleFill } from "react-icons/bs";
 
-import { accommodationData } from "@/data/accommodationData";
-import SingleAccommodation from "@/components/accommodation/SingleAccommodation";
+import { accommodationData } from "../../data/accommodationData";
+import SingleAccommodation from "../../components/accommodation/SingleAccommodation";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
+import Container from "../../components/container/Container";
 
 const Rooms = ({ rooms }) => {
   const { theme, setTheme } = useTheme();

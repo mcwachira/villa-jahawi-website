@@ -1,6 +1,6 @@
-import nextMDX from '@next/mdx'
-import remarkGfm from 'remark-gfm'
-import rehypePrism from '@mapbox/rehype-prism'
+import nextMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
+import rehypePrism from "@mapbox/rehype-prism";
 
 /** @type {import('next').NextConfig} */
 
@@ -15,22 +15,21 @@ const withMDX = nextMDX({
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
-})
+});
 
 const nextConfig = {
   // Configure pageExtensions to include md and mdx
-  pageExtensions: ['js', 'jsx', 'mdx'],
+  pageExtensions: ["js", "jsx", "mdx"],
   reactStrictMode: true,
   images: {
-
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
       },
     ],
   },
-}
+};
 
-export default withMDX(nextConfig)
+export default withMDX(nextConfig);

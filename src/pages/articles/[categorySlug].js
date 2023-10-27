@@ -1,11 +1,11 @@
 import Head from "next/head";
 
-import { BlogHero } from "@/components/BlogHero";
-import { Articles } from "@/components/Articles";
+import { BlogHero } from "../../components/BlogHero";
+import { Articles } from "../../components/Articles";
 
-import { getArticlesInCategory, getAllCategories } from "@/lib/articles";
-import Navbar from "@/components/Header/Navbar";
-import Footer from "@/components/Footer";
+import { getArticlesInCategory, getAllCategories } from "../../lib/articles";
+import Navbar from "../../components/Header/Navbar";
+import Footer from "../../components/Footer";
 
 export default function ArticlesIndex({ articles, categories, category }) {
   return (

@@ -3,8 +3,8 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container/Container";
 import clsx from "clsx";
-import darkLogo from "@/images/logos/web/png/white-logo.png";
-import lightLogo from "@/images/logos/web/png/color-logo-background.png";
+import darkLogo from "../images/logos/web/png/white-logo.png";
+import lightLogo from "../images/logos/web/png/color-logo-background.png";
 
 import { useTheme } from "next-themes";
 import { GoLocation } from "react-icons/go";
