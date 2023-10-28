@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import { Formik, Form, Field } from "formik";
 
 const ContactSchema = Yup.object().shape({
-  name: Yup.string().max(255).required("A customer must have a name"),
+  name: Yup.string().max(255).required("You must Enter your Name"),
   email: Yup.string()
     .email("Must be a valid email")
     .max(255)

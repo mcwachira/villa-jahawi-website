@@ -13,6 +13,14 @@ const dancingScript = Dancing_Script({
   subsets: ["latin"],
 });
 
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 const RoomFeatures = ({ room }) => {
   const { theme, setTheme } = useTheme();
   console.log(room);
@@ -74,13 +82,13 @@ const RoomFeatures = ({ room }) => {
       >
         <div className="mt-20  w-full">
           <Container>
-            <div className="flex flex-col">
-              <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
+            <div className="flex flex-col items-center">
+              <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2  text-gray-500 capitalize font-semibold  ">
                 {" "}
                 {room?.title}
               </h2>
 
-              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+              <h2 className="relative text-center overflow-visible w-auto mt-0 mr-auto mb-0 pr-2  text-[#4a576E] text-6xl capitalize font-semibold  ">
                 {room?.subTitle}
               </h2>
 
@@ -96,7 +104,7 @@ const RoomFeatures = ({ room }) => {
               </div>
 
               <div
-                className="w-full  sm:w-2/3 my-16 flex justify-between items-center space-x-12
+                className="w-2/3  my-16 flex justify-between items-center space-x-8
       "
               >
                 <Link
@@ -104,27 +112,27 @@ const RoomFeatures = ({ room }) => {
                   as={`/accommodation/${room.id}`}
                   aria-label="Single Project"
                   passHref
-                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  class="relative rounded-md  inline-flex items-center justify-start py-4 px-8 text-4xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                 >
                   <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                   <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                    Explore
+                    Virtual Tour
                   </span>
                 </Link>
 
                 <Link
                   href="#"
-                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  class="relative rounded-md  inline-flex items-center justify-start py-4 px-8 text-4xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                 >
                   <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                   <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                    Inquire
+                    Enquire
                   </span>
                 </Link>
 
                 <Link
                   href="#"
-                  class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  class="relative rounded-md  inline-flex items-center justify-start py-4 px-8 text-4xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                 >
                   <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                   <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
@@ -135,17 +143,28 @@ const RoomFeatures = ({ room }) => {
             </div>
           </Container>
         </div>
-
-        {/* <div className="relative  mx:auto my-auto md:w-full order-first md:order-last ">
-          <Image
-            src={room?.image}
-            loading="lazy"
-            alt="room image"
-            className="relative z-10 shadow-lg object-cover rounded-lg"
-            width="916"
-            height="817"
-          />
-        </div> */}
+        <div className=" mt-20 ">
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 5500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Navigation]}
+            className="mySwiper h-[64rem] w-screen "
+          >
+            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/drone-photos/1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </motion.div>
   );
