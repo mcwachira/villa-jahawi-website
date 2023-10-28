@@ -1,20 +1,20 @@
-'use client'
+"use client";
 
-import React,{useMemo} from 'react'
-import dynamic from 'next/dynamic'
+import React, { useMemo } from "react";
+import dynamic from "next/dynamic";
 
+const Location = () => {
+  const Map = useMemo(
+    () =>
+      dynamic(async () => import("./Map"), {
+        loading: () => <p>Map i loading ...</p>,
 
-const Location =() => {
-    
-    const Map = useMemo(() => dynamic(() => import('./Map'), { 
-        loading: ()=> <p>Map i loading ...</p>,
-        
-        ssr: false
-     }), [])
-    
-    return <Map/>
+        ssr: false,
+      }),
+    []
+  );
 
-}
-   
+  return <Map />;
+};
 
-export default Location
+export default Location;
