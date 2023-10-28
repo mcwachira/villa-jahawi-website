@@ -20,6 +20,7 @@ import "swiper/css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Rooms from "../../pages/accommodation";
 
 const RoomFeatures = ({ room }) => {
   const { theme, setTheme } = useTheme();
@@ -158,6 +159,11 @@ const RoomFeatures = ({ room }) => {
             modules={[Autoplay, Navigation]}
             className="mySwiper h-[64rem] w-screen "
           >
+            {/* <section
+          className={clsx("relative bg-cover bg-center bg-no-repeat")}
+          style={{ backgroundImage: `url(${room?.image})` }}
+        > */}
+
             <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/drone-photos/1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
             <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
             <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
@@ -166,6 +172,16 @@ const RoomFeatures = ({ room }) => {
           </Swiper>
         </div>
       </div>
+
+      <Container>
+        <div className="flex flex-col items-center">
+          <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2  text-gray-500 capitalize font-semibold  ">
+            OTHER ACCOMMODATION
+          </h2>
+        </div>
+
+        {/* <Rooms /> */}
+      </Container>
     </motion.div>
   );
 };

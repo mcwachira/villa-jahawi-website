@@ -115,22 +115,6 @@ export const accommodationData = [
         title: "room-3",
         img: "/assets/images/jahawi-images/room-3/4.jpg",
       },
-      {
-        title: "room-3",
-        img: "/assets/images/jahawi-images/room-3/5.jpg",
-      },
-      {
-        title: "room-3",
-        img: "/assets/images/jahawi-images/room-3/6.jpg",
-      },
-      {
-        title: "room-3",
-        img: "/assets/images/jahawi-images/room-3/7.jpg",
-      },
-      {
-        title: "room-3",
-        img: "/assets/images/jahawi-images/room-3/8.jpg",
-      },
     ],
   },
   {
@@ -158,22 +142,6 @@ export const accommodationData = [
       {
         title: "room-4",
         img: "/assets/images/jahawi-images/room-4/4.jpg",
-      },
-      {
-        title: "room-4",
-        img: "/assets/images/jahawi-images/room-4/5.jpg",
-      },
-      {
-        title: "room-4",
-        img: "/assets/images/jahawi-images/room-4/6.jpg",
-      },
-      {
-        title: "room-4",
-        img: "/assets/images/jahawi-images/room-4/7.jpg",
-      },
-      {
-        title: "room-4",
-        img: "/assets/images/jahawi-images/room-4/8.jpg",
       },
     ],
   },
