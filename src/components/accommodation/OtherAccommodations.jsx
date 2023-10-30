@@ -76,7 +76,7 @@ const OtherAccommodations = () => {
   }, [Index, roomsCount]);
 
   return (
-    <div className="relative mt-8 lg:mt-24">
+    <div className="relative mt-8 lg:mt-24 ">
       <Container className="relative">
         <Swiper
           modules={[Navigation, Autoplay]}
@@ -103,7 +103,7 @@ const OtherAccommodations = () => {
               className=" bg-cover bg-center bg-no-repeat  swiper-slide w-full overflow-hidden"
               style={{ backgroundImage: `url(${room.imageSrc.src})` }}
             >
-              <div className="w-3/4 ml-12  flex flex-col my-8 justify-between absolute items-start   bottom-0">
+              <div className="w-full ml-12  flex flex-col my-8 justify-between absolute items-start overflow-hidden  bottom-0">
                 <p className="text-4xl text-white">{room.description}</p>
 
                 <div className="w-1/2  space-x-4  flex  my-8 justify-between items-center">
@@ -112,7 +112,7 @@ const OtherAccommodations = () => {
                     as={`/accommodation/${room.id}`}
                     aria-label="Single Project"
                     passHref
-                    class="relative rounded-md  inline-flex items-center justify-start py-8 px-14 text-3xl border-4 border-[#fff]  text-white overflow-hidden transition-all  bg-transparent  hover:bg-[#4a576E] group"
+                    class="relative rounded-md  inline-flex items-center justify-start py-6 px-14 text-3xl border-4 border-[#fff]  text-white overflow-hidden transition-all  bg-transparent  hover:bg-[#4a576E] group"
                   >
                     <span class="w-48 h-48 rounded rotate-[-40deg] bg-transparent absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span class="relative w-full text-4xl text-center text-white transition-colors duration-300 ease-in-out group-hover:text-white">
@@ -122,7 +122,7 @@ const OtherAccommodations = () => {
 
                   <Link
                     href="#"
-                    class="relative rounded-md  inline-flex items-center justify-start py-8 px-14 text-3xl border-4 border-[#fff]  text-white overflow-hidden transition-all  bg-transparent  hover:bg-[#4a576E] group"
+                    class="relative rounded-md  inline-flex items-center justify-start py-6 px-14 text-3xl border-4 border-[#fff]  text-white overflow-hidden transition-all  bg-transparent  hover:bg-[#4a576E] group"
                   >
                     <span class="w-48 h-48 rounded rotate-[-40deg] bg-transparent absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span class="relative w-full text-4xl text-center text-white transition-colors duration-300 ease-in-out group-hover:text-white">
@@ -132,7 +132,7 @@ const OtherAccommodations = () => {
 
                   <Link
                     href="#"
-                    class="relative rounded-md  inline-flex items-center justify-start py-8 px-14 text-3xl border-4 border-[#fff]  text-white overflow-hidden transition-all  bg-transparent  hover:bg-[#4a576E] group"
+                    class="relative rounded-md  inline-flex items-center justify-start py-6 px-14 text-3xl border-4 border-[#fff]  text-white overflow-hidden transition-all  bg-transparent  hover:bg-[#4a576E] group"
                   >
                     <span class="w-48 h-48 rounded rotate-[-40deg] bg-transparent absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span class="relative w-full text-4xl text-center text-white transition-colors duration-300 ease-in-out group-hover:text-white">

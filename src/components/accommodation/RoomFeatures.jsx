@@ -212,24 +212,19 @@ const RoomFeatures = ({ room }) => {
                 style={{ backgroundImage: `url(${roomImage.img})` }}
               ></SwiperSlide>
             ))}
-            {/* <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide> */}
           </Swiper>
           ;
         </div>
 
         <div className="mt-12">
-          <h2 className="relative text-center overflow-visible mb-0 pr-2  text-[#4a576E] text-6xl capitalize font-semibold  ">
+          <h2 className="relative text-center overflow-visible mb-0   text-[#4a576E] text-6xl capitalize font-semibold  ">
             Amenities
           </h2>
           {room.amenities.map((amenities, index) => (
-            <div
-              key={index}
-              className="w-full flex justify-between items-center"
-            >
-              {amenities}
+            <div key={index} className="w-full  ">
+              <p className="ml-10 flex flex-row text-3xl border-1 border-r-2 border-[#4a576e] ">
+                {amenities}
+              </p>
             </div>
           ))}
         </div>

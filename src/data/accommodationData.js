@@ -47,7 +47,7 @@ export const accommodationData = [
       },
     ],
     amenities: [
-      " AC",
+      "AC",
       "Mosquito Nets",
       "Ceiling Fans",
       "Free Wifi",
