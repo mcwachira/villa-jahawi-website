@@ -27,26 +27,26 @@ const Rooms = () => {
     {
       imageSrc: roomImage1,
       title: "Superior Room",
-      bedrooms: 2,
-      bathrooms: 2,
+      beds: 2,
+      bathrooms: 1,
     },
     {
       imageSrc: roomImage2,
       title: "Superior Room",
-      bedrooms: 3,
-      bathrooms: 2,
+      beds: 3,
+      bathrooms: 1,
     },
     {
       imageSrc: roomImage3,
       title: "Superior Room",
-      bedrooms: 3,
-      bathrooms: 2,
+      beds: 3,
+      bathrooms: 1,
     },
     {
       imageSrc: roomImage4,
       title: "Superior Room",
-      bedrooms: 3,
-      bathrooms: 2,
+      beds: 3,
+      bathrooms: 1,
     },
   ];
 
@@ -77,7 +77,7 @@ const Rooms = () => {
           Our Beautiful Rooms
         </h2>
 
-        <div className="py-2 grid aut-cols-max auto-rows-max justify-center md:grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-8 my-12 mx-6 ">
+        <div className="py-2 grid justify-center md:grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-8 my-12 mx-6 ">
           {roomsData.map((room, roomIndex) => (
             <div
               key={roomIndex}
@@ -87,7 +87,7 @@ const Rooms = () => {
               )}
             >
               <Image
-                className="h-72 w-full rounded-md object-cover bg-slate-100 transition duration-300 group-hover:scale-105"
+                className="h-72 w-full md:w-full rounded-md object-cover bg-slate-100 transition duration-300 group-hover:scale-105"
                 src={room.imageSrc}
                 width={400}
                 height={400}
@@ -95,7 +95,7 @@ const Rooms = () => {
               />
               <div className="px-6 py-4">
                 <div className="my-8">
-                  <h2 className="text-2xl font-bold text-gray-900">
+                  <h2 className="text-center md:text-left text-2xl font-bold text-gray-900">
                     {room.title}
                   </h2>
                   <div className="flex items-center">
@@ -118,30 +118,27 @@ const Rooms = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 justify-between">
                   <div className="flex items-center">
                     <MdOutlineBedroomParent size={40} />
-                    <p className="ml-2 text-lg  font-medium text-gray-700">
-                      {room.bedrooms} Bedrooms
+                    <p className="ml-3 text-2xl  font-medium text-gray-700">
+                      {room.beds} Beds
                     </p>
                   </div>
                   <div className="flex items-center">
                     <GiBathtub size={40} />
-                    <p className="ml-2 text-lg  font-medium text-gray-700">
-                      {room.bathrooms} Bathrooms
+                    <p className="ml-3 text-2xl   font-medium text-gray-700">
+                      {room.bathrooms}   {room.bathrooms ===1 ? "Bathroom":"Bathrooms"}
                     </p>
                   </div>
                 </div>
-                <div
-                  className=" my-16 flex justify-between items-center space-x-12
-    "
-                >
+                <div className=" my-16 flex flex-col space-y-8 sm:flex-row justify-between items-center sm:space-x-12 sm:space-y-0">
                   <Link
                     href="#_"
                     class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
                     <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                    <span class="relative w-full text-center text-xl text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                       Explore
                     </span>
                   </Link>
@@ -151,7 +148,7 @@ const Rooms = () => {
                     class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
                     <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                    <span class="relative w-full text-center text-xl text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                       Book Now
                     </span>
                   </Link>

@@ -19,10 +19,12 @@ const Facilities = () => {
       )}
     >
       <Container>
-        <h2 className="text-center text-6xl py-24">Our Facilities</h2>
+        <h2 className="text-center text-6xl py-24">Our Amenities</h2>
 
-        <p className="text-center text-2xl">
-          We offer modern villa facilities for your comfort
+        <p className="text-center text-3xl">
+          Our villa provides the perfect blend of modern convenience and
+          luxurious living. It's a retreat where you can unwind, entertain, and
+          make lasting memories.
         </p>
         <div className="py-2 grid aut-cols-max auto-rows-max justify-center md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8 my-12 ">
           <div
