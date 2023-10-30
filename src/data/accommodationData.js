@@ -1,13 +1,15 @@
 export const accommodationData = [
   {
     id: 1,
-    title: "3 bedroom",
+    title: "  1  bed",
     url: "contemporary",
     image: "/assets/images/jahawi-images/room-1.jpg",
-    subTitle: "Contemporary Swahili furnishing",
+    subTitle: "Contemporary Swahili Room",
     description:
-      "Lamu style carved door features a fountain against a triple height coral clad wall with decorative grille panel bringing light & ventilation into the whole villa.",
-    numberOfPeople: 6,
+      "This room provides a perfect blend of contemporary aesthetics and coastal ambiance, capitalizing on the area's pleasant coastal weather. The king-size bed serves as the room's focal point, surrounded by a soothing color palette that evokes the tranquil spirit of the coast. ",
+    numberOfPeople: 2,
+    numberOfBeds: 1,
+    numberOfBathrooms: 1,
     orderFirst: "order-first",
     orderLast: "order-last",
     AccommodationImages: [
@@ -47,13 +49,15 @@ export const accommodationData = [
   },
   {
     id: 2,
-    title: "5 bedroom",
+    title: "2 bed",
     url: "contemporary",
-    image: "/assets/assets/images/jahawi-images/jahawi-images/room-2.jpg",
+    image: "/assets/images/jahawi-images/room-2.jpg",
     subTitle: "Contemporary Swahili furnishing",
     description:
-      "Lamu style carved door features a fountain against a triple height coral clad wall with decorative grille panel bringing light & ventilation into the whole villa.",
-    numberOfPeople: 5,
+      "Our shared self-contained room offers a spacious and contemporary retreat for couples.With two comfortable beds and ample space, it's the perfect option for couples seeking a cozy escape by the coast. The modern design ensures a comfortable and stylish stay, while large windows allow the coastal breeze and natural light to stream in.",
+    numberOfPeople: 4,
+    numberOfBeds: 2,
+    numberOfBathrooms: 1,
     AccommodationImages: [
       {
         title: "room2",
@@ -91,13 +95,15 @@ export const accommodationData = [
   },
   {
     id: 3,
-    title: "2 bedroom",
+    title: "3 bed",
     url: "contemporary",
     subTitle: "Contemporary Swahili furnishing",
-    image: "/assets/assets/images/jahawi-images/jahawi-images/room-3.jpg",
+    image: "/assets/images/jahawi-images/room-3.jpg",
     description:
-      "Lamu style carved door features a fountain against a triple height coral clad wall with decorative grille panel bringing light & ventilation into the whole villa.",
-    numberOfPeople: 2,
+      "Our shared self-contained room is a spacious, modern haven for couples and families, although it's not beachfront property. The room features a luxurious king-size bed for couples, ensuring a comfortable and tranquil stay, while a double-decker bunk bed is perfect for kids, offering a fun and practical sleeping solution.  THe room is an ideal choice for families looking to unwind and enjoy the coastal charm while exploring the stunning coastal region nearby.",
+    numberOfPeople: 3,
+    numberOfBeds: 3,
+    numberOfBathrooms: 1,
     AccommodationImages: [
       {
         title: "room-3",
@@ -119,13 +125,15 @@ export const accommodationData = [
   },
   {
     id: 4,
-    title: "1 bedroom",
+    title: "1 bed",
     url: "contemporary",
-    image: "/assets/assets/images/jahawi-images/jahawi-images/room-4.jpg",
+    image: "/assets/images/jahawi-images/room-4.jpg",
     subTitle: "Contemporary Swahili furnishing",
     description:
-      "Lamu style carved door features a fountain against a triple height coral clad wall with decorative grille panel bringing light & ventilation into the whole villa.",
-    numberOfPeople: 6,
+      "Welcome to our spacious, modern-designed room tailored for couples, situated in the coastal region but not on the beach. The room is a haven of contemporary comfort, embracing the coastal weather with its chic design. A luxurious king-size bed is the centerpiece, complemented by large windows that provide serene coastal views and allow the coastal breeze to drift in. ",
+    numberOfPeople: 2,
+    numberOfBeds: 1,
+    numberOfBathrooms: 1,
     AccommodationImages: [
       {
         title: "room-4",

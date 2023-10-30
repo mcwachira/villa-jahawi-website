@@ -128,13 +128,14 @@ const Rooms = () => {
                   <div className="flex items-center">
                     <GiBathtub size={40} />
                     <p className="ml-3 text-2xl   font-medium text-gray-700">
-                      {room.bathrooms}   {room.bathrooms ===1 ? "Bathroom":"Bathrooms"}
+                      {room.bathrooms}{" "}
+                      {room.bathrooms === 1 ? "Bathroom" : "Bathrooms"}
                     </p>
                   </div>
                 </div>
                 <div className=" my-16 flex flex-col space-y-8 sm:flex-row justify-between items-center sm:space-x-12 sm:space-y-0">
                   <Link
-                    href="#_"
+                    href="/accommodation"
                     class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
                     <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>

@@ -6,6 +6,8 @@ import { Container } from "./Container";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
+import { MdOutlineBedroomParent } from "react-icons/md";
+import { GiBathtub } from "react-icons/gi";
 
 const SingleAccommodation = ({ room }) => {
   const { theme, setTheme } = useTheme();
@@ -37,22 +39,37 @@ const SingleAccommodation = ({ room }) => {
 
               <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-5xl text-left capitalize font-semibold  ">
                 {room?.subTitle}
-                subTitle
               </h2>
 
-              <p className="text-2xl my-4">{room?.description}</p>
+              <p className="text-2xl leading-loose my-2">{room?.description}</p>
 
-              <div className="flex my-14 ">
-                <div className="flex items-center">
-                  <BsPeopleFill size={60} color="#4a576E" />
-                  <p className="ml-2 text-2xl  font-medium text-gray-700">
-                    {room?.numberOfPeople} people
-                  </p>
+              <div className="mt-4">
+                <div className=" w-full  sm:w-2/3 my-8 flex justify-between items-center space-x-12">
+                  <div className="flex items-center">
+                    <BsPeopleFill size={60} color="#4a576E" />
+                    <p className="ml-2 text-2xl  font-medium text-gray-700">
+                      {room?.numberOfPeople} people
+                    </p>
+                  </div>
+
+                  <div className="flex items-center">
+                    <MdOutlineBedroomParent size={40} />
+                    <p className="ml-3 text-2xl  font-medium text-gray-700">
+                      {room?.numberOfBeds} Beds
+                    </p>
+                  </div>
+
+                  <div className="flex items-center">
+                    <GiBathtub size={40} />
+                    <p className="ml-3 text-2xl   font-medium text-gray-700">
+                      {room.numberOfBathrooms}{" "}
+                      {room.numberOfBathrooms === 1 ? "Bathroom" : "Bathrooms"}
+                    </p>
+                  </div>
                 </div>
               </div>
-
               <div
-                className="w-full  sm:w-2/3 my-16 flex justify-between items-center space-x-12
+                className="w-full  sm:w-2/3 my-8 flex justify-between items-center space-x-12
     "
               >
                 <Link
