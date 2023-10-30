@@ -6,6 +6,8 @@ import { Container } from "../Container";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
+import { MdOutlineBedroomParent } from "react-icons/md";
+import { GiBathtub } from "react-icons/gi";
 
 import { Dancing_Script } from "next/font/google";
 const dancingScript = Dancing_Script({
@@ -21,6 +23,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Rooms from "../../pages/accommodation";
+import OtherAccommodations from "./OtherAccommodations";
 
 const RoomFeatures = ({ room }) => {
   const { theme, setTheme } = useTheme();
@@ -84,22 +87,37 @@ const RoomFeatures = ({ room }) => {
         <div className="mt-20  w-full">
           <Container>
             <div className="flex flex-col items-center">
-              <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2  text-gray-500 capitalize font-semibold  ">
+              <h2 className="relative text-4xl text-center overflow-visible mb-6  text-gray-500 capitalize font-semibold  ">
                 {" "}
                 {room?.title}
               </h2>
 
-              <h2 className="relative text-center overflow-visible w-auto mt-0 mr-auto mb-0 pr-2  text-[#4a576E] text-6xl capitalize font-semibold  ">
+              <h2 className="relative text-center overflow-visible mb-0 pr-2  text-[#4a576E] text-6xl capitalize font-semibold  ">
                 {room?.subTitle}
               </h2>
 
               <p className="text-2xl text-center my-4">{room?.description}</p>
 
-              <div className="flex my-14 ">
+              <div className=" w-full  sm:w-2/3 my-8 flex justify-between items-center space-x-12">
                 <div className="flex items-center">
                   <BsPeopleFill size={60} color="#4a576E" />
                   <p className="ml-2 text-2xl  font-medium text-gray-700">
                     {room?.numberOfPeople} people
+                  </p>
+                </div>
+
+                <div className="flex items-center">
+                  <MdOutlineBedroomParent size={40} />
+                  <p className="ml-3 text-2xl  font-medium text-gray-700">
+                    {room?.numberOfBeds} Beds
+                  </p>
+                </div>
+
+                <div className="flex items-center">
+                  <GiBathtub size={40} />
+                  <p className="ml-3 text-2xl   font-medium text-gray-700">
+                    {room.numberOfBathrooms}{" "}
+                    {room.numberOfBathrooms === 1 ? "Bathroom" : "Bathrooms"}
                   </p>
                 </div>
               </div>
@@ -141,9 +159,33 @@ const RoomFeatures = ({ room }) => {
                   </span>
                 </Link>
               </div>
+              <div>
+                <p className="text-center text-2xl">
+                  *The Virtual Reality Tours relate to specific units at the
+                  property at the time of filming and are for illustrative
+                  purposes only. All unit types categories are similar in layout
+                  and furnishings and individual units within the same
+                  categories may differ or vary slightly.
+                </p>
+              </div>
             </div>
           </Container>
         </div>
+
+        {/* 
+        {room?.AccommodationImages.map((roomImage, index) => (
+              <SwiperSlide
+                key={index}
+                // style={{ backgroundImage: `url(${roomImage.img})` }}
+              >
+                <img
+                  src={roomImage.img}
+                  alt="image"
+                  className=" w-full bg-cover bg-center bg-no-repeat  swiper-slide  absolute  "
+                />
+
+))} */}
+
         <div className=" mt-20 ">
           <Swiper
             spaceBetween={30}
@@ -157,28 +199,50 @@ const RoomFeatures = ({ room }) => {
             }}
             navigation={true}
             modules={[Autoplay, Navigation]}
-            className="mySwiper h-[64rem] w-screen "
+            className="mySwiper !overflow-visible h-[64rem] w-screen "
           >
             {/* <section
           className={clsx("relative bg-cover bg-center bg-no-repeat")}
           style={{ backgroundImage: `url(${room?.image})` }}
         > */}
 
-            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/drone-photos/1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            {room?.AccommodationImages.map((roomImage) => (
+              <SwiperSlide
+                className=" bg-cover bg-center bg-no-repeat  swiper-slide w-full overflow-hidden"
+                style={{ backgroundImage: `url(${roomImage.img})` }}
+              ></SwiperSlide>
+            ))}
+            {/* <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
             <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
             <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide> */}
           </Swiper>
+          ;
+        </div>
+
+        <div className="mt-12">
+          <h2 className="relative text-center overflow-visible mb-0 pr-2  text-[#4a576E] text-6xl capitalize font-semibold  ">
+            Amenities
+          </h2>
+          {room.amenities.map((amenities, index) => (
+            <div
+              key={index}
+              className="w-full flex justify-between items-center"
+            >
+              {amenities}
+            </div>
+          ))}
         </div>
       </div>
 
       <Container>
         <div className="flex flex-col items-center">
-          <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2  text-gray-500 capitalize font-semibold  ">
-            OTHER ACCOMMODATION
+          <h2 className="relative text-4xl text-center overflow-visible  mb-6   text-gray-500 capitalize font-semibold  ">
+            OTHER ACCOMMODATIONS
           </h2>
         </div>
+
+        <OtherAccommodations />
 
         {/* <Rooms /> */}
       </Container>

@@ -46,6 +46,15 @@ export const accommodationData = [
         img: "/assets/images/jahawi-images/room-1/8.jpg",
       },
     ],
+    amenities: [
+      " AC",
+      "Mosquito Nets",
+      "Ceiling Fans",
+      "Free Wifi",
+      "Daily Housekeeping",
+      "Fully Equipped Kitchen",
+      "Washing Machine",
+    ],
   },
   {
     id: 2,
@@ -61,27 +70,27 @@ export const accommodationData = [
     AccommodationImages: [
       {
         title: "room2",
-        img: "/assets/images/jahawi-images/room2/1.jpg",
+        img: "/assets/images/jahawi-images/room-2/1.jpg",
       },
       {
         title: "room2",
-        img: "/assets/images/jahawi-images/room2/2.jpg",
+        img: "/assets/images/jahawi-images/room-2/2.jpg",
       },
       {
         title: "room2",
-        img: "/assets/images/jahawi-images/room2/3.jpg",
+        img: "/assets/images/jahawi-images/room-2/3.jpg",
       },
       {
         title: "room2",
-        img: "/assets/images/jahawi-images/room2/4.jpg",
+        img: "/assets/images/jahawi-images/room-2/4.jpg",
       },
       {
         title: "room2",
-        img: "/assets/images/jahawi-images/room2/5.jpg",
+        img: "/assets/images/jahawi-images/room-2/5.jpg",
       },
       {
         title: "room2",
-        img: "/assets/images/jahawi-images/room2/6.jpg",
+        img: "/assets/images/jahawi-images/room-2/6.jpg",
       },
       {
         title: "room2",
@@ -91,6 +100,15 @@ export const accommodationData = [
         title: "room2",
         img: "/assets/images/jahawi-images/room2/8.jpg",
       },
+    ],
+    amenities: [
+      " AC",
+      "Mosquito Nets",
+      "Ceiling Fans",
+      "Free Wifi",
+      "Daily Housekeeping",
+      "Fully Equipped Kitchen",
+      "Washing Machine",
     ],
   },
   {
@@ -122,6 +140,15 @@ export const accommodationData = [
         img: "/assets/images/jahawi-images/room-3/4.jpg",
       },
     ],
+    amenities: [
+      " AC",
+      "Mosquito Nets",
+      "Ceiling Fans",
+      "Free Wifi",
+      "Daily Housekeeping",
+      "Fully Equipped Kitchen",
+      "Washing Machine",
+    ],
   },
   {
     id: 4,
@@ -151,6 +178,15 @@ export const accommodationData = [
         title: "room-4",
         img: "/assets/images/jahawi-images/room-4/4.jpg",
       },
+    ],
+    amenities: [
+      " AC",
+      "Mosquito Nets",
+      "Ceiling Fans",
+      "Free Wifi",
+      "Daily Housekeeping",
+      "Fully Equipped Kitchen",
+      "Washing Machine",
     ],
   },
 ];
