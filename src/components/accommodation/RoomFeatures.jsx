@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BsPeopleFill } from "react-icons/bs";
@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
+import Modal from "../Modal";
 
 import { Dancing_Script } from "next/font/google";
 const dancingScript = Dancing_Script({
@@ -24,10 +25,39 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Rooms from "../../pages/accommodation";
 import OtherAccommodations from "./OtherAccommodations";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
+import { Formik, Form, Field } from "formik";
+
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+
+const ContactSchema = Yup.object().shape({
+  name: Yup.string().max(255).required("You must Enter your Name"),
+  email: Yup.string()
+    .email("Must be a valid email")
+    .max(255)
+    .required("Email is required"),
+  phone: Yup.string()
+    .max(20)
+    .required(
+      "Your mobile phone number must begin with a '+', followed by your country code then actual number e.g +254123456789"
+    ),
+  message: Yup.string().trim().required("Message is required"),
+});
 const RoomFeatures = ({ room }) => {
   const { theme, setTheme } = useTheme();
+
+  const [showModal, setShowModal] = useState(false);
   console.log(room);
+
+  const [message, setMessage] = useState(""); // This will be used to show a message if the submission is successful
+  const [submitted, setSubmitted] = useState(false);
+
+  const [startDate, setStartDate] = useState(new Date());
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -139,16 +169,277 @@ const RoomFeatures = ({ room }) => {
                   </span>
                 </Link>
 
-                <Link
-                  href="#"
+                <button
+                  onClick={() => setShowModal(true)}
                   class="relative rounded-md  inline-flex items-center justify-start py-4 px-8 text-4xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                 >
                   <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                   <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                     Enquire
                   </span>
-                </Link>
+                </button>
 
+                {showModal ? (
+                  <>
+                    <div className="flex justify-center items-center overflow-x-hidden w-full h-full fixed inset-0 z-50 top-0 right-0 left-0 bottom-0 bg-black opacity-90 outline-none focus:outline-none">
+                      <div className="relative h-52  w-full my-6 mx-auto max-w-3xl">
+                        <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                          <div className="flex items-center justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
+                            <h3 className="text-4xl text-center font-semibold">
+                              Enquire Now
+                            </h3>
+                            <button
+                              className="bg-transparent border-0 text-black float-right"
+                              onClick={() => setShowModal(false)}
+                            >
+                              <span className="text-black opacity-7 h-12 w-12 text-4xl block bg-gray-400 py-0 rounded-full">
+                                x
+                              </span>
+                            </button>
+                          </div>
+                          <div className="relative p-6 flex-auto">
+                            <div className="w-full">
+                              <Formik
+                                initialValues={{
+                                  email: "",
+                                  name: "",
+                                  phone: "",
+                                  roomType: "1 Bed",
+                                  nights: 1,
+                                  adults: 1,
+                                  children: 1,
+                                  message: "",
+                                }}
+                                onSubmit={() => {
+                                  setMessage("Form submitted");
+                                  setSubmitted(true);
+                                }}
+                                validationSchema={ContactSchema}
+                              >
+                                {({
+                                  errors,
+                                  handleBlur,
+                                  handleSubmit,
+                                  handleChange,
+                                  isSubmitting,
+                                  touched,
+                                  values,
+                                }) => (
+                                  <Form
+                                    onSubmit={handleSubmit}
+                                    div
+                                    className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12"
+                                  >
+                                    <label className="block text-black text-sm font-bold mb-1">
+                                      Name
+                                    </label>
+                                    <Field
+                                      type="text"
+                                      placeholder="Enter Your Name"
+                                      name="name"
+                                      value={values.name}
+                                      onChange={handleChange}
+                                      onBlur={handleBlur}
+                                      className="mb-6 border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-black outline-none"
+                                    />
+
+                                    {errors.name && (
+                                      <div className="text-red text-center  mb-2">
+                                        {errors.name}
+                                      </div>
+                                    )}
+
+                                    <label className="block text-black text-sm font-bold mb-1">
+                                      Email
+                                    </label>
+                                    <Field
+                                      type="email"
+                                      placeholder="Enter your Email"
+                                      name="email"
+                                      value={values.email}
+                                      onChange={handleChange}
+                                      onBlur={handleBlur}
+                                      className="mb-6 border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-black outline-none focus:border-primary focus-visible:shadow-none"
+                                    />
+
+                                    {errors.name && touched.name ? (
+                                      <div className="text-red text-center  mb-2 ">
+                                        {errors.email}
+                                      </div>
+                                    ) : null}
+
+                                    <label className="block text-black text-sm font-bold mb-1">
+                                      Phone Number
+                                    </label>
+                                    <Field
+                                      type="phone"
+                                      placeholder="Enter Your Phone Number"
+                                      name="phone"
+                                      value={values.phone}
+                                      onChange={handleChange}
+                                      onBlur={handleBlur}
+                                      className="mb-6 border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-black outline-none focus:border-primary focus-visible:shadow-none"
+                                    />
+
+                                    {errors.phone && touched.phone ? (
+                                      <div className="text-red text-center  mb-2">
+                                        {errors.phone}
+                                      </div>
+                                    ) : null}
+
+                                    <div className="flex flex-col md:flex-row justify-between items-center">
+                                      <label className="block text-black text-sm font-bold mb-1">
+                                        Adults
+                                      </label>
+                                      <Field as="select" name="adults">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        className="mb-6 border-[f0f0f0] w-full
+                                        rounded border py-6 px-[px-20] text-base
+                                        text-black outline-none
+                                        focus:border-primary
+                                        focus-visible:shadow-none"
+                                      </Field>
+                                      {errors.adults && touched.adults ? (
+                                        <div className="text-red text-center  mb-2">
+                                          {errors.adults}
+                                        </div>
+                                      ) : null}
+
+                                      <label className="block text-black text-sm font-bold mb-1">
+                                        Children
+                                      </label>
+
+                                      <Field as="select" name="children">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        className="mb-6 border-[f0f0f0] w-full
+                                        rounded border py-3 px-[14px] text-base
+                                        text-black outline-none
+                                        focus:border-primary
+                                        focus-visible:shadow-none"
+                                      </Field>
+                                      {errors.children && touched.children ? (
+                                        <div className="text-red text-center  mb-2">
+                                          {errors.children}
+                                        </div>
+                                      ) : null}
+
+                                      <label className="block text-black text-sm font-bold mb-1">
+                                        Room Type
+                                      </label>
+
+                                      <Field as="select" name="roomType">
+                                        <option value="1 Bed ">1 Bed </option>
+                                        <option value="2 Bed ">2 Bed </option>
+                                        <option value="3 Bed ">3 Bed </option>
+                                        className="mb-6 border-[f0f0f0] w-full
+                                        rounded border py-3 px-[14px] text-base
+                                        text-black outline-none
+                                        focus:border-primary
+                                        focus-visible:shadow-none"
+                                      </Field>
+                                      {errors.roomType && touched.roomType ? (
+                                        <div className="text-red text-center  mb-2">
+                                          {errors.roomType}
+                                        </div>
+                                      ) : null}
+                                    </div>
+
+                                    <div className="my-12 w-full">
+                                      <label className="block text-black text-sm font-bold mb-1">
+                                        Check In Date
+                                      </label>
+                                      <DatePicker
+                                        showIcon
+                                        selected={startDate}
+                                        onChange={(date) => setStartDate(date)}
+                                        style={{
+                                          width: "100%",
+                                          boxSizing: "border-box",
+                                          height: "26px",
+                                        }}
+                                        containerStyle={{
+                                          width: "100%",
+                                        }}
+                                        calendarPosition="bottom-center"
+                                      />
+                                    </div>
+
+                                    <label className="block text-black text-sm font-bold mb-1">
+                                      No. of Nights
+                                    </label>
+
+                                    <Field
+                                      type="nights"
+                                      placeholder="No. of Nights"
+                                      name="nights"
+                                      value={values.nights}
+                                      onChange={handleChange}
+                                      onBlur={handleBlur}
+                                      className="mb-6 border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-black outline-none focus:border-primary focus-visible:shadow-none"
+                                    />
+
+                                    {errors.nights && touched.nights ? (
+                                      <div className="text-red text-center  mb-2">
+                                        {errors.nights}
+                                      </div>
+                                    ) : null}
+
+                                    <label className="block text-black text-sm font-bold mb-1">
+                                      Message
+                                    </label>
+                                    <Field
+                                      type="message"
+                                      row="6"
+                                      placeholder="Your Message"
+                                      name="details"
+                                      value={values.message}
+                                      onChange={handleChange}
+                                      onBlur={handleBlur}
+                                      className="mb-6 border-[f0f0f0] w-full resize-none rounded border py-3 px-[14px] text-base text-black outline-none focus:border-primary focus-visible:shadow-none"
+                                    />
+
+                                    {errors.message && touched.message ? (
+                                      <div className="text-red text-center  mb-2">
+                                        {errors.message}
+                                      </div>
+                                    ) : null}
+
+                                    <div className="flex items-center space-x-4 justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                      <button
+                                        className="text-[#041413] background-transparent font-bold uppercase px-8 py-6 text-xl outline-none focus:outline-none mr-1 mb-1"
+                                        type="button"
+                                        onClick={() => setShowModal(false)}
+                                      >
+                                        Close
+                                      </button>
+                                      <button
+                                        className="text-white bg-[#041434]  font-bold uppercase text-xl px-8 py-4 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                                        type="button"
+                                        onClick={() => setShowModal(false)}
+                                      >
+                                        Submit
+                                      </button>
+                                    </div>
+                                  </Form>
+                                )}
+                              </Formik>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : null}
                 <Link
                   href="#"
                   class="relative rounded-md  inline-flex items-center justify-start py-4 px-8 text-4xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
