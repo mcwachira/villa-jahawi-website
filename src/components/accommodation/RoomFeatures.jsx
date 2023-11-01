@@ -51,10 +51,11 @@ const RoomFeatures = ({ room }) => {
   const { theme, setTheme } = useTheme();
 
   const [showModal, setShowModal] = useState(false);
-  console.log(room);
+  // console.log(room);
 
   const [message, setMessage] = useState(""); // This will be used to show a message if the submission is successful
   const [submitted, setSubmitted] = useState(false);
+  console.log(submitted);
 
   const [startDate, setStartDate] = useState(new Date());
 
@@ -210,9 +211,10 @@ const RoomFeatures = ({ room }) => {
                                   children: 1,
                                   message: "",
                                 }}
-                                onSubmit={() => {
+                                onSubmit={(values) => {
                                   setMessage("Form submitted");
                                   setSubmitted(true);
+                                  alert(JSON.stringify(values, null, 2));
                                 }}
                                 validationSchema={ContactSchema}
                               >
@@ -287,7 +289,7 @@ const RoomFeatures = ({ room }) => {
                                       </div>
                                     ) : null}
 
-                                    <div className="flex flex-col md:flex-row justify-between items-center">
+                                    <div className="flex  justify-between items-center">
                                       <label className="block text-black text-sm font-bold mb-1">
                                         Adults
                                       </label>
@@ -423,8 +425,13 @@ const RoomFeatures = ({ room }) => {
                                         Close
                                       </button>
                                       <button
-                                        className="text-white bg-[#041434]  font-bold uppercase text-xl px-8 py-4 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                                        type="button"
+                                        className={clsx(
+                                          "w-1/2 p-3 text-black transition border rounded border-primary  hover:bg-opacity-90",
+                                          theme === "dark"
+                                            ? "bg-[#041434] text-white"
+                                            : "bg-[#F3F4F6] text-black"
+                                        )}
+                                        type="submit"
                                         onClick={() => setShowModal(false)}
                                       >
                                         Submit
