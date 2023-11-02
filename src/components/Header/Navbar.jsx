@@ -99,7 +99,7 @@ const Navbar = () => {
     return (
       <Popover>
         <Popover.Button
-          className="group relative z-50 flex cursor-pointer items-center justify-center rounded-full bg-slate-100/80 p-3 shadow-sm shadow-sky-100/50 ring-1 ring-slate-900/5 transition duration-300 ease-in-out hover:bg-slate-200/60 focus:outline-none md:hidden  "
+          className="group relative z-50 flex cursor-pointer items-center justify-center rounded-full bg-slate-100/80 p-3 shadow-sm shadow-sky-100/50 ring-1 ring-slate-900/5 transition duration-300 ease-in-out hover:bg-slate-200/60 focus:outline-none xl:hidden  "
           aria-label="Toggle Navigation"
         >
           {({ open }) => <MenuIcon open={open} />}
@@ -192,7 +192,7 @@ const Navbar = () => {
               )}
             </Link>
           </div>
-          <div className="hidden items-center md:flex md:space-x-6 lg:space-x-8">
+          <div className="hidden items-center xl:flex md:space-x-6 lg:space-x-8">
             {links?.map((link) => (
               <Link
                 key={`${link.label}-desktop`}
@@ -219,7 +219,7 @@ const Navbar = () => {
             >
               Book Now
             </Button>
-            <div className="ml-4 md:hidden">
+            <div className="ml-4 xl:hidden">
               <MobileNav />
             </div>
           </div>
