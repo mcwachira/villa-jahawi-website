@@ -26,25 +26,25 @@ const Rooms = () => {
   const roomsData = [
     {
       imageSrc: roomImage1,
-      title: "Superior Room",
-      beds: 2,
+      title: "One Bed Room",
+      beds: 1,
       bathrooms: 1,
     },
     {
       imageSrc: roomImage2,
-      title: "Superior Room",
-      beds: 3,
+      title: "Friends Room ",
+      beds: 2,
       bathrooms: 1,
     },
     {
       imageSrc: roomImage3,
-      title: "Superior Room",
+      title: "Family Room  ",
       beds: 3,
       bathrooms: 1,
     },
     {
       imageSrc: roomImage4,
-      title: "Superior Room",
+      title: "Couples Room",
       beds: 3,
       bathrooms: 1,
     },
@@ -77,7 +77,7 @@ const Rooms = () => {
           Our Beautiful Rooms
         </h2>
 
-        <div className="py-2 grid justify-center md:grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-8 my-12 mx-6 ">
+        <div className="py-2 grid justify-center md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-16 lg:gap-8 my-12 mx-6 ">
           {roomsData.map((room, roomIndex) => (
             <div
               key={roomIndex}
@@ -95,11 +95,11 @@ const Rooms = () => {
               />
               <div className="px-6 py-4">
                 <div className="my-8">
-                  <h2 className="text-center md:text-left text-2xl font-bold text-gray-900">
+                  <h2 className="text-center  text-2xl font-bold text-gray-900">
                     {room.title}
                   </h2>
                   <div className="flex items-center">
-                    <div className="flex gap-0.5">
+                    {/* <div className="flex gap-0.5">
                       {[...Array(5)].map((i, n) => (
                         <svg
                           key={`room-${roomIndex}-star-${n}`}
@@ -115,25 +115,25 @@ const Rooms = () => {
                           />
                         </svg>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
-                <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 justify-between">
+                <div className="flex flex-col 2xl:flex-row items-center space-y-8 2xl:space-y-0 justify-between">
                   <div className="flex items-center">
-                    <MdOutlineBedroomParent size={40} />
+                    <MdOutlineBedroomParent size={40} color={"black"} />
                     <p className="ml-3 text-2xl  font-medium text-gray-700">
                       {room.beds} Beds
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <GiBathtub size={40} />
+                    <GiBathtub size={40} color={"black"} />
                     <p className="ml-3 text-2xl   font-medium text-gray-700">
                       {room.bathrooms}{" "}
                       {room.bathrooms === 1 ? "Bathroom" : "Bathrooms"}
                     </p>
                   </div>
                 </div>
-                <div className=" my-16 flex flex-col space-y-8 sm:flex-row justify-between items-center sm:space-x-12 sm:space-y-0">
+                <div className=" my-16 flex flex-col space-y-8 2xl:flex-row justify-between items-center 2xl:space-x-12 2xl:space-y-0">
                   <Link
                     href="/accommodation"
                     class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
