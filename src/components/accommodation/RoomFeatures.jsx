@@ -431,23 +431,28 @@ const RoomFeatures = ({ room }) => {
           ;
         </div>
 
-        <div className="mt-12">
-          <h2 className="relative text-center overflow-visible mb-0   text-[#4a576E] text-6xl capitalize font-semibold  ">
+        <div className="mt-12 max-w-full">
+          <h2 className="relative text-center  mb-0   text-[#4a576E] text-6xl capitalize font-semibold  ">
             Amenities
           </h2>
           {room.amenities.map((amenities, index) => (
-            <div key={index} className="w-full  ">
-              <p className="ml-10 flex flex-row text-3xl border-1 border-r-2 border-[#4a576e] ">
-                {amenities}
-              </p>
+            <div
+              key={index}
+              className="my-4 flex flex-row items-center justify-between"
+            >
+              <Container>
+                <span className=" text-3xl border-4  border-[#4a576e] ">
+                  {amenities}
+                </span>
+              </Container>
             </div>
           ))}
         </div>
       </div>
 
       <Container>
-        <div className="flex flex-col items-center">
-          <h2 className="relative text-4xl text-center overflow-visible  mb-6   text-gray-500 capitalize font-semibold  ">
+        <div className="flex flex-col items-center s">
+          <h2 className="relative text-4xl text-center  mb-6   text-gray-500 capitalize font-semibold  ">
             OTHER ACCOMMODATIONS
           </h2>
         </div>

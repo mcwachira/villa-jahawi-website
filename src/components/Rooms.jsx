@@ -118,14 +118,14 @@ const Rooms = () => {
                     </div> */}
                   </div>
                 </div>
-                <div className="flex flex-col 2xl:flex-row items-center space-y-8 2xl:space-y-0 justify-between">
-                  <div className="flex items-center">
+                <div className="flex flex-col 2xl:flex-row items-center space-y-12 2xl:space-y-0  2xl:space-x-8 justify-between">
+                  <div className="flex flex-col items-center">
                     <MdOutlineBedroomParent size={40} color={"black"} />
                     <p className="ml-3 text-2xl  font-medium text-gray-700">
                       {room.beds} Beds
                     </p>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex flex-col items-center">
                     <GiBathtub size={40} color={"black"} />
                     <p className="ml-3 text-2xl   font-medium text-gray-700">
                       {room.bathrooms}{" "}
@@ -133,7 +133,7 @@ const Rooms = () => {
                     </p>
                   </div>
                 </div>
-                <div className=" my-16 flex flex-col space-y-8 2xl:flex-row justify-between items-center 2xl:space-x-12 2xl:space-y-0">
+                <div className=" my-16 flex flex-col space-y-8 2xl:flex-row justify-between items-center 2xl:space-x-8 2xl:space-y-0">
                   <Link
                     href="/accommodation"
                     class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-2xl border-2 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"

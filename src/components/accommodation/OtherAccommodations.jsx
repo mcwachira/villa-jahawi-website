@@ -76,7 +76,7 @@ const OtherAccommodations = () => {
   }, [Index, roomsCount]);
 
   return (
-    <div className="relative mt-8 lg:mt-24 ">
+    <div className="relative mt-8 lg:mt-24  max-w-full">
       <Container className="relative">
         <Swiper
           modules={[Navigation, Autoplay]}
