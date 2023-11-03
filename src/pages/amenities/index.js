@@ -69,22 +69,24 @@ const Amenities = () => {
       <Container>
         {/* main area  */}
         <div className="mt-20 space-y-6">
-          <h3 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
-            {" "}
-            Amenities
-          </h3>
+          <Container>
+            <h2 className="relative text-6xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
+              {" "}
+              Amenities
+            </h2>
 
-          <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
-            Making Your Stay Comfortable & Care Free
-          </h2>
+            <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-4xl text-center capitalize font-semibold  ">
+              Making Your Stay Comfortable & Care Free
+            </h3>
 
-          <p className="text-2xl text-center">
-            At Villa Jahawi, you will find all the facilities necessary to make
-            your stay as comfortable and as carefree as possible. Our team of
-            staff, renowned for offering exemplary service, is there for you and
-            will make every effort to ensure you have an exceptional and
-            unforgettable holiday!
-          </p>
+            <p className="text-2xl text-center mt-4">
+              At Villa Jahawi, you will find all the facilities necessary to
+              make your stay as comfortable and as carefree as possible. Our
+              team of staff, renowned for offering exemplary service, is there
+              for you and will make every effort to ensure you have an
+              exceptional and unforgettable holiday!
+            </p>
+          </Container>
         </div>
       </Container>
 
@@ -101,7 +103,7 @@ const Amenities = () => {
           }}
           navigation={true}
           modules={[Autoplay, Navigation]}
-          className="mySwiper h-[64rem] w-screen "
+          className="mySwiper h-[64rem] w-screen  "
         >
           <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/drone-photos/1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
           <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
@@ -114,19 +116,21 @@ const Amenities = () => {
       {/* pool area  */}
 
       <div className="mt-20 space-y-6">
-        <h3 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
-          {" "}
-          SWIMMING POOL
-        </h3>
+        <Container>
+          <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
+            {" "}
+            Jacuzzi
+          </h2>
 
-        <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
-          Ideal Space for Relaxation
-        </h2>
+          <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+            Ideal Space for Relaxation
+          </h3>
 
-        <p className="text-2xl text-center">
-          The main leisure pool offers the ideal space for sunbathing,
-          relaxation and leisure.
-        </p>
+          <p className="text-2xl text-center mnt-4">
+            The main leisure jacuzzi offers the ideal space for sunbathing,
+            relaxation and leisure.
+          </p>
+        </Container>
       </div>
 
       <div className=" mt-20 mb-20">
@@ -153,20 +157,22 @@ const Amenities = () => {
 
       {/* Kitchen area  */}
       <div className="mt-20 space-y-6">
-        <h3 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
-          {" "}
-          Kitchen
-        </h3>
+        <Container>
+          <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
+            {" "}
+            Kitchen
+          </h2>
 
-        <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
-          Ideal Space for Cooking and preparing your meals
-        </h2>
+          <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+            Ideal Space for Cooking and preparing your meals
+          </h3>
 
-        <p className="text-2xl text-center">
-          The villa's kitchen is a home away from home, allowing guests to take
-          control of their dining experience and prepare their meals to their
-          liking.
-        </p>
+          <p className="text-2xl text-center mt-4">
+            The villa's kitchen is a home away from home, allowing guests to
+            take control of their dining experience and prepare their meals to
+            their liking.
+          </p>
+        </Container>
       </div>
 
       <div className=" mt-20 mb-20">
@@ -194,20 +200,22 @@ const Amenities = () => {
 
       {/* sitting area  */}
       <div className="mt-20 space-y-6">
-        <h3 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
-          {" "}
-          Lounge
-        </h3>
+        <Container>
+          <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
+            {" "}
+            Lounge
+          </h2>
 
-        <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
-          Ideal Space for relaxing
-        </h2>
+          <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+            Ideal Space for relaxing
+          </h3>
 
-        <p className="text-2xl text-center">
-          Whether you want to kick back and watch a movie or simply unwind, our
-          villa's lounge is the perfect retreat for relaxation and
-          entertainment.
-        </p>
+          <p className="text-2xl text-center mt-4">
+            Whether you want to kick back and watch a movie or simply unwind,
+            our villa's lounge is the perfect retreat for relaxation and
+            entertainment.
+          </p>
+        </Container>
       </div>
 
       <div className=" mt-20 ">
@@ -230,6 +238,48 @@ const Amenities = () => {
           <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
           <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
           <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+        </Swiper>
+      </div>
+
+      <div className="mt-20 space-y-6">
+        <Container>
+          <h2 className="relative text-4xl text-center overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 capitalize font-semibold  ">
+            {" "}
+            Porch
+          </h2>
+
+          <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+            Ideal Space for Having a meal
+          </h3>
+
+          <p className="text-2xl text-center mt-4">
+            The porch is adorned with a rustic wooden table and chairs, all
+            weathered to perfection, providing a delightful setting for
+            breakfasts, brunches, or evening dinners.
+          </p>
+        </Container>
+      </div>
+
+      <div className=" mt-20 ">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Navigation]}
+          className="mySwiper h-[64rem] w-screen  "
+        >
+          <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/veranda/veranda-1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+          <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+          <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+          <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+          <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/sitting-5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
         </Swiper>
       </div>
     </div>
