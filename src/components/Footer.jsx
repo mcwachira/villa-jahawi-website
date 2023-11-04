@@ -178,7 +178,7 @@ const Footer = () => {
             <ul className="mt-4 flex justify-center gap-6 sm:mt-0 sm:justify-start">
               <li>
                 <a
-                  href="/"
+                  href="https://www.facebook.com/profile.php?id=61552855440458"
                   rel="noreferrer"
                   target="_blank"
                   className=" transition hover:text-teal-700/75"
@@ -201,7 +201,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="/"
+                  href="https://www.instagram.com/villajahawi/"
                   rel="noreferrer"
                   target="_blank"
                   className=" transition hover:text-teal-700/75"

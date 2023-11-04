@@ -246,8 +246,10 @@ const Navbar = () => {
             <Button
               className="bg-[#4a576e] text-white text-base md:text-xl border-white
             "
+              target="_blank"
+              rel="noopener noreferrer"
               variant="secondary"
-              href="#"
+              href="https://www.airbnb.com/rooms/1011994449555648498?source_impression_id=p3_1699090362_HCm3Po%2BSP7gkaS%2F6"
             >
               Book Now
             </Button>
