@@ -78,20 +78,20 @@ const SingleAccommodation = ({ room }) => {
                     as={`/accommodation/${room.id}`}
                     aria-label="Single Project"
                     passHref
-                    class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                    className="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
-                    <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                    <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                    <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                       Explore
                     </span>
                   </Link>
 
                   <Link
                     href="#"
-                    class="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                    className="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
-                    <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                    <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                    <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                       Enquire
                     </span>
                   </Link>
@@ -99,10 +99,10 @@ const SingleAccommodation = ({ room }) => {
 
                 <Link
                   href="#"
-                  class="w-3/4 relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  className="w-3/4 relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                 >
-                  <span class="w-full h-52 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-5 ml-5 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                  <span class="relative w-full text-center text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                  <span className="w-full h-52 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-5 ml-5 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                  <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                     Book{" "}
                   </span>
                 </Link>
