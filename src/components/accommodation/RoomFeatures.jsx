@@ -35,6 +35,8 @@ import FormikControl from "../FormComponents/FormikControl";
 const RoomFeatures = ({ room }) => {
   const { theme, setTheme } = useTheme();
 
+  const [selectId, setSelectId] = useState(null);
+
   const [showModal, setShowModal] = useState(false);
   // console.log(room);
   const childrenOptions = [
@@ -102,10 +104,39 @@ const RoomFeatures = ({ room }) => {
     message: Yup.string().trim().required("Message is required"),
   });
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     setMessage("Form submitted");
     setSubmitted(true);
-    alert(JSON.stringify(values, null, 2));
+    console.log(values);
+
+    const {
+      email,
+      name,
+      phoneNumber,
+      roomType,
+      bookingDate,
+      nights,
+      adults,
+      children,
+      message,
+    } = values;
+    const res = await fetch("/api/SendMail", {
+      body: JSON.stringify({
+        email,
+        name,
+        phoneNumber,
+        roomType,
+        bookingDate,
+        nights,
+        adults,
+        children,
+        message,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
     setShowModal(!showModal);
   };
 
@@ -234,11 +265,11 @@ const RoomFeatures = ({ room }) => {
 
                 {showModal ? (
                   <>
-                    <div className="flex justify-center items-center overflow-x-hidden w-full h-full fixed inset-0 z-50 top-0 right-0 left-0 bottom-0 bg-black opacity-90 outline-none focus:outline-none">
+                    <div className="flex justify-center items-center overflow-x-hidden w-full h-full fixed inset-0 z-50 top-0 right-0 left-0 bottom-0 bg-black  outline-none focus:outline-none">
                       <div className="relative h-52  w-full my-6 mx-auto max-w-3xl">
                         <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                          <div className="flex items-center justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
-                            <h3 className="text-4xl text-center font-semibold">
+                          <div className="flex items-center justify-between p-5 border-b border-4 text-center border-solid border-gray-300 rounded-t ">
+                            <h3 className="text-4xl !text-center font-semibold">
                               Enquire Now
                             </h3>
                             <button
@@ -364,15 +395,16 @@ const RoomFeatures = ({ room }) => {
                   </>
                 ) : null}
 
-                <Link
-                  href="#"
+                <button
+                  type="button"
                   class="w-3/4 relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-4xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  onClick={() => setShowModal(true)}
                 >
                   <span class="w-full h-52 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-5 ml-5 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                   <span class="relative w-full text-center text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                     Book{" "}
                   </span>
-                </Link>
+                </button>
               </div>
               <div>
                 <p className="text-center text-2xl">

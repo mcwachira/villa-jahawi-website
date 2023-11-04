@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Container from "./container/Container";
 import { FaWifi, FaParking } from "react-icons/fa";
 import { FaPersonSwimming } from "react-icons/fa6";
@@ -26,8 +27,12 @@ const Facilities = () => {
           luxurious living. It's a retreat where you can unwind, entertain, and
           make lasting memories.
         </p>
-        <div className="py-2 grid aut-cols-max auto-rows-max justify-center md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8 my-12 ">
-          <div
+        <motion.div className="py-2 grid aut-cols-max auto-rows-max justify-center md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8 my-12 ">
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1 }}
+            transition={{ delay: 0.65, duration: 0.65, ease: "easeOut" }}
             className={clsx(
               "flex flex-col items-center justify-center   px-16 py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
@@ -38,9 +43,13 @@ const Facilities = () => {
             <h2 className="text-2xl text-[#4a576E] my-4 leading-1">
               Swimming Pool
             </h2>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1 }}
+            transition={{ delay: 0.65, duration: 0.65, ease: "easeOut" }}
             className={clsx(
               "flex flex-col items-center justify-center   px-16 py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
@@ -49,9 +58,12 @@ const Facilities = () => {
             <FaWifi size={60} color="#4a576E" />
 
             <h2 className="text-2xl text-[#4a576E] my-4 leading-1">Wifi</h2>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1 }}
             className={clsx(
               "flex flex-col items-center justify-center   px-16 py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
@@ -60,11 +72,14 @@ const Facilities = () => {
             <FaParking size={60} color="#4a576E" />
 
             <h2 className="text-2xl text-[#4a576E] my-4 leading-1">Parking</h2>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <div className="py-2 grid aut-cols-max auto-rows-max justify-center  md:grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8 my-12 ">
-          <div
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1 }}
             className={clsx(
               "flex flex-col items-center justify-center   px-16 py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
@@ -73,9 +88,12 @@ const Facilities = () => {
             <MdLocalLaundryService size={60} color="#4a576E" />
 
             <h2 className="text-2xl text-[#4a576E] my-4 leading-1">Laundry</h2>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1 }}
             className={clsx(
               "flex flex-col items-center justify-center   px-16 py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
@@ -86,9 +104,12 @@ const Facilities = () => {
             <h2 className="text-2xl text-[#4a576E] my-4 leading-1">
               24/7 Light
             </h2>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1 }}
             className={clsx(
               "flex flex-col items-center justify-center   px-16 py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
@@ -99,7 +120,7 @@ const Facilities = () => {
             <h2 className="text-2xl text-[#4a576E] my-4 leading-1">
               Massage & Spa
             </h2>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </div>

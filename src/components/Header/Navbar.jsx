@@ -11,6 +11,8 @@ import Container from "../container/Container";
 import Button from "../Button/Button";
 import ThemeToggler from "./ThemeToggler";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
+import { animationContainer, item } from "../animate";
 
 const links = [
   {
@@ -51,6 +53,32 @@ const Navbar = () => {
     } else {
       setSticky(false);
     }
+  };
+
+  const variants = {
+    open: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const linkVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
   };
 
   useEffect(() => {
@@ -133,18 +161,22 @@ const Navbar = () => {
               )}
             >
               <div>
-                <div className="flex flex-col space-y-4">
+                <motion.div
+                  className="flex flex-col space-y-4"
+                  variants={animationContainer}
+                >
                   {links?.map((link) => (
                     <Link
                       key={`${link.label}-mobile`}
                       href={link.href}
                       className="block text-2xl font-semibold text-slate-700 duration-200 hover:text-slate-900"
+                      variants={item}
                     >
                       {link.label}
                     </Link>
                   ))}
                   <ThemeToggler />
-                </div>
+                </motion.div>
               </div>
             </Popover.Panel>
           </Transition.Child>

@@ -16,7 +16,7 @@ const index = () => {
           div
           className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12"
         >
-          <label className="block text-black text-sm font-bold mb-1">
+          <label className="block text-black text-lg font-bold mb-1">
             Name
           </label>
           <Field
@@ -35,7 +35,7 @@ const index = () => {
             </div>
           )}
 
-          <label className="block text-black text-sm font-bold mb-1">
+          <label className="block text-black text-lg font-bold mb-1">
             Email
           </label>
           <Field
@@ -54,7 +54,7 @@ const index = () => {
             </div>
           ) : null}
 
-          <label className="block text-black text-sm font-bold mb-1">
+          <label className="block text-black text-lg font-bold mb-1">
             Phone Number
           </label>
           <Field
@@ -74,7 +74,7 @@ const index = () => {
           ) : null}
 
           <div className="flex  justify-between items-center">
-            <label className="block text-black text-sm font-bold mb-1">
+            <label className="block text-black text-lg font-bold mb-1">
               Adults
             </label>
             <Field as="select" name="adults">
@@ -106,7 +106,7 @@ const index = () => {
               </div>
             ) : null}
 
-            <label className="block text-black text-sm font-bold mb-1">
+            <label className="block text-black text-lg font-bold mb-1">
               Children
             </label>
 
@@ -139,7 +139,7 @@ const index = () => {
               </div>
             ) : null}
 
-            <label className="block text-black text-sm font-bold mb-1">
+            <label className="block text-black text-lg font-bold mb-1">
               Room Type
             </label>
 

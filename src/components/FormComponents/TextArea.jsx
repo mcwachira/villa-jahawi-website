@@ -5,7 +5,7 @@ const TextArea = (props) => {
   const { label, name, ...rest } = props;
   return (
     <>
-      <label className="block text-black text-sm font-bold mb-1" htmlFor={name}>
+      <label className="block text-black text-lg font-bold mb-1" htmlFor={name}>
         {label}
       </label>
 

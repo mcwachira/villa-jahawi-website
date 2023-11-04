@@ -6,7 +6,7 @@ const Select = (props) => {
   return (
     <>
       <label
-        className="flex text-black text-sm font-bold items-center -mt-4"
+        className="flex text-black text-lg font-bold items-center -mt-4"
         htmlFor={name}
       >
         {label}

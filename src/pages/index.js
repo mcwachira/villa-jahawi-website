@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import Facilities from "../components/Facilities";
 import { FeaturedArticles } from "../components/FeaturedArticles";
 
@@ -9,8 +10,14 @@ import Testimonial from "../components/Testimonial";
 import { getAllArticles } from "../lib/articles";
 
 export default function Home({ caseStudies, articles }) {
+  console.log(process.env.NEXT_PUBLIC_GMAIL_PASSWORD);
   return (
-    <main>
+    <motion.div
+      initial={{ y: "100%" }}
+      animate={{ y: "0%" }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
       <Hero />
 
       <Facilities />
@@ -31,7 +38,7 @@ export default function Home({ caseStudies, articles }) {
   video="/assets/images/video.mp4"
   videoWidth={1920}
   videoHeight={1080} /> */}
-    </main>
+    </motion.div>
   );
 }
 
