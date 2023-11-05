@@ -1,4 +1,4 @@
-export const container = {
+export const animationContainer = {
   hidden: {
     opacity: 0,
   },
