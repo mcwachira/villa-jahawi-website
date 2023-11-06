@@ -49,21 +49,21 @@ const SingleAccommodation = ({ room }) => {
                 <div className=" w-full  md:w-2/3 my-8 flex justify-between items-center space-x-12">
                   <div className="flex items-center space-x-4">
                     <BsPeopleFill size={60} color="#4a576E" />
-                    <p className="ml-2 text-lg md:text-2xl  font-medium text-gray-700">
+                    <p className="ml-2 text-2xl md:text-4xl  font-medium text-gray-700">
                       {room?.numberOfPeople} people
                     </p>
                   </div>
 
                   <div className="flex items-center space-x-4">
                     <MdOutlineBedroomParent size={40} />
-                    <p className="ml-3  text-lg md:text-2xl   font-medium text-gray-700">
+                    <p className="ml-3  text-2xl md:text-4xl   font-medium text-gray-700">
                       {room?.numberOfBeds} Beds
                     </p>
                   </div>
 
                   <div className="flex items-center space-x-4">
                     <GiBathtub size={40} />
-                    <p className="ml-3  text-lg md:text-2xl    font-medium text-gray-700">
+                    <p className="ml-3  text-2xl md:text-4xl    font-medium text-gray-700">
                       {room.numberOfBathrooms}{" "}
                       {room.numberOfBathrooms === 1 ? "Bathroom" : "Bathrooms"}
                     </p>

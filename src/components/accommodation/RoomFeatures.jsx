@@ -31,6 +31,7 @@ import { Formik, Form } from "formik";
 
 import "react-datepicker/dist/react-datepicker.css";
 import FormikControl from "../FormComponents/FormikControl";
+import BookingForm from "../BookingForm/BookingForm";
 
 const RoomFeatures = ({ room }) => {
   const { theme, setTheme } = useTheme();
@@ -415,6 +416,8 @@ const RoomFeatures = ({ room }) => {
                   </span>
                 </button>
               </div>
+
+              <BookingForm />
               <div>
                 <p className="text-center text-2xl">
                   *The Virtual Reality Tours relate to specific units at the
