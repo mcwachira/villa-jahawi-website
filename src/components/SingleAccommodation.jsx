@@ -24,12 +24,12 @@ const SingleAccommodation = ({ room }) => {
     >
       <div
         className={clsx(
-          "pb-20 w-full grid  md:grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 ",
+          "pb-20 w-full grid  items-center md:grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 ",
           theme === "dark" ? "bg-[#041434]" : "bg-white"
         )}
         id="#section1"
       >
-        <div className="mt-20 ml-auto mr-auto w-full">
+        <div className="mt-20 mx-auto w-full">
           <Container>
             <div className="flex flex-col">
               <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 text-3xl text-left capitalize font-semibold  ">
@@ -37,31 +37,33 @@ const SingleAccommodation = ({ room }) => {
                 {room?.title}
               </h2>
 
-              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-5xl text-left capitalize font-semibold  ">
+              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-xl lg:text-5xl text-left capitalize font-semibold  ">
                 {room?.subTitle}
               </h2>
 
-              <p className="text-2xl leading-loose my-2">{room?.description}</p>
+              <p className=" text-lg md:text-2xl  leading-loose my-2">
+                {room?.description}
+              </p>
 
               <div className="mt-4">
                 <div className=" w-full  sm:w-2/3 my-8 flex justify-between items-center space-x-12">
                   <div className="flex items-center">
                     <BsPeopleFill size={60} color="#4a576E" />
-                    <p className="ml-2 text-2xl  font-medium text-gray-700">
+                    <p className="ml-2 text-lg md:text-2xl  font-medium text-gray-700">
                       {room?.numberOfPeople} people
                     </p>
                   </div>
 
                   <div className="flex items-center">
                     <MdOutlineBedroomParent size={40} />
-                    <p className="ml-3 text-2xl  font-medium text-gray-700">
+                    <p className="ml-3  text-lg md:text-2xl   font-medium text-gray-700">
                       {room?.numberOfBeds} Beds
                     </p>
                   </div>
 
                   <div className="flex items-center">
                     <GiBathtub size={40} />
-                    <p className="ml-3 text-2xl   font-medium text-gray-700">
+                    <p className="ml-3  text-lg md:text-2xl    font-medium text-gray-700">
                       {room.numberOfBathrooms}{" "}
                       {room.numberOfBathrooms === 1 ? "Bathroom" : "Bathrooms"}
                     </p>
@@ -111,14 +113,14 @@ const SingleAccommodation = ({ room }) => {
           </Container>
         </div>
 
-        <div className="relative  mx:auto my-auto md:w-full order-first md:order-last ">
+        <div className="relative  mx:auto my-auto md:w-full order-first lg:order-last ">
           <Image
             src={room?.image}
             loading="lazy"
             alt="room image"
             className="relative z-10 shadow-lg object-cover rounded-lg"
-            width="916"
-            height="817"
+            width="716"
+            height="517"
           />
         </div>
       </div>
