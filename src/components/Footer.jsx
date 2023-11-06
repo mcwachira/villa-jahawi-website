@@ -54,24 +54,27 @@ const Footer = () => {
           </div>
 
           <div className="max-w-full ">
-            <div className=" ml-auto w-full mt-16 grid aut-cols-max auto-rows-max grid-cols-1 gap-4 border-t border-gray-100 pt-16 lg:grid-cols-2 md:gap-2 ">
-              <div className="text-center text-2xl space-y-4  sm:text-left ">
+            <div className=" ml-auto w-full m-12 md:mt-16 grid aut-cols-max auto-rows-max grid-cols-1 gap-4 border-t border-gray-100 pt-16 lg:grid-cols-2 md:gap-2 ">
+              <div className="text-center text-lg md:text-2xl space-y-4  sm:text-left ">
                 <h2>Villa Jahawi</h2>
                 <h3>Diani Beach Road 80401</h3>
-                <h3>Diani Beach Kenya</h3>
+                <h3>Diani, Kenya</h3>
 
-                <div className="w-full flex  flex-row ml-auto">
-                  <Link href="#" className="   text-2xl">
-                    Locate us
-                    <GoLocation size={30} />
-                  </Link>
-                </div>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://maps.app.goo.gl/6iNbE3gy3AMDmdZZ8"
+                  className=" ml-auto mr-auto flex items-center text-lg md:text-2xl "
+                >
+                  Locate us
+                  <GoLocation size={30} className="ml-2" />
+                </Link>
               </div>
               <div className="max-w-full   mt-8 md:mt-0 grid grid-cols-1 gap-4   lg:grid-cols-3 ">
-                <div className="text-2xl w-full text-center sm:text-left">
+                <div className="text-lg md:text-2xl  w-full text-center sm:text-left">
                   <h2 className="text-3xl font-semibold ">About Us</h2>
 
-                  <ul className="mt-8 text-2xl space-y-4">
+                  <ul className="mt-8 text-lg md:text-2xl  space-y-4">
                     <li>
                       <Link
                         className="transition hover:text-gray-700/75"
@@ -122,7 +125,7 @@ const Footer = () => {
                 <div className="text-center w-full sm:text-left">
                   <h2 className="text-3xl font-semibold ">Gallery</h2>
 
-                  <ul className="mt-8 text-2xl space-y-4">
+                  <ul className="mt-8 text-lg md:text-2xl  space-y-4">
                     <li>
                       <Link
                         className=" transition hover:text-gray-700/75"
@@ -146,7 +149,7 @@ const Footer = () => {
                 <div className="text-center sm:text-left">
                   <h2 className="text-3xl font-semibold ">Helpful Links</h2>
 
-                  <ul className="mt-8 text-2xl space-y-4">
+                  <ul className="mt-8 text-lg md:text-2xl  space-y-4">
                     <li>
                       <Link
                         className=" transition hover:text-gray-700/75"
@@ -171,7 +174,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-16 border-t border-gray-100 pt-6 sm:flex sm:items-center sm:justify-between">
-            <p className="text-center text-2xl  sm:text-left">
+            <p className="text-center text-lg md:text-2xl   sm:text-left">
               Copyright &copy; 2022. All rights reserved.
             </p>
 
