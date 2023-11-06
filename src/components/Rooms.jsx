@@ -193,14 +193,14 @@ const Rooms = () => {
             <div
               key={roomIndex}
               className={clsx(
-                "  h-full w-full rounded-xl p-6  overflow-hidden shadow-lg hover:shadow-xl",
+                "h-full w-full rounded-xl p-6  overflow-hidden shadow-lg hover:shadow-xl",
                 theme === "dark" ? "bg-[#F3F4F6]" : "bg-[#F3F4F6]"
               )}
             >
               <Image
-                className="h-72 w-full md:w-full rounded-md object-cover bg-slate-100 transition duration-300 group-hover:scale-105"
+                className="h-48 md:h-72 w-full md:w-full rounded-md object-cover bg-slate-100 transition duration-300 group-hover:scale-105"
                 src={room.imageSrc}
-                width={400}
+                width={600}
                 height={400}
                 alt="Property Image"
               />
