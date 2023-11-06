@@ -36,7 +36,7 @@ const Facilities = () => {
             exit={{ opacity: 1 }}
             transition={{ delay: 0.65, duration: 0.65, ease: "easeOut" }}
             className={clsx(
-              "flex flex-col items-center justify-center   px-16 py-16",
+              "flex flex-col items-center justify-center px-10 py-10 md:px-16 md:py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
             )}
           >
@@ -53,7 +53,7 @@ const Facilities = () => {
             exit={{ opacity: 1 }}
             transition={{ delay: 0.65, duration: 0.65, ease: "easeOut" }}
             className={clsx(
-              "flex flex-col items-center justify-center   px-16 py-16",
+              "flex flex-col items-center justify-center px-10 py-10 md:px-16 md:py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
             )}
           >
@@ -67,7 +67,7 @@ const Facilities = () => {
             animate={{ y: "0%" }}
             exit={{ opacity: 1 }}
             className={clsx(
-              "flex flex-col items-center justify-center   px-16 py-16",
+              "flex flex-col items-center justify-center px-10 py-10 md:px-16 md:py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
             )}
           >
@@ -83,7 +83,7 @@ const Facilities = () => {
             animate={{ y: "0%" }}
             exit={{ opacity: 1 }}
             className={clsx(
-              "flex flex-col items-center justify-center   px-16 py-16",
+              "flex flex-col items-center justify-center px-10 py-10 md:px-16 md:py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
             )}
           >
@@ -97,7 +97,7 @@ const Facilities = () => {
             animate={{ y: "0%" }}
             exit={{ opacity: 1 }}
             className={clsx(
-              "flex flex-col items-center justify-center   px-16 py-16",
+              "flex flex-col items-center justify-center px-10 py-10 md:px-16 md:py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
             )}
           >
@@ -113,7 +113,7 @@ const Facilities = () => {
             animate={{ y: "0%" }}
             exit={{ opacity: 1 }}
             className={clsx(
-              "flex flex-col items-center justify-center   px-16 py-16",
+              "flex flex-col items-center justify-center px-10 py-10 md:px-16 md:py-16",
               theme === "dark" ? " bg-[#fafafa]" : "bg-[#e5dada]"
             )}
           >
