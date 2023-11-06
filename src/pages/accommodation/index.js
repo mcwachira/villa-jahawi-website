@@ -40,19 +40,15 @@ const Rooms = ({ rooms }) => {
             }}
           >
             <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.25)] bg-fixed">
-              <div className="flex flex-col md:flex-row w-full items-center justify-end  md:w-2/3 h-full md:items-end md:justify-start text-white">
-                <div className="mb-2 justify-end md:mb-24 mx-14 items-center  text-left font-bold tracking-tight flex flex-col sm:1/2 md:w-1/2">
-                  <span className="text-3xl my-4">
+              <div className=" flex flex-col xl:flex-row w-full items-center h-full justify-end    xl:w-2/3  text-white">
+                <div className="mb-2 text-4xl lg:text-6xl justify-end md:mb-24 mx-14 items-center text-center lg:text-left font-bold tracking-tight flex flex-col w-full  xl:w-1/2">
+                  <span className=" my-4 text-center">
                     Designed to take advantage of
                   </span>
 
-                  <div className="w-full flex justify-between items-center">
-                    <span className="text-2xl md:text-6xl xl:text-7xl">
-                      The sunny costal climate
-                    </span>
-                  </div>
+                  <span className="">The sunny costal climate</span>
                 </div>
-                <div className="px-6 text-center  mb-12 md:mb-24 ml-auto text-white md:px-12">
+                <div className="w-full px-6 text-center  mb-12 md:mb-24 ml-auto text-white md:px-12">
                   <button
                     href="#section1"
                     scroll={false}
@@ -68,7 +64,7 @@ const Rooms = ({ rooms }) => {
         </section>
 
         <Container>
-          <h2 className="text-center text-bold text-3xl lg:text-6xl py-18 mb-5">
+          <h2 className="text-center font-bold text-5xl lg:text-6xl py-18 mb-8">
             Our Rooms
           </h2>
         </Container>
