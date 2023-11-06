@@ -145,7 +145,7 @@ const Testimonial = () => {
       <Container className="relative">
         <div className="mx-auto grid max-w-xl gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
+            <h2 className="font-display text-2xl md:text-4xl font-semibold text-slate-900 ">
               Here’s what past Guests are saying about our villa
             </h2>
             <div className="mt-10 hidden h-[10px] w-full rounded-full bg-gray-300 lg:mt-16 lg:block">
@@ -157,8 +157,9 @@ const Testimonial = () => {
           </div>
           <div className="lg:ml-auto lg:max-w-sm">
             <p className="text-lg text-slate-700">
-              Iced pumpkin ristretto irish trifecta robusta trade froth affogato
-              barista con barista cappuccino filter roast.
+              Our villa itself has received high praise for its comfort,
+              cleanliness, and welcoming atmosphere, making it the ideal retreat
+              for a seaside escape.
             </p>
             <div className="mt-14 flex gap-2.5 lg:mt-12">
               <button className="carousel-prev inline-flex h-12 w-12 items-center justify-center rounded-full text-black bg-white shadow-sm shadow-sky-200/75 ring-1 ring-slate-200/60 duration-200 hover:bg-sky-50/50">
@@ -233,7 +234,7 @@ const Testimonial = () => {
                           </svg>
                         ))}
                       </div>
-                      <h4 className="mt-7 font-display text-3xl font-medium text-slate-900">
+                      <h4 className="mt-7 font-display text-xl md:text-3xl font-medium text-slate-900">
                         {testimonial.headline}
                       </h4>
                       <p className="mt-3 text-xl leading-7 text-slate-700">
