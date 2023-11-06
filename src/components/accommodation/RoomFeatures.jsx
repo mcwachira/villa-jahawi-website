@@ -129,7 +129,7 @@ const RoomFeatures = ({ room }) => {
         phoneNumber,
         subject,
         roomType,
-        bookingDate,
+        bookingDate: bookingDate.split("T", 1)[0],
         nights,
         adults,
         children,
@@ -319,7 +319,7 @@ const RoomFeatures = ({ room }) => {
                                         label="Subject"
                                         name="subject"
                                       />
-                                      <div className="flex space-x-4 justify-between items-center">
+                                      <div className="flex flex-col lg:flex-row space-x-4 justify-between items-center">
                                         <FormikControl
                                           control="select"
                                           type="adults"

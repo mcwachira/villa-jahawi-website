@@ -92,17 +92,11 @@ const SendMail = async (req, res) => {
               <div className="email-details">
               <p>Adults: ${req.body.adults}</p>
 
-              <p>Children:${req.body.children}</p>
-      
-           </div>
-           <br/>
+              <p>Children: ${req.body.children}</p>
 
-           <div className="email-details">
-              <p>Booking Date:</p>
-              <p>${req.body.bookingDate}</p>
+              <p>Booking Date: ${req.body.bookingDate}</p>
             
-              <p>Nights:</p>
-              <p>${req.body.nights}</p>
+              <p>Nights: ${req.body.nights}</p>
 
               </div>
               <br>
@@ -110,7 +104,8 @@ const SendMail = async (req, res) => {
               </div>
               <div class="footer">
         
-              <img src="/public/assets/images/jahawi-images/logos/web/png/color-logo-background.png" class="logo-image" style="height: 50px;width: 50px;border-radius: 5px;overflow: hidden;">
+              <img src="/public/assets/images/jahawi-images/logos/web/png/color-logo-background.png"
+              style="height: 100px;width: 100px;/>
               <p class="footer" style="font-size: 16px;padding-bottom: 20px;border-bottom: 1px solid #FFF;">Regards<br>Villa Jahawi <br> +254703496926<br>
               <div class="footer-links" style="display: flex;justify-content: center;align-items: center;">
                 <a href="https://www.villajahawi.com/" style="text-decoration: none;margin: 8px;color: #ffF;">Website</a>
