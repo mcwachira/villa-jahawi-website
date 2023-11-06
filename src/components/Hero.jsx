@@ -50,7 +50,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.airbnb.com/rooms/1011994449555648498?source_impression_id=p3_1699090362_HCm3Po%2BSP7gkaS%2F6"
-              className="block w-3/4 rounded bg-[#4a576E] my-8 px-14 py-6  sm:px-12 sm:py-4 text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+              className="block w-3/4 rounded bg-[#4a576E] my-8 px-6 py-4 text-xl sm:px-12 sm:py-4 md:text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
             >
               Book Now
             </Link>
