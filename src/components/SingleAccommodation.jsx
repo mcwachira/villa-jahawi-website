@@ -24,7 +24,7 @@ const SingleAccommodation = ({ room }) => {
     >
       <div
         className={clsx(
-          "pb-20 w-full grid  items-center md:grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 ",
+          "pb-20 w-full grid  md:grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 ",
           theme === "dark" ? "bg-[#041434]" : "bg-white"
         )}
         id="#section1"
@@ -32,36 +32,36 @@ const SingleAccommodation = ({ room }) => {
         <div className="mt-20 mx-auto w-full">
           <Container>
             <div className="flex flex-col">
-              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-start items-start text-gray-500 text-3xl text-left capitalize font-semibold  ">
+              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-center items-start text-gray-500 text-4xl text-center lg:text-left capitalize font-semibold  ">
                 {" "}
                 {room?.title}
               </h2>
 
-              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-xl lg:text-5xl text-left capitalize font-semibold  ">
+              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-4 pr-2 justify-start items-start text-[#4a576E] text-3xl lg:text-5xl text-center lg:text-left capitalize font-semibold  ">
                 {room?.subTitle}
               </h2>
 
-              <p className=" text-lg md:text-2xl  leading-loose my-2">
+              <p className=" text-2xl md:text-3xl  leading-loose tracking-normal my-2">
                 {room?.description}
               </p>
 
-              <div className="mt-4">
-                <div className=" w-full  sm:w-2/3 my-8 flex justify-between items-center space-x-12">
-                  <div className="flex items-center">
+              <div className="mt-6">
+                <div className=" w-full  md:w-2/3 my-8 flex justify-between items-center space-x-12">
+                  <div className="flex items-center space-x-4">
                     <BsPeopleFill size={60} color="#4a576E" />
                     <p className="ml-2 text-lg md:text-2xl  font-medium text-gray-700">
                       {room?.numberOfPeople} people
                     </p>
                   </div>
 
-                  <div className="flex items-center">
+                  <div className="flex items-center space-x-4">
                     <MdOutlineBedroomParent size={40} />
                     <p className="ml-3  text-lg md:text-2xl   font-medium text-gray-700">
                       {room?.numberOfBeds} Beds
                     </p>
                   </div>
 
-                  <div className="flex items-center">
+                  <div className="flex items-center space-x-4">
                     <GiBathtub size={40} />
                     <p className="ml-3  text-lg md:text-2xl    font-medium text-gray-700">
                       {room.numberOfBathrooms}{" "}
@@ -83,7 +83,7 @@ const SingleAccommodation = ({ room }) => {
                     className="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                    <span className="relative w-full text-center lg:text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                       Explore
                     </span>
                   </Link>
@@ -93,7 +93,7 @@ const SingleAccommodation = ({ room }) => {
                     className="relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                    <span className="relative w-full text-center lg:text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
                       Enquire
                     </span>
                   </Link>
@@ -114,14 +114,16 @@ const SingleAccommodation = ({ room }) => {
         </div>
 
         <div className="relative  mx:auto my-auto md:w-full order-first lg:order-last ">
-          <Image
-            src={room?.image}
-            loading="lazy"
-            alt="room image"
-            className="relative z-10 shadow-lg object-cover rounded-lg"
-            width="716"
-            height="517"
-          />
+          <Container>
+            <Image
+              src={room?.image}
+              loading="lazy"
+              alt="room image"
+              className="relative z-10 shadow-lg object-cover rounded-lg"
+              width="716"
+              height="517"
+            />
+          </Container>
         </div>
       </div>
     </motion.div>
