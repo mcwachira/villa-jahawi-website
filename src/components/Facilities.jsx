@@ -20,9 +20,11 @@ const Facilities = () => {
       )}
     >
       <Container>
-        <h2 className="text-center text-6xl py-24">Our Amenities</h2>
+        <h2 className="text-center text-4xl md:text-6xl py-16 md:py-24">
+          Our Amenities
+        </h2>
 
-        <p className="text-center text-3xl">
+        <p className="text-center text-xl  md:text-3xl">
           Our villa provides the perfect blend of modern convenience and
           luxurious living. It's a retreat where you can unwind, entertain, and
           make lasting memories.
