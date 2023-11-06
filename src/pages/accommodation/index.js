@@ -27,9 +27,13 @@ const Rooms = ({ rooms }) => {
         <section className="mb-40">
           {/* <!-- Jumbotron --> */}
           <div
-            className="relative overflow-hidden bg-cover bg-no-repeat"
+            className=""
             style={{
-              backgroundPosition: "50%",
+              position: "relative",
+              backgroundSize: "cover",
+              backgroundAttachment: "fixed",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center, center",
               backgroundImage:
                 " url('/assets/images/jahawi-images/room-2.jpg')",
               height: "850px",
@@ -37,13 +41,13 @@ const Rooms = ({ rooms }) => {
           >
             <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.25)] bg-fixed">
               <div className="flex flex-col md:flex-row w-full items-center justify-end  md:w-2/3 h-full md:items-end md:justify-start text-white">
-                <div className="mb-2 justify-end md:mb-28 mx-14  text-left font-bold tracking-tight flex flex-col sm:1/2 md:w-1/2">
+                <div className="mb-2 justify-end md:mb-24 mx-14 items-center  text-left font-bold tracking-tight flex flex-col sm:1/2 md:w-1/2">
                   <span className="text-3xl my-4">
                     Designed to take advantage of
                   </span>
 
                   <div className="w-full flex justify-between items-center">
-                    <span className="text-6xl xl:text-7xl">
+                    <span className="text-2xl md:text-6xl xl:text-7xl">
                       The sunny costal climate
                     </span>
                   </div>
@@ -64,7 +68,9 @@ const Rooms = ({ rooms }) => {
         </section>
 
         <Container>
-          <h2 className="text-center text-6xl py-24">Our Rooms</h2>
+          <h2 className="text-center text-bold text-3xl lg:text-6xl py-18 mb-5">
+            Our Rooms
+          </h2>
         </Container>
 
         {rooms.map((room) => (
