@@ -17,34 +17,106 @@ const SendMail = async (req, res) => {
       html: `<!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta charset="utf-8">
-      
-        <title>The HTML5 Herald</title>
-        <meta name="description" content="The HTML5 Herald">
-        <meta name="author" content="SitePoint">
-      <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
-      
-        <link rel="stylesheet" href="css/styles.css?v=1.0">
-      
-      </head>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f5f5f5;
+          margin: 0;
+          padding: 0;
+        }
+        .email-container {
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: #fff;
+          padding: 20px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .email-details{
+          display:flex;
+          flex-direction:row;
+
+        }
+        .header {
+          background-color: #041835;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px 5px 0 0;
+        }
+        .header h1 {
+          margin: 0;
+          font-size: 24px;
+        }
+        .email-content {
+          padding: 20px;
+        }
+        .sender-info {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .email-body {
+          line-height: 1.6;
+        }
+        .footer {
+          background-color: #041835;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+          border-radius: 0 0 5px 5px;
+        }
+      </style>
+    </head>
       
       <body>
-        <div class="img-container" style="display: flex;justify-content: center;align-items: center;border-radius: 5px;overflow: hidden; font-family: 'helvetica', 'ui-sans';">              
+        <div class="email-container">
+              <div class="header">
+              <h1>${req.body.subject}</h1>
               </div>
-              <div class="container" style="margin-left: 20px;margin-right: 20px;">
-              <h3>You've got a new mail from ${req.body.name}, their email is: ✉️${req.body.email} </h3>
-              <div style="font-size: 16px;">
+              <div class='email-content'>
+              <p class="sender-info">From: ${req.body.name} &lt;${req.body.email}&gt;</p>
+              <p class="sender-info">To: You &lt;${process.env.NEXT_PUBLIC_GMAIL_EMAIL}&gt;</p>
+              <hr>
+        
+
+              <div class="email-content">
               <p>Message:</p>
               <p>${req.body.message}</p>
-              <br>
+
+              <div className="email-details">
+              <p>PhoneNumber: ${req.body.phoneNumber}</p>
+            
               </div>
-              <img src="../../assets/images/logos/web/png/color-logo-background.png" class="logo-image" style="height: 50px;width: 50px;border-radius: 5px;overflow: hidden;">
-              <p class="footer" style="font-size: 16px;padding-bottom: 20px;border-bottom: 1px solid #D1D5DB;">Regards<br>Ngozi Africa<br> +254721215653<br>
-              <div class="footer-links" style="display: flex;justify-content: center;align-items: center;">
-                <a href="https://www.villajahawi.com/" style="text-decoration: none;margin: 8px;color: #9CA3AF;">Website</a>
-                
+              <br/>
+              <div className="email-details">
+              <p>Adults: ${req.body.adults}</p>
+
+              <p>Children:${req.body.children}</p>
+      
+           </div>
+           <br/>
+
+           <div className="email-details">
+              <p>Booking Date:</p>
+              <p>${req.body.bookingDate}</p>
+            
+              <p>Nights:</p>
+              <p>${req.body.nights}</p>
 
               </div>
+              <br>
+              </div>
+              </div>
+              <div class="footer">
+        
+              <img src="/public/assets/images/jahawi-images/logos/web/png/color-logo-background.png" class="logo-image" style="height: 50px;width: 50px;border-radius: 5px;overflow: hidden;">
+              <p class="footer" style="font-size: 16px;padding-bottom: 20px;border-bottom: 1px solid #FFF;">Regards<br>Villa Jahawi <br> +254703496926<br>
+              <div class="footer-links" style="display: flex;justify-content: center;align-items: center;">
+                <a href="https://www.villajahawi.com/" style="text-decoration: none;margin: 8px;color: #ffF;">Website</a>
+                
+                </div>
+            
               </div>
       </body>
       </html>`,

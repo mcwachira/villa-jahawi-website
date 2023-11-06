@@ -130,6 +130,7 @@ const Rooms = () => {
       .required(
         "Your mobile phone number must begin with a '+', followed by your country code then actual number e.g +254123456789"
       ),
+    subject: Yup.string().max(255).required("You must Enter the subject "),
     bookingDate: Yup.date().required("Required").nullable(),
     nights: Yup.string().required("Required"),
     adults: Yup.string().required("Required"),
@@ -146,6 +147,7 @@ const Rooms = () => {
       email,
       name,
       phoneNumber,
+      subject,
       roomType,
       bookingDate,
       nights,
@@ -153,10 +155,11 @@ const Rooms = () => {
       children,
       message,
     } = values;
-    const res = await fetch("/api/SendMail", {
+    const res = await fetch("/api/SendBookingMail", {
       body: JSON.stringify({
         email,
         name,
+        subject,
         phoneNumber,
         roomType,
         bookingDate,
@@ -298,6 +301,13 @@ const Rooms = () => {
                                           type="phoneNumber"
                                           label="Phone Number"
                                           name="phoneNumber"
+                                        />
+
+                                        <FormikControl
+                                          control="input"
+                                          type="subject"
+                                          label="Subject"
+                                          name="subject"
                                         />
                                         <div className="flex space-x-4 justify-between items-center">
                                           <FormikControl

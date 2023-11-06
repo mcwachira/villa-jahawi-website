@@ -3,7 +3,6 @@ import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
 
 const Input = (props) => {
-  console.log(props);
   const { label, name, ...rest } = props;
   return (
     <>

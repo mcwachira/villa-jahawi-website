@@ -7,6 +7,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useTheme } from "next-themes";
 import { Formik, Form, Field } from "formik";
+import FormikControl from "../../components/FormComponents/FormikControl";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string().max(255).required("You must Enter your Name"),
@@ -19,12 +20,44 @@ const ContactSchema = Yup.object().shape({
     .required(
       "Your mobile phone number must begin with a '+', followed by your country code then actual number e.g +254123456789"
     ),
+  subject: Yup.string().trim().required("Subject is required"),
   message: Yup.string().trim().required("Message is required"),
 });
 const Contact = () => {
   const { theme } = useTheme();
   const [message, setMessage] = useState(""); // This will be used to show a message if the submission is successful
   const [submitted, setSubmitted] = useState(false);
+
+  const initialValues = {
+    email: "",
+    name: "",
+    phone: "",
+    subject: "",
+    message: "",
+  };
+
+  const onSubmit = async (values, { resetForm }) => {
+    setMessage("Form submitted");
+    setSubmitted(true);
+    console.log(values);
+
+    const { email, name, phone, subject, message } = values;
+    const res = await fetch("/api/SendMail", {
+      body: JSON.stringify({
+        email,
+        name,
+        subject,
+        phone,
+        message,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    resetForm({ values: "" });
+  };
 
   return (
     <>
@@ -97,10 +130,9 @@ const Contact = () => {
                       GET IN TOUCH WITH US
                     </h2>
                     <p className="text-base leading-relaxed mb-9 text-body-color">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eius tempor incididunt ut labore e dolore magna
-                      aliqua. Ut enim adiqua minim veniam quis nostrud
-                      exercitation ullamco
+                      Thank you for considering a visit to our enchanting villa!
+                      We can't wait to welcome you to a world of relaxation and
+                      luxury nested in Diani Kenya.
                     </p>
                     <div className="mb-8 flex w-full max-w-[370px]">
                       <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
@@ -123,7 +155,7 @@ const Contact = () => {
                           Our Location
                         </h4>
                         <p className="text-base text-body-color">
-                          99 S.t Jomblo Park Pekanbaru 28292. Indonesia
+                          Diani Beach Road 80401, Diani
                         </p>
                       </div>
                     </div>
@@ -150,7 +182,7 @@ const Contact = () => {
                           Phone Number
                         </h4>
                         <p className="text-base text-body-color">
-                          (+62)81 414 257 9980
+                          +254703496926
                         </p>
                       </div>
                     </div>
@@ -175,120 +207,78 @@ const Contact = () => {
                           Email Address
                         </h4>
                         <p className="text-base text-body-color">
-                          info@yourdomain.com
+                          info@villlajahawi.com
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
+
                 <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
                   <Formik
-                    initialValues={{
-                      email: "",
-                      name: "",
-                      phone: "",
-                      message: "",
-                    }}
-                    onSubmit={() => {
-                      setMessage("Form submitted");
-                      setSubmitted(true);
-                    }}
+                    initialValues={initialValues}
+                    onSubmit={onSubmit}
                     validationSchema={ContactSchema}
                   >
-                    {({
-                      errors,
-                      handleBlur,
-                      handleChange,
-                      handleSubmit,
-                      isSubmitting,
-                      touched,
-                      values,
-                    }) => (
-                      <Form
-                        onSubmit={handleSubmit}
-                        div
-                        className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12"
-                      >
-                        <Field
-                          type="text"
-                          placeholder="Enter Your Name"
-                          name="name"
-                          value={values.name}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          className="mb-6 border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-black outline-none"
-                        />
+                    {(formik) => {
+                      return (
+                        <Form className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
+                          <FormikControl
+                            control="input"
+                            type="name"
+                            label="Name"
+                            name="name"
+                          />
+                          <FormikControl
+                            control="input"
+                            type="email"
+                            label="Email"
+                            name="email"
+                          />
 
-                        {errors.name && (
-                          <div className="text-red text-center  mb-2">
-                            {errors.name}
+                          <FormikControl
+                            control="input"
+                            type="subject"
+                            label="Subject"
+                            name="subject"
+                          />
+                          <FormikControl
+                            control="input"
+                            type="phone"
+                            label="Phone Number"
+                            name="phone"
+                          />
+                          <div className="my-12 w-full">
+                            <FormikControl
+                              control="textarea"
+                              type="message"
+                              label="Message"
+                              name="message"
+                            />
                           </div>
-                        )}
 
-                        <Field
-                          type="email"
-                          placeholder="Enter your Email"
-                          name="email"
-                          value={values.email}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          className="mb-6 border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-black outline-none focus:border-primary focus-visible:shadow-none"
-                        />
-
-                        {errors.name && touched.name ? (
-                          <div className="text-red text-center  mb-2 ">
-                            {errors.email}
+                          <div>
+                            <button
+                              type="submit"
+                              className={clsx(
+                                "w-full p-3 text-black transition border rounded border-primary  hover:bg-opacity-90",
+                                theme === "dark"
+                                  ? "bg-[#041434] text-white"
+                                  : "bg-[#F3F4F6] text-black"
+                              )}
+                              disabled={
+                                !formik.isValid &&
+                                !formik.isSubmitting &&
+                                !formik.dirty
+                              }
+                              // onClick={() => setShowModal(false)}
+                            >
+                              Send Message
+                            </button>
                           </div>
-                        ) : null}
-
-                        <Field
-                          type="phone"
-                          placeholder="Enter Your Phone Number"
-                          name="phone"
-                          value={values.phone}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          className="mb-6 border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-black outline-none focus:border-primary focus-visible:shadow-none"
-                        />
-
-                        {errors.phone && touched.phone ? (
-                          <div className="text-red text-center  mb-2">
-                            {errors.phone}
-                          </div>
-                        ) : null}
-
-                        <Field
-                          type="message"
-                          row="6"
-                          placeholder="Your Message"
-                          name="details"
-                          value={values.message}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          className="mb-6 border-[f0f0f0] w-full resize-none rounded border py-3 px-[14px] text-base text-black outline-none focus:border-primary focus-visible:shadow-none"
-                        />
-
-                        {errors.message && touched.message ? (
-                          <div className="text-red text-center  mb-2">
-                            {errors.message}
-                          </div>
-                        ) : null}
-
-                        <div>
-                          <button
-                            type="submit"
-                            className={clsx(
-                              "w-full p-3 text-black transition border rounded border-primary  hover:bg-opacity-90",
-                              theme === "dark"
-                                ? "bg-[#041434] text-white"
-                                : "bg-[#F3F4F6] text-black"
-                            )}
-                          >
-                            Send Message
-                          </button>
-                        </div>
-                      </Form>
-                    )}
+                        </Form>
+                      );
+                    }}
                   </Formik>
                 </div>
               </div>
@@ -302,105 +292,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-// import { useState } from 'react';
-
-// import { useFormik } from 'formik';
-// import type { NextPage } from 'next';
-// import * as yup from 'yup';
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-// const Home: NextPage = () => {
-//   const [message, setMessage] = useState(''); // This will be used to show a message if the submission is successful
-//   const [submitted, setSubmitted] = useState(false);
-
-//   const formik = useFormik({
-//     initialValues: {
-//       email: '',
-//       name: '',
-//       message: '',
-//     },
-//     onSubmit: () => {
-//       setMessage('Form submitted');
-//       setSubmitted(true);
-//     },
-//     validationSchema: yup.object({
-//       name: yup.string().trim().required('Name is required'),
-//       email: yup
-//         .string()
-//         .email('Must be a valid email')
-//         .required('Email is required'),
-//       message: yup.string().trim().required('Message is required'),
-//     }),
-//   });
-
-//   return (
-//     <div className="vh-100 d-flex flex-column justify-content-center align-items-center">
-//       <div hidden={!submitted} className="alert alert-primary" role="alert">
-//         {message}
-//       </div>
-
-//       <form className="w-50" onSubmit={handleSubmit}>
-//         <div className="mb-3">
-//           <label htmlFor="name" className="form-label">
-//             Name
-//           </label>
-//           <input
-//             type="text"
-//             name="name"
-//             className="form-control"
-//             placeholder="John Doe"
-//             value={formik.values.name}
-//             onChange={formik.handleChange}
-//             onBlur={formik.handleBlur}
-//           />
-//           {formik.errors.name && (
-//             <div className="text-danger">{formik.errors.name}</div>
-//           )}
-//         </div>
-
-//         <div className="mb-3">
-//           <label htmlFor="email" className="form-label">
-//             Email
-//           </label>
-//           <input
-//             type="email"
-//             name="email"
-//             className="form-control"
-//             placeholder="john@example.com"
-//             value={formik.values.email}
-//             onChange={formik.handleChange}
-//             onBlur={formik.handleBlur}
-//           />
-//           {formik.errors.email && (
-//             <div className="text-danger">{formik.errors.email}</div>
-//           )}
-//         </div>
-
-//         <div className="mb-3">
-//           <label htmlFor="message" className="form-label">
-//             Message
-//           </label>
-//           <textarea
-//             name="message"
-//             className="form-control"
-//             placeholder="Your message ..."
-//             value={formik.values.message}
-//             onChange={formik.handleChange}
-//             onBlur={formik.handleBlur}
-//           />
-//           {formik.errors.message && (
-//             <div className="text-danger">{formik.errors.message}</div>
-//           )}
-//         </div>
-
-//         <button type="submit" className="btn btn-primary">
-//           Send
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Home;
