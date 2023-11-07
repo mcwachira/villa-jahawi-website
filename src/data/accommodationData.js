@@ -191,7 +191,7 @@ export const accommodationData = [
   },
   {
     id: 5,
-    title: "2 bedroom House",
+    title: "Couples exclusive",
     url: "contemporary",
     image: "/assets/images/jahawi-images/room-5.webp",
     subTitle: "Couples Room",
@@ -202,28 +202,16 @@ export const accommodationData = [
     numberOfBathrooms: 1,
     AccommodationImages: [
       {
-        title: "2 bedroom house",
-        img: "/assets/images/jahawi-images/room-5/1.webp",
-      },
-      {
-        title: "2 bedroom house",
-        img: "/assets/images/jahawi-images/room-5/2.webp",
-      },
-      {
-        title: "2 bedroom house",
-        img: "/assets/images/jahawi-images/room-5/3.webp",
-      },
-      {
-        title: "2 bedroom house",
-        img: "/assets/images/jahawi-images/room-5/4.webp",
-      },
-      {
-        title: "2 bedroom house",
-        img: "/assets/images/jahawi-images/room-5/5.webp",
-      },
-      {
-        title: "2 bedroom house",
+        title: "Couples exclusive",
         img: "/assets/images/jahawi-images/room-5/6.webp",
+      },
+      {
+        title: "Couples exclusive",
+        img: "/assets/images/jahawi-images/room-5/7.webp",
+      },
+      {
+        title: "Couples exclusive",
+        img: "/assets/images/jahawi-images/room-5/5.webp",
       },
     ],
     amenities: [
