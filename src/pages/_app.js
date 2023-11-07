@@ -7,6 +7,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 
+export const metadata = {
+  title: {
+    default:
+      "Villajahawi.com  - your coastal haven just 10 minutes from Diani Beach ",
+  },
+};
+
 export default function App({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();

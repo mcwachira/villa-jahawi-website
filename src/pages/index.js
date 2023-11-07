@@ -10,8 +10,9 @@ import Testimonial from "../components/Testimonial";
 import { getAllArticles } from "../lib/articles";
 
 export const metadata = {
-  title: "Villa jahawi ",
-  description: "",
+  title: "Villa Jahawi ",
+  description:
+    "Discover Villa Jahawi, your coastal haven just 10 minutes from Diani Beach. Our villa offers the perfect blend of convenience and comfort for your beachside retreat. Book now for an unforgettable Diani getaway ",
 };
 
 export default function Home({ caseStudies, articles }) {
