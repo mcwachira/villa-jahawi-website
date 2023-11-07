@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import roomImage1 from "/public/assets/images/jahawi-images/room-1.jpg";
-import roomImage2 from "/public/assets/images/jahawi-images/room-2.jpg";
-import roomImage3 from "/public/assets/images/jahawi-images/room-3.jpg";
-import roomImage4 from "/public/assets/images/jahawi-images/room-4.jpg";
+import roomImage1 from "/public/assets/images/jahawi-images/room-1.webp";
+import roomImage2 from "/public/assets/images/jahawi-images/room-2.webp";
+import roomImage3 from "/public/assets/images/jahawi-images/room-3.webp";
+import roomImage4 from "/public/assets/images/jahawi-images/room-4.webp";
 import roomImage5 from "/public/assets/images/room-5.png";
 import roomImage6 from "/public/assets/images/room-6.png";
 import roomImage7 from "/public/assets/images/room-7.png";

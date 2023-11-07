@@ -20,6 +20,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const Amenities = () => {
   const { theme, setTheme } = useTheme();
@@ -36,39 +37,62 @@ const Amenities = () => {
           theme === "dark" ? "bg-[#041434]" : "bg-[#F3F4F6]"
         )}
       >
-        <section className="relative bg-[url(/assets/images/jahawi-images/front-2.jpg)] bg-cover bg-center bg-no-repeat">
-          <div className="absolute inset-0 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+        <section className="relative h-screen ">
+          <div className="absolute inset-0 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l">
+            <Image
+              src="/assets/images/jahawi-images/front-2.webp"
+              alt="background image"
+              className="object-cover object-center"
+              fill
+              sizes="100vw"
+              priority
+            />
+          </div>
 
-          <div className="relative mx-auto max-w-screen-xl  px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+          <div className="relative z-20   mx-auto max-w-screen-xl  px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
             {/* sm:max-w-lg */}
-            <div className="w-full  text-center ltr:sm:text-left rtl:sm:text-right">
-              <h1
+            <div className="w-full  overflow-hidden text-center ltr:sm:text-left rtl:sm:text-right">
+              <motion.h1
                 className={`${dancingScript.className}
-   text-center font-display text-6xl font-semibold text-[#7c6a467]
-    sm:text-6xl lg:text-left my-12 text-white`}
+     text-center font-display text-6xl font-semibold text-[#7c6a467]
+      sm:text-6xl lg:text-left my-12 text-white`}
+                initial={{ x: "100%" }}
+                animate={{ x: "0%" }}
+                exit={{ opacity: 1 }}
+                transition={{ delay: 0.65, duration: 0.65, ease: "easeOut" }}
               >
                 Villa Jahawi
-              </h1>
-              <h2 className=" my-4 text-4xl font-extrabold text-center sm:text-5xl  lg:text-left text-white">
+              </motion.h1>
+              <motion.h2
+                initial={{ x: "100%" }}
+                animate={{ x: "0%" }}
+                exit={{ opacity: 1 }}
+                transition={{ delay: 0.65, duration: 0.65, ease: "easeOut" }}
+                className=" my-4 text-4xl font-extrabold text-center sm:text-5xl  lg:text-left text-white"
+              >
                 Every Moment feels like the first time
-                {/* 
-      <strong className="block font-extrabold text-rose-700">
-      Villa Jahawi.
-      </strong> */}
-              </h2>
+              </motion.h2>
 
               {/* <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-    Every Moment feels like the first time Villa Jahawi
-    </p> */}
+      Every Moment feels like the first time Villa Jahawi
+      </p> */}
 
-              <div className="mt-8 flex flex-wrap gap-4 text-center  justify-center items-center lg:justify-start">
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: "0%" }}
+                exit={{ opacity: 1 }}
+                transition={{ delay: 0.65, duration: 0.65, ease: "easeOut" }}
+                className="mt-8 flex flex-wrap gap-4 text-center  justify-center items-center lg:justify-start"
+              >
                 <Link
-                  href="#"
-                  className="block w-3/4 rounded bg-[#4a576E] my-8 px-14 py-6  sm:px-12 sm:py-4 text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.airbnb.com/rooms/1011994449555648498?source_impression_id=p3_1699090362_HCm3Po%2BSP7gkaS%2F6"
+                  className="block w-3/4 rounded bg-[#4a576E] my-8 px-6 py-4 text-xl sm:px-8 sm:py-4 md:text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
                 >
                   Book Now
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -86,7 +110,7 @@ const Amenities = () => {
                 Making Your Stay Comfortable & Care Free
               </h3>
 
-              <p className="text-2xl text-center mt-4">
+              <p className="text-2xl text-center mt-4 leading-normal w-full">
                 At Villa Jahawi, you will find all the facilities necessary to
                 make your stay as comfortable and as carefree as possible. Our
                 team of staff, renowned for offering exemplary service, is there
@@ -112,11 +136,11 @@ const Amenities = () => {
             modules={[Autoplay, Navigation]}
             className="mySwiper h-[64rem] w-screen  "
           >
-            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/drone-photos/1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/drone-photos/1.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/2.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/3.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/4.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/5.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
           </Swiper>
         </div>
 
@@ -129,11 +153,11 @@ const Amenities = () => {
               Jacuzzi
             </h2>
 
-            <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+            <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-4xl lg:text-6xl text-center capitalize font-semibold  ">
               Ideal Space for Relaxation
             </h3>
 
-            <p className="text-2xl text-center mnt-4">
+            <p className="text-2xl text-center mt-4">
               The main leisure jacuzzi offers the ideal space for sunbathing,
               relaxation and leisure.
             </p>
@@ -155,10 +179,57 @@ const Amenities = () => {
             modules={[Autoplay, Navigation]}
             className="mySwiper h-[64rem] w-screen  "
           >
-            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/drone-photos/5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/pool-2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/pool-3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/drone-photos/cool-pool.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className="swiper-slide">
+              <div className="w-full max-w-xs">
+                <Image
+                  alt="responsive_image"
+                  src="/assets/images/jahawi-images/drone-photos/5.webp"
+                  // sizes="100vw"
+                  sizes="(min-width: 808px) 50vw, 100vw"
+                  fill
+                  priority="blur"
+                />
+              </div>
+
+              <Image
+                src="/assets/images/jahawi-images/drone-photos/5.webp"
+                alt="background image"
+                // className="object-cover object-center"
+                fill
+                // sizes="100vw"
+                priority
+              />
+            </SwiperSlide>
+            <SwiperSlide className=" swiper-slide  ">
+              <Image
+                src="/assets/images/jahawi-images/drone-photos/pool-2.webp"
+                alt="background image"
+                // className="object-cover object-center"
+                fill
+                // sizes="100vw"
+                priority
+              />
+            </SwiperSlide>
+            <SwiperSlide className=" swiper-slide  ">
+              <Image
+                src="/assets/images/jahawi-images/drone-photos/pool-3.webp"
+                alt="background image"
+                // className="object-cover object-center"
+                fill
+                // sizes="100vw"
+                priority
+              />
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide  ">
+              <Image
+                src="/assets/images/jahawi-images/drone-photos/cool-pool.webp"
+                alt="background image"
+                // className="object-cover object-center"
+                fill
+                // sizes="100vw"
+                priority
+              />
+            </SwiperSlide>
           </Swiper>
         </div>
 
@@ -170,7 +241,10 @@ const Amenities = () => {
               Kitchen
             </h2>
 
-            <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+            <h3
+              className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E]
+            text-4xl lg:text-6xl text-center capitalize font-semibold  "
+            >
               Ideal Space for Cooking and preparing your meals
             </h3>
 
@@ -197,11 +271,20 @@ const Amenities = () => {
             modules={[Autoplay, Navigation]}
             className="mySwiper h-[64rem] w-screen  "
           >
-            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/kitchen/kitchen-1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/kitchen/kitchen-2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/kitchen/kitchen-3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/kitchen/kitchen-4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/kitchen/kitchen-5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className="swiper-slide  ">
+              <Image
+                src="/assets/images/jahawi-images/drone-photos/cool-pool.webp"
+                alt="background image"
+                // className="object-cover "
+                fill
+                sizes="100vw"
+                priority
+              />
+            </SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/kitchen/kitchen-2.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/kitchen/kitchen-3.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/kitchen/kitchen-4.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/kitchen/kitchen-5.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
           </Swiper>
         </div>
 
@@ -213,7 +296,10 @@ const Amenities = () => {
               Lounge
             </h2>
 
-            <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+            <h3
+              className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E]
+             text-4xl lg:text-6xl text-center capitalize font-semibold  "
+            >
               Ideal Space for relaxing
             </h3>
 
@@ -240,11 +326,11 @@ const Amenities = () => {
             modules={[Autoplay, Navigation]}
             className="mySwiper h-[64rem] w-screen  "
           >
-            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/sitting/sitting-1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/sitting/sitting-1.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-2.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-3.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-4.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/sitting/sitting-5.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
           </Swiper>
         </div>
 
@@ -255,7 +341,10 @@ const Amenities = () => {
               Porch
             </h2>
 
-            <h3 className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] text-6xl text-center capitalize font-semibold  ">
+            <h3
+              className="relative overflow-visible w-auto mt-0 mr-auto mb-0 pr-2 justify-start items-start text-[#4a576E] 
+           text-4xl lg:text-6xl text-center capitalize font-semibold  "
+            >
               Ideal Space for Having a meal
             </h3>
 
@@ -282,11 +371,11 @@ const Amenities = () => {
             modules={[Autoplay, Navigation]}
             className="mySwiper h-[64rem] w-screen  "
           >
-            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/veranda/veranda-1.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-2.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-3.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-4.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
-            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/sitting-5.jpg)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className="  bg-[url(/assets/images/jahawi-images/veranda/veranda-1.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-2.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-3.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/veranda-4.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
+            <SwiperSlide className=" bg-[url(/assets/images/jahawi-images/veranda/sitting-5.webp)] bg-cover bg-center bg-no-repeat  swiper-slide  "></SwiperSlide>
           </Swiper>
         </div>
       </div>

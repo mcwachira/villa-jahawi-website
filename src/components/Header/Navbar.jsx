@@ -208,7 +208,7 @@ const Navbar = () => {
               {theme === "dark" ? (
                 <Image
                   src={darkLogo}
-                  alt=""
+                  alt="dark mode logo"
                   width={100}
                   height={100}
                   className="h-18 w-auto sm:h-16  lg:h-16"
@@ -216,7 +216,7 @@ const Navbar = () => {
               ) : (
                 <Image
                   src={lightLogo}
-                  alt=""
+                  alt="light mode logo"
                   width={100}
                   height={100}
                   className="h-18 w-auto sm:h-16  lg:h-16"

@@ -9,6 +9,11 @@ import Testimonial from "../components/Testimonial";
 
 import { getAllArticles } from "../lib/articles";
 
+export const metadata = {
+  title: "Villa jahawi ",
+  description: "",
+};
+
 export default function Home({ caseStudies, articles }) {
   console.log(process.env.NEXT_PUBLIC_GMAIL_PASSWORD);
   return (

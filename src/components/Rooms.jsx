@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 
-import roomImage1 from "/public/assets/images/jahawi-images/room-1.jpg";
-import roomImage2 from "/public/assets/images/jahawi-images/room-2.jpg";
-import roomImage3 from "/public/assets/images/jahawi-images/room-3.jpg";
-import roomImage4 from "/public/assets/images/jahawi-images/room-4.jpg";
+import roomImage1 from "/public/assets/images/jahawi-images/room-1.webp";
+import roomImage2 from "/public/assets/images/jahawi-images/room-2.webp";
+import roomImage3 from "/public/assets/images/jahawi-images/room-3.webp";
+import roomImage4 from "/public/assets/images/jahawi-images/room-4.webp";
 
 import * as Yup from "yup";
 
@@ -198,10 +198,13 @@ const Rooms = () => {
               )}
             >
               <Image
-                className="h-48 md:h-72 w-full md:w-full rounded-md object-cover bg-slate-100 transition duration-300 group-hover:scale-105"
+                className=" h-auto w-full rounded-md object-cover bg-slate-100 transition duration-300 group-hover:scale-105"
                 src={room.imageSrc}
                 width={600}
                 height={400}
+                placeholder="blur"
+                quality={100}
+                // sizes="(max-width: 768px) 100vw, 33vw"
                 alt="Property Image"
               />
               <div className="px-6 py-4">

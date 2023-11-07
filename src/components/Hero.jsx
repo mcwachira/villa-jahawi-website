@@ -2,18 +2,28 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { Dancing_Script } from "next/font/google";
+import Image from "next/image";
 const dancingScript = Dancing_Script({
   weight: "700",
   subsets: ["latin"],
 });
 const Hero = () => {
   return (
-    <section className="relative bg-[url(/assets/images/jahawi-images/front-2.jpg)] bg-cover bg-center bg-no-repeat">
-      <div className="absolute inset-0 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+    <section className="relative h-screen ">
+      <div className="absolute inset-0 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l">
+        <Image
+          src="/assets/images/jahawi-images/front-2.webp"
+          alt="background image"
+          className="object-cover object-center"
+          fill
+          sizes="100vw"
+          priority
+        />
+      </div>
 
-      <div className="relative mx-auto max-w-screen-xl  px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+      <div className="relative z-20   mx-auto max-w-screen-xl  px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
         {/* sm:max-w-lg */}
-        <div className="w-full overflow-hidden text-center ltr:sm:text-left rtl:sm:text-right">
+        <div className="w-full  overflow-hidden text-center ltr:sm:text-left rtl:sm:text-right">
           <motion.h1
             className={`${dancingScript.className}
      text-center font-display text-6xl font-semibold text-[#7c6a467]

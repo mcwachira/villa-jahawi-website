@@ -83,7 +83,7 @@ const Contact = () => {
               style={{
                 backgroundPosition: "50%",
                 backgroundImage:
-                  " url('/assets/images/jahawi-images/room-4.jpg')",
+                  " url('/assets/images/jahawi-images/room-4.webp')",
                 height: "800px",
               }}
             >
