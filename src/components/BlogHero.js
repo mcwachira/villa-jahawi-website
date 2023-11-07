@@ -1,20 +1,27 @@
-import { Container } from './Container'
-import Image from 'next/image'
-
-import bgGradient from '/public/assets/images/blog-hero-bg.png'
+import { Container } from "./Container";
+import Image from "next/image";
+import clsx from "clsx";
+import { useTheme } from "next-themes";
+import bgGradient from "/public/assets/images/blog-hero-bg.png";
 
 export function BlogHero() {
+  const { theme, setTheme } = useTheme();
   return (
-    <section className="relative overflow-hidden bg-white lg:px-8">
-      <Container className="relative bg-slate-50 py-16 sm:py-24 lg:rounded-b-3xl lg:py-32">
-        <Image
+    <section
+      className={clsx(
+        "relative overflow-hidden lg:px-8",
+        theme === "light" ? "!bg-[#F3F4F6]" : "!bg-[#041434]"
+      )}
+    >
+      <Container className="relative bg-slate-50 py-10 sm:py-14 lg:rounded-b-3xl lg:py-16">
+        {/* <Image
           src={bgGradient}
           alt=""
           className="absolute inset-0 h-full w-full opacity-75"
-        />
+        /> */}
         <div className="relative flex flex-col items-center justify-center">
           <h1 className="text-center font-display text-5xl font-semibold text-slate-900 sm:text-6xl">
-            Welcome to{' '}
+            Welcome to{" "}
             <span className="relative whitespace-nowrap">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,9 +37,10 @@ export function BlogHero() {
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-center text-lg leading-8 text-slate-700">
-           Join us as we share insights on traveling, life in Diani , the best places to visit and the hottest villas to stay in
+            Join us as we share insights on traveling, life in Diani , the best
+            places to visit and the hottest villas to stay in
           </p>
-          <form
+          {/* <form
             action="#"
             method="post"
             className="relative mt-12 w-full max-w-lg"
@@ -82,9 +90,9 @@ export function BlogHero() {
             >
               Subscribe
             </button>
-          </form>
+          </form> */}
         </div>
       </Container>
     </section>
-  )
+  );
 }

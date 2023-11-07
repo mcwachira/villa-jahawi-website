@@ -1,13 +1,19 @@
-import { Article } from './Article'
-import { Pagination } from './Pagination'
-import { Tabs } from './Tabs'
-import { Container } from './Container'
+import { Article } from "./Article";
+import { Pagination } from "./Pagination";
+import { Tabs } from "./Tabs";
+import { Container } from "./Container";
+import clsx from "clsx";
+import { useTheme } from "next-themes";
 
 export function Articles({ articles, categories }) {
+  const { theme, setTheme } = useTheme();
   return (
     <section
       id="articles"
-      className="overflow-hidden bg-white py-16 sm:py-24 lg:py-28"
+      className={clsx(
+        "overflow-hidden py-16 sm:py-24 lg:py-28",
+        theme === "light" ? "!bg-[#F3F4F6]" : "!bg-[#041434]"
+      )}
     >
       <Container>
         <h2 className="text-center font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
@@ -26,5 +32,5 @@ export function Articles({ articles, categories }) {
         <Pagination />
       </Container>
     </section>
-  )
+  );
 }

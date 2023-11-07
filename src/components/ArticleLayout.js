@@ -1,17 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
+import { useTheme } from "next-themes";
 
 import { formatDate } from "../lib/formatDate";
-import { LinkedInIcon, InstagramIcon, TwitterIcon } from "./SocialIcons";
+import { FacebookIcon, InstagramIcon } from "./SocialIcons";
 import {
   WebDevelopmentIcon,
   TutorialIcon,
   BusinessIcon,
   ContentCreationIcon,
 } from "./CategoryIcons";
-import Navbar from "./Header/Navbar";
-import Footer from "./Footer";
 
 const iconOptions = {
   Traveling: WebDevelopmentIcon,
@@ -32,6 +32,7 @@ function SocialLink({ icon: Icon, ...props }) {
 }
 
 export function ArticleLayout({ meta, children }) {
+  const { theme, setTheme } = useTheme();
   const categorySlug = meta.category.replace(/ /g, "-").toLowerCase();
   const CategoryIcon = iconOptions[meta.category];
 
@@ -42,17 +43,28 @@ export function ArticleLayout({ meta, children }) {
         <meta name="description" content={meta.description} />
       </Head>
 
-      <main>
+      <main
+        className={clsx(theme === "light" ? "!bg-[#F3F4F6]" : "!bg-[#041434]")}
+      >
         <article>
           {/* Article Header */}
           <header className="relative bg-slate-50 py-16 sm:pt-24 lg:pt-28">
-            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-white" />
+            <div
+              className={clsx(
+                "absolute inset-x-0 bottom-0 h-1/4",
+                theme === "light" ? "!bg-[#F3F4F6]" : "!bg-[#041434]"
+              )}
+            />
             <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
               <Link
                 href={`/articles/${categorySlug}#articles`}
                 className="group inline-flex items-center justify-center gap-3.5 text-base leading-5 tracking-wide text-sky-700 transition duration-200 ease-in-out hover:text-sky-600 sm:text-lg"
               >
-                <CategoryIcon className="h-[18px] w-[18px] text-sky-700/90 transition duration-200 group-hover:text-sky-600 sm:h-5 sm:w-5" />
+                <CategoryIcon
+                  className={clsx(
+                    "h-[18px] w-[18px] text-sky-700/90 transition duration-200 group-hover:text-sky-600 sm:h-5 sm:w-5"
+                  )}
+                />
                 {meta.category}
               </Link>
               <h1 className="mt-6 text-center font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
@@ -112,8 +124,22 @@ export function ArticleLayout({ meta, children }) {
           </header>
 
           {/* Article Content */}
-          <div className="bg-white px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg mx-auto max-w-2xl">{children}</div>
+          <div
+            className={clsx(
+              theme === "light"
+                ? "!bg-[#F3F4F6] text-[#041434]"
+                : "!bg-[#041434] text-white",
+              "px-4 sm:px-6 lg:px-8"
+            )}
+          >
+            <div
+              className={clsx(
+                "prose prose-lg mx-auto max-w-2xl",
+                theme === "light" ? "!text-[#041434]" : "!text-white"
+              )}
+            >
+              {children}
+            </div>
             <footer className="mx-auto max-w-2xl">
               <hr className="mt-14 h-px w-full pb-6 text-slate-300/75 sm:pb-4" />
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
@@ -149,20 +175,19 @@ export function ArticleLayout({ meta, children }) {
                     Copy link
                   </button>
                   <SocialLink
-                    href="https://linkedin.com"
-                    aria-label="Share on LinkedIn"
-                    icon={LinkedInIcon}
+                    href="https://www.facebook.com/profile.php?id=61552855440458"
+                    rel="noreferrer"
+                    target="_blank"
+                    aria-label="Share on Facebook"
+                    icon={FacebookIcon}
                   />
 
                   <SocialLink
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/villajahawi/"
+                    rel="noreferrer"
+                    target="_blank"
                     aria-label="Share on Instagram"
                     icon={InstagramIcon}
-                  />
-                  <SocialLink
-                    href="https://twitter.com"
-                    aria-label="Share on Twitter"
-                    icon={TwitterIcon}
                   />
                 </div>
               </div>
