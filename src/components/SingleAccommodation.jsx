@@ -51,29 +51,29 @@ const SingleAccommodation = ({ room }) => {
                 {room?.subTitle}
               </h2>
 
-              <p className=" text-xl md:text-2xl  leading-loose tracking-normal my-2">
+              <p className=" text-xl lg:text-2xl  leading-loose tracking-wide my-2">
                 {room?.description}
               </p>
 
               <div className="mt-6">
-                <div className=" w-full  lg:w-2/3 my-8 flex flex-col space-y-6 md:space-y-6 md:flex-row justify-between items-center lg:space-x-12">
-                  <div className="flex items-center space-x-4">
-                    <BsPeopleFill size={60} />
-                    <p className="ml-2 text-2xl md:text-4xl  font-medium ">
+                <div className=" w-full  xl:w-2/3 my-8 flex flex-col space-y-6 md:space-y-6 md:flex-row justify-between items-center lg:space-x-12">
+                  <div className="w-full flex flex-col space-y-4 items-center space-x-4">
+                    <BsPeopleFill size={40} />
+                    <p className=" lg:ml-2 text-xl md:text-3xl  font-medium ">
                       {room?.numberOfPeople} people
                     </p>
                   </div>
 
-                  <div className="flex items-center space-x-4">
+                  <div className="w-full flex flex-col space-y-4 items-center space-x-4">
                     <MdOutlineBedroomParent size={40} />
-                    <p className="ml-3  text-2xl md:text-4xl   font-medium ">
+                    <p className="lg:ml-2  text-xl md:text-4xl   font-medium ">
                       {room?.numberOfBeds} Beds
                     </p>
                   </div>
 
-                  <div className="flex items-center space-x-4">
+                  <div className="w-full flex flex-col space-y-4 items-center space-x-4">
                     <GiBathtub size={40} />
-                    <p className="ml-3  text-2xl md:text-4xl    font-medium ">
+                    <p className="lg:ml-2  text-2xl md:text-4xl    font-medium ">
                       {room.numberOfBathrooms}{" "}
                       {room.numberOfBathrooms === 1 ? "Bathroom" : "Bathrooms"}
                     </p>
