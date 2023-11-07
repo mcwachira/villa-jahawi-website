@@ -34,6 +34,7 @@ import FormikControl from "../FormComponents/FormikControl";
 import BookingForm from "../BookingForm/BookingForm";
 
 const RoomFeatures = ({ room }) => {
+  console.log(room);
   const { theme, setTheme } = useTheme();
 
   const [selectId, setSelectId] = useState(null);
@@ -203,12 +204,22 @@ const RoomFeatures = ({ room }) => {
         <div className="mt-20  w-full">
           <Container>
             <div className="flex flex-col items-center">
-              <h2 className="relative text-2xl lg:text-4xl text-center overflow-visible mb-6  text-gray-500 capitalize font-semibold  ">
+              <h2
+                className={clsx(
+                  theme === "dark" ? "text-white" : "text-gray-500",
+                  "relative text-2xl lg:text-4xl text-center overflow-visible mb-6  capitalize font-semibold  "
+                )}
+              >
                 {" "}
                 {room?.title}
               </h2>
 
-              <h2 className="relative text-center overflow-visible mb-0 pr-2  text-[#4a576E] text-3xl lg:text-5xl capitalize font-semibold  ">
+              <h2
+                className={clsx(
+                  theme === "dark" ? "text-white" : "text-gray-500",
+                  "relative text-center overflow-visible  pr-2 my-4 mb-4  text-3xl lg:text-5xl capitalize font-semibold  "
+                )}
+              >
                 {room?.subTitle}
               </h2>
 
@@ -216,22 +227,22 @@ const RoomFeatures = ({ room }) => {
 
               <div className=" w-full  sm:w-2/3 my-8 flex justify-between items-center space-x-12">
                 <div className="flex items-center">
-                  <BsPeopleFill size={60} color="#4a576E" />
-                  <p className="ml-2 text-2xl  font-medium text-gray-700">
+                  <BsPeopleFill size={60} />
+                  <p className="ml-2 text-2xl  font-medium ">
                     {room?.numberOfPeople} people
                   </p>
                 </div>
 
                 <div className="flex items-center">
                   <MdOutlineBedroomParent size={40} />
-                  <p className="ml-3 text-2xl  font-medium text-gray-700">
+                  <p className="ml-3 text-2xl  font-medium ">
                     {room?.numberOfBeds} Beds
                   </p>
                 </div>
 
                 <div className="flex items-center">
                   <GiBathtub size={40} />
-                  <p className="ml-3 text-2xl   font-medium text-gray-700">
+                  <p className="ml-3 text-2xl   font-medium ">
                     {room.numberOfBathrooms}{" "}
                     {room.numberOfBathrooms === 1 ? "Bathroom" : "Bathrooms"}
                   </p>
@@ -242,13 +253,13 @@ const RoomFeatures = ({ room }) => {
                 className="w-full  md:w-2/3 my-8 flex flex-col justify-between items-center md:space-x-12
     "
               >
-                <div className="flex justify-between items-center space-x-12 my-8">
+                <div className="flex flex-col md:flex-row  space-y-4 md:space-y-0 justify-between items-center md:space-x-12 my-8">
                   <Link
                     href={`/accommodation/[id]`}
                     as={`/accommodation/${room.id}`}
                     aria-label="Single Project"
                     passHref
-                    className="relative rounded-md  inline-flex items-center justify-start py-4 px-8 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                    className="relative rounded-md  inline-flex items-center justify-start py-4 px-8 text-2xl  md:text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
                     <span className="w-52 h-52 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-36 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
@@ -258,7 +269,7 @@ const RoomFeatures = ({ room }) => {
 
                   <button
                     onClick={() => setShowModal(true)}
-                    className="relative rounded-md  inline-flex items-center justify-start py-4 px-8 text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                    className="relative rounded-md  inline-flex items-center justify-start py-4 px-8  text-2xl  md:text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   >
                     <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
@@ -407,7 +418,7 @@ const RoomFeatures = ({ room }) => {
 
                 <button
                   type="button"
-                  className="w-3/4 relative rounded-md  inline-flex items-center justify-start py-2 px-6 text-4xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
+                  className="w-3/4 relative rounded-md  inline-flex items-center justify-start py-2 px-4 md:px-6  text-2xl  md:text-3xl border-4 border-[#4a576E]  text-black overflow-hidden transition-all  bg-white  hover:bg-white group"
                   onClick={() => setShowModal(true)}
                 >
                   <span className="w-full h-52 rounded rotate-[-40deg] bg-[#4a576E] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-5 ml-5 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
