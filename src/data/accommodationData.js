@@ -191,10 +191,10 @@ export const accommodationData = [
   },
   {
     id: 5,
-    title: "Couples exclusive",
+    title: "1 Bed",
     url: "contemporary",
     image: "/assets/images/jahawi-images/room-5.webp",
-    subTitle: "Couples Room",
+    subTitle: "Couples Exclusive",
     description:
       "Welcome to our spacious, modern-designed House tailored for your family,  situated in the coastal region but not on the beach. The room is a haven of contemporary comfort, embracing the coastal weather with its chic design. A luxurious king-size bed is the centerpiece, complemented by large windows that provide serene coastal views and allow the coastal breeze to drift in. ",
     numberOfPeople: 4,
@@ -202,15 +202,15 @@ export const accommodationData = [
     numberOfBathrooms: 1,
     AccommodationImages: [
       {
-        title: "Couples exclusive",
+        title: "room-5",
         img: "/assets/images/jahawi-images/room-5/6.webp",
       },
       {
-        title: "Couples exclusive",
+        title: "room-5",
         img: "/assets/images/jahawi-images/room-5/7.webp",
       },
       {
-        title: "Couples exclusive",
+        title: "room-5",
         img: "/assets/images/jahawi-images/room-5/5.webp",
       },
     ],
