@@ -29,41 +29,51 @@ const SingleAccommodation = ({ room }) => {
         )}
         id="#section1"
       >
-        <div className="mt-20 mx-auto w-full">
+        <div className="mt-20 lg:mx-auto w-full">
           <Container>
-            <div className="flex flex-col">
-              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-center items-start text-gray-500 text-4xl text-center lg:text-left capitalize font-semibold  ">
+            <div className="flex flex-col w-full ">
+              <h2
+                className={clsx(
+                  "relative overflow-visible w-auto mt-0 mr-auto mb-6 pr-2 justify-center items-start  text-4xl text-center lg:text-left capitalize font-semibold  ",
+                  theme === "dark" ? "text-white" : "text-gray-500"
+                )}
+              >
                 {" "}
                 {room?.title}
               </h2>
 
-              <h2 className="relative overflow-visible w-auto mt-0 mr-auto mb-4 pr-2 justify-start items-start text-[#4a576E] text-3xl lg:text-5xl text-center lg:text-left capitalize font-semibold  ">
+              <h2
+                className={clsx(
+                  "relative overflow-visible w-auto mt-0 mr-auto mb-4 pr-2 justify-start items-start text-3xl lg:text-5xl text-center lg:text-left capitalize font-semibold  ",
+                  theme === "dark" ? "text-white" : "text-gray-500"
+                )}
+              >
                 {room?.subTitle}
               </h2>
 
-              <p className=" text-2xl md:text-3xl  leading-loose tracking-normal my-2">
+              <p className=" text-xl md:text-2xl  leading-loose tracking-normal my-2">
                 {room?.description}
               </p>
 
               <div className="mt-6">
-                <div className=" w-full  md:w-2/3 my-8 flex justify-between items-center space-x-12">
+                <div className=" w-full  lg:w-2/3 my-8 flex flex-col space-y-6 md:space-y-6 md:flex-row justify-between items-center lg:space-x-12">
                   <div className="flex items-center space-x-4">
-                    <BsPeopleFill size={60} color="#4a576E" />
-                    <p className="ml-2 text-2xl md:text-4xl  font-medium text-gray-700">
+                    <BsPeopleFill size={60} />
+                    <p className="ml-2 text-2xl md:text-4xl  font-medium ">
                       {room?.numberOfPeople} people
                     </p>
                   </div>
 
                   <div className="flex items-center space-x-4">
                     <MdOutlineBedroomParent size={40} />
-                    <p className="ml-3  text-2xl md:text-4xl   font-medium text-gray-700">
+                    <p className="ml-3  text-2xl md:text-4xl   font-medium ">
                       {room?.numberOfBeds} Beds
                     </p>
                   </div>
 
                   <div className="flex items-center space-x-4">
                     <GiBathtub size={40} />
-                    <p className="ml-3  text-2xl md:text-4xl    font-medium text-gray-700">
+                    <p className="ml-3  text-2xl md:text-4xl    font-medium ">
                       {room.numberOfBathrooms}{" "}
                       {room.numberOfBathrooms === 1 ? "Bathroom" : "Bathrooms"}
                     </p>

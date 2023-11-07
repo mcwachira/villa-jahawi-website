@@ -190,7 +190,7 @@ export const accommodationData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "2 bedroom House",
     url: "contemporary",
     image: "/assets/images/jahawi-images/room-5.webp",

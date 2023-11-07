@@ -24,36 +24,34 @@ const Rooms = ({ rooms }) => {
       transition={{ duration: 0.75, ease: "easeOut" }}
     >
       <div className={clsx(theme === "dark" ? "bg-[#041434]" : "bg-white")}>
-        <section className="mb-40 relative h-screen ">
-          {/* <!-- Jumbotron --> */}
-
+        <section className="relative h-screen mb-20 ">
           <div className="absolute inset-0 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l">
             <Image
-              src="/assets/images/jahawi-images/room-2.web"
+              src="/assets/images/jahawi-images/front-2.webp"
               alt="background image"
               className="object-cover object-center"
               fill
-              // sizes="100vw"
+              sizes="100vw"
               priority
             />
+          </div>
 
-            <div className="z-20  flex flex-col xl:flex-row w-full items-center h-full justify-end    xl:w-2/3  text-white">
-              <div className="mb-2 text-4xl lg:text-6xl justify-end md:mb-24 mx-14 items-center text-center lg:text-left font-bold tracking-tight flex flex-col w-full  xl8:w-1/2">
-                <span className=" my-4 text-center">
-                  Designed to take advantage of
-                </span>
+          <div className="z-20  flex flex-col xl:flex-row w-full items-center h-full justify-end    xl:w-2/3  text-white">
+            <div className="mb-2 text-4xl lg:text-6xl justify-end md:mb-24 mx-14 items-center text-center lg:text-left font-bold tracking-tight flex flex-col w-full  xl8:w-1/2">
+              <span className=" my-4 text-center">
+                Designed to take advantage of
+              </span>
 
-                <span className="">The sunny costal climate</span>
-              </div>
-              <div className="w-full px-6 text-center  mb-12 md:mb-24 ml-auto text-white md:px-12">
-                <button
-                  href="#section1"
-                  scroll={false}
-                  className="bg-white opacity-60"
-                >
-                  <AiOutlineArrowDown size={60} color="#111" />
-                </button>
-              </div>
+              <span className="">The sunny costal climate</span>
+            </div>
+            <div className="w-full px-6 text-center  mb-12 md:mb-24 ml-auto text-white md:px-12">
+              <button
+                href="#section1"
+                scroll={false}
+                className="bg-white opacity-60"
+              >
+                <AiOutlineArrowDown size={60} color="#111" />
+              </button>
             </div>
           </div>
 
