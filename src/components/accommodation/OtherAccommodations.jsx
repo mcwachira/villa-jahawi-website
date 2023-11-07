@@ -3,9 +3,7 @@ import roomImage1 from "/public/assets/images/jahawi-images/room-1.webp";
 import roomImage2 from "/public/assets/images/jahawi-images/room-2.webp";
 import roomImage3 from "/public/assets/images/jahawi-images/room-3.webp";
 import roomImage4 from "/public/assets/images/jahawi-images/room-4.webp";
-import roomImage5 from "/public/assets/images/room-5.png";
-import roomImage6 from "/public/assets/images/room-6.png";
-import roomImage7 from "/public/assets/images/room-7.png";
+import roomImage5 from "/public/assets/images/jahawi-images/room-5.webp";
 import Image from "next/image";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
@@ -25,8 +23,8 @@ const OtherAccommodations = () => {
     {
       id: 1,
       imageSrc: roomImage1,
-      title: "Superior Room",
-      beds: 2,
+      title: "Single's Room",
+      beds: 1,
       bathrooms: 1,
       description:
         "Offering perfect blend of contemporary aesthetics and coastal ambiance",
@@ -34,8 +32,8 @@ const OtherAccommodations = () => {
     {
       id: 2,
       imageSrc: roomImage2,
-      title: "Superior Room",
-      beds: 3,
+      title: "Friends Room ",
+      beds: 2,
       bathrooms: 1,
       description:
         "Offering perfect blend of contemporary aesthetics and coastal ambiance",
@@ -43,20 +41,29 @@ const OtherAccommodations = () => {
     {
       id: 3,
       imageSrc: roomImage3,
-      title: "Superior Room",
+      title: "Family Room",
       beds: 3,
       bathrooms: 1,
       description:
-        "Offering perfect blend of contemporary aesthetics and coastal ambiance",
+        "Offering perfect blend of contemporary aesthetics and coastal ambiance For Your Family",
     },
     {
       id: 4,
       imageSrc: roomImage4,
-      title: "Superior Room",
-      beds: 3,
+      title: "Couples Room",
+      beds: 1,
       bathrooms: 1,
       description:
         "Offering perfect blend of contemporary aesthetics and coastal ambiance",
+    },
+
+    {
+      id: 5,
+      imageSrc: roomImage5,
+      title: " 2 Bedroom Bungalow",
+      beds: 2,
+      bathrooms: 1,
+      description: "Spacious 2 Bedroom bungalow ",
     },
   ];
 

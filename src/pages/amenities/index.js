@@ -185,7 +185,7 @@ const Amenities = () => {
                   alt="responsive_image"
                   src="/assets/images/jahawi-images/drone-photos/5.webp"
                   // sizes="100vw"
-                  sizes="(min-width: 808px) 50vw, 100vw"
+                  // sizes="(min-width: 808px) 50vw, 100vw"
                   fill
                   priority="blur"
                 />

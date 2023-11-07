@@ -5,6 +5,7 @@ import roomImage1 from "/public/assets/images/jahawi-images/room-1.webp";
 import roomImage2 from "/public/assets/images/jahawi-images/room-2.webp";
 import roomImage3 from "/public/assets/images/jahawi-images/room-3.webp";
 import roomImage4 from "/public/assets/images/jahawi-images/room-4.webp";
+import roomImage5 from "/public/assets/images/jahawi-images/room-5.webp";
 
 import * as Yup from "yup";
 
@@ -31,7 +32,7 @@ const Rooms = () => {
   const roomsData = [
     {
       imageSrc: roomImage1,
-      title: "One Bed Room",
+      title: "Single's Room",
       beds: 1,
       bathrooms: 1,
     },
@@ -50,7 +51,13 @@ const Rooms = () => {
     {
       imageSrc: roomImage4,
       title: "Couples Room",
-      beds: 3,
+      beds: 1,
+      bathrooms: 1,
+    },
+    {
+      imageSrc: roomImage5,
+      title: "2 bedroom Bungalow",
+      beds: 2,
       bathrooms: 1,
     },
   ];
@@ -188,12 +195,12 @@ const Rooms = () => {
           Our Beautiful Rooms
         </h2>
 
-        <div className="py-2 grid justify-center md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-16 lg:gap-8 my-12 mx-6 ">
+        <div className="py-2 grid justify-center md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 lg:gap-8 my-12 mx-6 ">
           {roomsData.map((room, roomIndex) => (
             <div
               key={roomIndex}
               className={clsx(
-                "h-full w-full rounded-xl p-6  overflow-hidden shadow-lg hover:shadow-xl",
+                "h-full w-full lg:w-3/4 rounded-xl p-6  overflow-hidden shadow-lg hover:shadow-xl",
                 theme === "dark" ? "bg-[#F3F4F6]" : "bg-[#F3F4F6]"
               )}
             >

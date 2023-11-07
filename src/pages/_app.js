@@ -19,13 +19,14 @@ export default function App({ Component, pageProps }) {
     return null;
   }
   return (
-    <>
-      <AnimatePresence initial={false}>
-        <motion.div key={router.pathname}>
-          <ThemeProvider attribute="class" enableSystem={true}>
-            <Navbar />
-            <Component key={router.path} {...pageProps} />
-            {/* 
+    <html suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" enableSystem={true}>
+          <AnimatePresence initial={false}>
+            <motion.div key={router.pathname}>
+              <Navbar />
+              <Component key={router.path} {...pageProps} />
+              {/* 
             <motion.div
               className="slide-in"
               initialScale={{ scaleY: 0 }}
@@ -39,10 +40,11 @@ export default function App({ Component, pageProps }) {
               animate={{ scaleY: 1 }}
               exit={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             ></motion.div> */}
-            <Footer />
-          </ThemeProvider>
-        </motion.div>
-      </AnimatePresence>
-    </>
+              <Footer />
+            </motion.div>
+          </AnimatePresence>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

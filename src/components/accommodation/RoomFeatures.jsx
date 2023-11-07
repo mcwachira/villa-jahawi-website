@@ -170,7 +170,7 @@ const RoomFeatures = ({ room }) => {
             >
               Villa Jahawi
             </h1>
-            <h2 className=" my-4 text-4xl font-extrabold text-center sm:text-5xl  lg:text-left text-white">
+            <h2 className=" my-4 text-2xl font-extrabold text-center sm:text-3xl  lg:text-left text-white">
               Every Moment feels like the first time
               {/* 
         <strong className="block font-extrabold text-rose-700">
@@ -182,10 +182,10 @@ const RoomFeatures = ({ room }) => {
       Every Moment feels like the first time Villa Jahawi
       </p> */}
 
-            <div className="mt-8 flex flex-wrap gap-4 text-center  justify-center items-center lg:justify-start">
+            <div className="mt-8 flex flex-wrap  text-center  justify-center items-center lg:justify-start">
               <Link
                 href="#"
-                className="block w-3/4 rounded bg-[#4a576E] my-8 px-14 py-6  sm:px-12 sm:py-4 text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                className="block w-3/4 rounded bg-[#4a576E] my-8 px-6 py-4  sm:px-8 sm:py-4 text-2xl font-medium text-white shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
               >
                 Book Now
               </Link>
@@ -203,12 +203,12 @@ const RoomFeatures = ({ room }) => {
         <div className="mt-20  w-full">
           <Container>
             <div className="flex flex-col items-center">
-              <h2 className="relative text-4xl text-center overflow-visible mb-6  text-gray-500 capitalize font-semibold  ">
+              <h2 className="relative text-2xl lg:text-4xl text-center overflow-visible mb-6  text-gray-500 capitalize font-semibold  ">
                 {" "}
                 {room?.title}
               </h2>
 
-              <h2 className="relative text-center overflow-visible mb-0 pr-2  text-[#4a576E] text-6xl capitalize font-semibold  ">
+              <h2 className="relative text-center overflow-visible mb-0 pr-2  text-[#4a576E] text-3xl lg:text-5xl capitalize font-semibold  ">
                 {room?.subTitle}
               </h2>
 
