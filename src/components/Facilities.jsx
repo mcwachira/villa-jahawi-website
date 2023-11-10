@@ -42,9 +42,7 @@ const Facilities = () => {
           >
             <FaPersonSwimming size={60} color="#4a576E" />
 
-            <h2 className="text-2xl text-[#4a576E] my-4 leading-1">
-              Swimming Pool
-            </h2>
+            <h2 className="text-2xl text-[#4a576E] my-4 leading-1">Jacuzzi</h2>
           </motion.div>
 
           <motion.div
