@@ -60,10 +60,10 @@ const OtherAccommodations = () => {
     {
       id: 5,
       imageSrc: roomImage5,
-      title: " 2 Bedroom Bungalow",
+      title: " 2 Beds",
       beds: 2,
-      bathrooms: 1,
-      description: "Spacious 2 Bedroom bungalow ",
+      bathrooms: 2,
+      description: "Spacious 2 Beds ",
     },
   ];
 

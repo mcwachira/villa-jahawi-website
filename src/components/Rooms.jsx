@@ -56,9 +56,9 @@ const Rooms = () => {
     },
     {
       imageSrc: roomImage5,
-      title: "2 bedroom Bungalow",
+      title: "2 beds",
       beds: 2,
-      bathrooms: 1,
+      bathrooms: 2,
     },
   ];
 
@@ -195,6 +195,7 @@ const Rooms = () => {
           Our Beautiful Rooms
         </h2>
 
+    
         <div className="py-2 grid justify-center md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 lg:gap-8 my-12 mx-6 ">
           {roomsData.map((room, roomIndex) => (
             <div
