@@ -18,9 +18,10 @@ import { clsx } from "clsx";
 
 const testimonials = [
   {
-    headline: "“Highly skilled and professional”",
+    headline:
+      "“ A perfect blend of comfort and convenience, just 10 minutes from Diani's beach”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "Had a fantastic time at Villa Jahawi! The short distance to the beach was a game-changer for us. The villa itself is charming and has everything you need.A great spot for a relaxed holiday in Diani. ",
     author: {
       name: "Katy Jackson",
       role: "Guest",
@@ -28,9 +29,10 @@ const testimonials = [
     },
   },
   {
-    headline: "“I highly recommend him”",
+    headline:
+      "“Just a hop, skip, and a jump to Diani's beach – Villa Jahawi is the perfect spot!”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "Villa Jahawi is a gem! Its location is ideal, just 10 minutes from the beach. The villa's simplicity and comfort made our stay delightful. Great value for a tranquil retreat near the beautiful Diani coastline.",
     author: {
       name: "Sean Murphy",
       role: "Guest",
@@ -38,9 +40,10 @@ const testimonials = [
     },
   },
   {
-    headline: "“I’m so lucky I found John!”",
+    headline:
+      "“Unwind in style at Villa Jahawi, with Diani's sandy shores only 10 minutes away”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "Villa Jahawi offers a great escape near Diani's beautiful beaches. The villa's proximity to the shore is a big plus. Clean, comfortable, and welcoming—our stay was wonderful. Will definitely be coming back",
     author: {
       name: "Elaine Foster",
       role: "Guest",
@@ -48,9 +51,10 @@ const testimonials = [
     },
   },
   {
-    headline: "“I’m really impressed with the quality of his work”",
+    headline:
+      "“Villa Jahawi: 10 minutes to blissful beach days and cozy nights”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "Our stay at Villa Jahawi was fantastic! The villa's location, just a short 10-minute drive from the beach, was super convenient. The serene atmosphere and cozy rooms made it a perfect retreat. Highly recommended for a relaxing getaway!",
     author: {
       name: "Jeff Bick",
       role: "Guest",
@@ -60,7 +64,7 @@ const testimonials = [
   {
     headline: "“Seriously awesome!”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "The peaceful ambiance and well-maintained villa made our getaway truly enjoyable. A great option for those looking for a more private retreat",
     author: {
       name: "Jason Cosmo",
       role: "Guest",
@@ -68,9 +72,9 @@ const testimonials = [
     },
   },
   {
-    headline: "“Highly skilled and professional”",
+    headline: "“Seaside simplicity at Villa Jahaw”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "Perfect getaway at Villa Jahawi! The quick 10-minute trip to the beach made it easy to enjoy the sun and surf. The villa is comfortable, clean, and a great place to unwind",
     author: {
       name: "Katy Jackson",
       role: "Guest",
@@ -78,9 +82,9 @@ const testimonials = [
     },
   },
   {
-    headline: "“I highly recommend him”",
+    headline: "“I highly recommend them”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "Villa Jahawi provided the ultimate getaway. Just a quick 10-minute drive to the beach, we enjoyed the best of both worlds. The villa's charm and comfort made our stay truly special.",
     author: {
       name: "Sean Murphy",
       role: "Guest",
@@ -88,9 +92,9 @@ const testimonials = [
     },
   },
   {
-    headline: "“I’m so lucky I found John!”",
+    headline: "“I’m so lucky I found the villa!”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "Villa Jahawi is a wonderful retreat just 10 minutes from Diani's beach. The villa's comfort and style provided the perfect backdrop for a memorable vacation. We loved every minute of our stay.",
     author: {
       name: "Elaine Foster",
       role: "Guest",
@@ -98,9 +102,9 @@ const testimonials = [
     },
   },
   {
-    headline: "“I’m really impressed with the quality of his work”",
+    headline: "“I’m really impressed with the quality of the place”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "The villa's design and amenities are excellent. Our stay was relaxing, and we enjoyed every moment of it",
     author: {
       name: "Jeff Bick",
       role: "Guest",
@@ -110,7 +114,7 @@ const testimonials = [
   {
     headline: "“Seriously awesome!”",
     content:
-      "And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.",
+      "The quick 10-minute drive to Diani's beach allowed us to soak up the sun effortlessly. The villa's comfort and style made it a perfect home away from home.",
     author: {
       name: "Jason Cosmo",
       role: "Guest",
